@@ -1,0 +1,64 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mars_Rover_Comms", "Mars_Rover_Comms\Mars_Rover_Comms.csproj", "{ABFF3B63-5630-42CD-9299-52F712C99537}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mars_Rover_OCU", "Mars_Rover_OCU\Mars_Rover_OCU.csproj", "{D392ED45-A36B-4072-9709-5CE4825CB8E0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ABFF3B63-5630-42CD-9299-52F712C99537} = {ABFF3B63-5630-42CD-9299-52F712C99537}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mars_Rover_Configuration", "Mars_Rover_Configuration\Mars_Rover_Configuration.csproj", "{13826DCF-28CA-498C-A410-E9F797AD957E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mars_Rover_RCU", "Mars_Rover_RCU\Mars_Rover_RCU.csproj", "{86153CA3-DF49-41C0-ABEC-EAF1CCAB5C58}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D} = {7F7994CE-823F-4A04-BBEA-D0A3808FF56D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jrk", "..\Experimental\pololu-usb-sdk\Jrk\Jrk\Jrk.csproj", "{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoUtility", "..\Experimental\MissionPlanner-master\MissionPlanner-master\ExtLibs\GeoUtility\GeoUtility.csproj", "{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ABFF3B63-5630-42CD-9299-52F712C99537}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABFF3B63-5630-42CD-9299-52F712C99537}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABFF3B63-5630-42CD-9299-52F712C99537}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABFF3B63-5630-42CD-9299-52F712C99537}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D392ED45-A36B-4072-9709-5CE4825CB8E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D392ED45-A36B-4072-9709-5CE4825CB8E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D392ED45-A36B-4072-9709-5CE4825CB8E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D392ED45-A36B-4072-9709-5CE4825CB8E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13826DCF-28CA-498C-A410-E9F797AD957E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13826DCF-28CA-498C-A410-E9F797AD957E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13826DCF-28CA-498C-A410-E9F797AD957E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13826DCF-28CA-498C-A410-E9F797AD957E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86153CA3-DF49-41C0-ABEC-EAF1CCAB5C58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86153CA3-DF49-41C0-ABEC-EAF1CCAB5C58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86153CA3-DF49-41C0-ABEC-EAF1CCAB5C58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86153CA3-DF49-41C0-ABEC-EAF1CCAB5C58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,13 @@
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\obj\Debug\MaestroEasyExample.csprojResolveAssemblyReference.cache
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\obj\Debug\Pololu.Usc.MaestroEasyExample.MainWindow.resources
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\obj\Debug\Pololu.Usc.MaestroEasyExample.Properties.Resources.resources
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\obj\Debug\MaestroEasyExample.csproj.GenerateResource.Cache
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\bin\Debug\MaestroEasyExample.exe
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\bin\Debug\MaestroEasyExample.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\bin\Debug\UsbWrapper.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\bin\Debug\Usc.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\bin\Debug\Usc.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\bin\Debug\Usc.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\bin\Debug\UsbWrapper.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\obj\Debug\MaestroEasyExample.exe
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Maestro\MaestroEasyExample\obj\Debug\MaestroEasyExample.pdb

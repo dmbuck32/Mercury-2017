@@ -1,0 +1,237 @@
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_APM.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_APM.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\Dustin\Desktop\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\ProjNet.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GMap.NET.Core.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\GeoUtility.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb

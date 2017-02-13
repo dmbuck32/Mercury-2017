@@ -1,0 +1,1 @@
+mars.rcu.exe --config=rcu_config.xml --no_apm --no_arm --no_maestro

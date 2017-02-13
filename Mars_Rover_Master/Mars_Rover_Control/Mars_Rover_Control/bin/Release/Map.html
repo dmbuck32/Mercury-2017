@@ -1,0 +1,40 @@
+﻿<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+   <title>Sample</title>
+   <script type="text/javascript" src="http://www.google.com/jsapi"> </script>
+   <script type="text/javascript">
+
+       var ge;
+       google.load("earth", "1");
+
+       function init() {
+           google.earth.createInstance('map3d', initCB, failureCB);
+       }
+
+       function initCB(instance) {
+           ge = instance;
+           ge.getWindow().setVisibility(true);
+
+           ge.getNavigationControl().setVisibility(ge.VISIBILITY_AUTO);
+
+           ge.getLayerRoot().enableLayerById(ge.LAYER_BORDERS, true);
+           ge.getLayerRoot().enableLayerById(ge.LAYER_ROADS, true);
+
+            var lookAt = ge.createLookAt('');
+           lookAt.set(loc, 10, ge.ALTITUDE_RELATIVE_TO_GROUND,0, 60, 20000);
+           ge.getView().setAbstractView(lookAt);
+               
+       }
+
+       function failureCB(errorCode) {
+           alert(errorCode);
+       }
+
+       google.setOnLoadCallback(init);
+   </script>
+</head>
+<body>
+    <div id="map3d" style="height: 500px; width: 570px;">
+</body>
+</html>

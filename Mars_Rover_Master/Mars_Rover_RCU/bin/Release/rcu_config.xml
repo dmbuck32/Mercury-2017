@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ConfigureRCU xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  
+  <!--Tag should match object name in ConfigureRCU-->
+  <APMConfig>
+    <Baud_Rate>115200</Baud_Rate>
+    <!-- 115200 for USB or 57600 for radio -->
+    <Timeout>1000</Timeout>
+    <!-- 500 for USB or 3000 for radio-->
+    <COM_Port>COM6</COM_Port>
+    <ReadBufferSize>4194304</ReadBufferSize>
+    <DTREnable>true</DTREnable>
+  </APMConfig>
+
+  <ArmConfig>
+    <COMPort>COM5</COMPort>
+  </ArmConfig>
+
+  <MaestroConfig>
+    <SteeringServoOutput1>
+      <Device>FrontLeftSteering</Device>
+      <Channel>Channel13</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1250</PWM_Low>
+        <PWM_High>1750</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </SteeringServoOutput1>
+
+    <SteeringServoOutput2>
+      <Device>FrontRightSteering</Device>
+      <Channel>Channel15</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1250</PWM_Low>
+        <PWM_High>1750</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </SteeringServoOutput2>
+
+    <SteeringServoOutput4>
+      <Device>RearRightSteering</Device>
+      <Channel>Channel16</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1250</PWM_Low>
+        <PWM_High>1750</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </SteeringServoOutput4>
+
+    <SteeringServoOutput3>
+      <Device>RearLeftSteering</Device>
+      <Channel>Channel14</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1250</PWM_Low>
+        <PWM_High>1750</PWM_High>
+      </PWM_Map>
+      <StopValue>1250</StopValue>
+    </SteeringServoOutput3>
+
+    <DrivingMotorOutput6>
+      <Device>FrontRightWheel</Device>
+      <Channel>Channel10</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1000</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </DrivingMotorOutput6>
+
+    <DrivingMotorOutput7>
+      <Device>FrontLeftWheel</Device>
+      <Channel>Channel1</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1000</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </DrivingMotorOutput7>
+
+    <DrivingMotorOutput8>
+      <Device>MidLeftWheel</Device>
+      <Channel>Channel7</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1000</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </DrivingMotorOutput8>
+
+    <DrivingMotorOutput9>
+      <Device>MidRightWheel</Device>
+      <Channel>Channel8</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1000</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </DrivingMotorOutput9>
+
+    <DrivingMotorOutput10>
+      <Device>RearLeftWheel</Device>
+      <Channel>Channel2</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1000</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </DrivingMotorOutput10>
+
+    <DrivingMotorOutput11>
+      <Device>RearRightWheel</Device>
+      <Channel>Channel9</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1000</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </DrivingMotorOutput11>
+
+    <ControlOutput>
+      <Device>ControlSignal</Device>
+      <Channel>Channel23</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1000</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1500</StopValue>
+    </ControlOutput>
+
+    <Timeout>250</Timeout>
+    
+  </MaestroConfig>
+
+  <WVUServerIP>157.182.43.8</WVUServerIP>
+  <ListeningPort>1111</ListeningPort>
+
+  <!--<RoboteqConfigs>
+    <RoboteqConfiguration>
+      <OutputSettings>
+        <RoboteqOutputSettings>
+          <Device>FrontLeftWheel</Device>
+          <Invert>true</Invert>
+          <Channel>Motor1</Channel>
+        </RoboteqOutputSettings>
+        <RoboteqOutputSettings>
+          <Device>FrontRightWheel</Device>
+          <Invert>false</Invert>
+          <Channel>Motor2</Channel>
+        </RoboteqOutputSettings>
+      </OutputSettings>
+      <COM_Port>COM7</COM_Port>
+      <Timeout>250</Timeout>
+    </RoboteqConfiguration>
+    <RoboteqConfiguration>
+      <OutputSettings>
+        <RoboteqOutputSettings>
+          <Device>MidLeftWheel</Device>
+          <Invert>false</Invert>
+          <Channel>Motor1</Channel>
+        </RoboteqOutputSettings>
+        <RoboteqOutputSettings>
+          <Device>MidRightWheel</Device>
+          <Invert>false</Invert>
+          <Channel>Motor2</Channel>
+        </RoboteqOutputSettings>
+      </OutputSettings>
+      <COM_Port>COM2</COM_Port>
+      <Timeout>250</Timeout>
+    </RoboteqConfiguration>
+    <RoboteqConfiguration>
+      <OutputSettings>
+        <RoboteqOutputSettings>
+          <Device>RearLeftWheel</Device>
+          <Invert>false</Invert>
+          <Channel>Motor1</Channel>
+        </RoboteqOutputSettings>
+        <RoboteqOutputSettings>
+          <Device>RearRightWheel</Device>
+          <Invert>false</Invert>
+          <Channel>Motor2</Channel>
+        </RoboteqOutputSettings>
+      </OutputSettings>
+      <COM_Port>COM3</COM_Port>
+      <Timeout>250</Timeout>
+    </RoboteqConfiguration>
+  </RoboteqConfigs>-->
+
+
+  <!--<JRKConfig>
+
+    <SteeringServoOutput2>
+      <Device>FrontRightSteering</Device>
+      <Channel>Channel2</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>600</PWM_Low>
+        <PWM_High>3900</PWM_High>
+      </PWM_Map>
+      <StopValue>2250</StopValue>
+    </SteeringServoOutput2>
+
+    <SteeringServoOutput1>
+      <Device>FrontLeftSteering</Device>
+      <Channel>Channel1</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>600</PWM_Low>
+        <PWM_High>3900</PWM_High>
+      </PWM_Map>
+      <StopValue>1370</StopValue>
+    </SteeringServoOutput1>
+
+    <SteeringServoOutput4>
+      <Device>RearRightSteering</Device>
+      <Channel>Channel4</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1100</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1550</StopValue>
+    </SteeringServoOutput4>
+
+    <SteeringServoOutput3>
+      <Device>RearLeftSteering</Device>
+      <Channel>Channel3</Channel>
+      <PWM_Map>
+        <Real_Low>45</Real_Low>
+        <Real_High>-45</Real_High>
+        <PWM_Low>1100</PWM_Low>
+        <PWM_High>2000</PWM_High>
+      </PWM_Map>
+      <StopValue>1550</StopValue>
+    </SteeringServoOutput3>
+
+    <Timeout>250</Timeout>
+
+  </JRKConfig>-->
+
+  <!-- <PhidgetConfiguration>
+    <OutputSettings>
+      <PhidgetServoOutputSettings>
+        <Device>FrontLeftSteering</Device>
+        <PWM_Map>
+          <Real_Low>45</Real_Low>
+          <Real_High>-45</Real_High>
+          <PWM_Low>1100</PWM_Low>
+          <PWM_High>2000</PWM_High>
+        </PWM_Map>
+        </PWM_Map>
+        <StopValue>1650</StopValue>
+        <Channel>Channel1</Channel>
+      </PhidgetServoOutputSettings>
+      <PhidgetServoOutputSettings>
+        <Device>RearLeftSteering</Device>
+        <PWM_Map>
+          <Real_Low>45</Real_Low>
+          <Real_High>-45</Real_High>
+          <PWM_Low>1150</PWM_Low>
+          <PWM_High>2050</PWM_High>
+        </PWM_Map>
+        <StopValue>1600</StopValue>
+        <Channel>Channel2</Channel>
+      </PhidgetServoOutputSettings>
+      <PhidgetServoOutputSettings>
+        <Device>RearRightSteering</Device>
+        <PWM_Map>
+          <Real_Low>45</Real_Low>
+          <Real_High>-45</Real_High>
+          <PWM_Low>1100</PWM_Low>
+          <PWM_High>2000</PWM_High>
+        </PWM_Map>
+        <StopValue>1550</StopValue>
+        <Channel>Channel0</Channel>
+      </PhidgetServoOutputSettings>
+    </OutputSettings>
+    <ID>-1</ID>
+    <Timeout>250</Timeout>
+  </PhidgetConfiguration>-->
+
+</ConfigureRCU>

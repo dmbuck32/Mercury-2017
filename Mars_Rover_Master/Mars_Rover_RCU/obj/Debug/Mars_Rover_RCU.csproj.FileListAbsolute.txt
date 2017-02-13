@@ -1,0 +1,688 @@
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_APM.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_APM.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\mars\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\Sam\Dropbox\Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\mars\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\Dustin\Desktop\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\Eric\Desktop\Play With This Code\Original Software\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\Eric\Desktop\Software (Motors Turn)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\Eric\Desktop\Software (Keyboard Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\Eric\Desktop\Software (Keyboard + Xbox Tank Steering)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+H:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+D:\West Virginia University (2014 - 2015)\Spring 2015\CpE 481\Mercury Remote Robot Stuff\Mars Rover\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Desktop\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+D:\Software (FINAL)\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Software (FINAL) Created     2-18\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\Seth\Desktop\Software (FINAL) Created     2-19\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+E:\MercurySoftwareFinal\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Desktop\Mercury\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\senior_design\Desktop\Mercury\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Desktop\Mercury\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\rcu_config.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Bytecode.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\ProjNet.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.dll
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GeoUtility.pdb
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe

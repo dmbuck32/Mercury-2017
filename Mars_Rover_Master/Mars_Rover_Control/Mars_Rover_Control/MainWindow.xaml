@@ -1,0 +1,97 @@
+﻿<Window x:Class="MarsRover.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:wf="clr-namespace:GMap.NET.WindowsForms;assembly=GMap.NET.WindowsForms"
+        Title="Mars Rover 2014 Control" Height="768" Width="1024" Foreground="#FF2B2E2E" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="Resources/wv.png" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="171*"/>
+            <ColumnDefinition Width="623*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Margin="10,10,614,10" Grid.ColumnSpan="2">
+            <TabItem Header="Rover">
+                <Grid x:Name="roverGrid" HorizontalAlignment="Left" Width="386" Margin="0,-10,-2,-1">
+                    <Rectangle Fill="#FFEEEEEE" Margin="10"/>
+                    <Canvas Margin="10,10,10,0" Height="679" VerticalAlignment="Top">
+                        <Rectangle Height="32" VerticalAlignment="Top" Fill="#FF302D27" Width="366"/>
+                        <Rectangle Height="652" VerticalAlignment="Top" Fill="#FF302D27" Canvas.Left="226" Canvas.Top="27" Width="140"/>
+                    </Canvas>
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="10,10,10,0" IsHitTestVisible="False" Height="679" VerticalAlignment="Top"/>
+                    <TextBlock Margin="20,15,0,0" TextWrapping="Wrap" Text="ROVER" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Gisha" FontSize="18" Foreground="White" Height="21" Width="66"/>
+                    <Grid Margin="21,76,22,0" Height="613" VerticalAlignment="Top">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="64*"/>
+                            <RowDefinition Height="55*"/>
+                        </Grid.RowDefinitions>
+                        <Rectangle HorizontalAlignment="Left" Height="47" VerticalAlignment="Top" Width="343" Fill="#FF2A99F5">
+                            <Rectangle.Effect>
+                                <DropShadowEffect BlurRadius="3" ShadowDepth="1"/>
+                            </Rectangle.Effect>
+                        </Rectangle>
+                        <TextBox HorizontalAlignment="Left" Margin="276,11,0,0" TextWrapping="Wrap" Text="1111" Width="52" TextAlignment="Center" FontSize="11" IsEnabled="False" Height="23" VerticalAlignment="Top"/>
+                        <Canvas Margin="-16,-14,323,13">
+                            <Ellipse HorizontalAlignment="Left" Height="36" Stroke="White" VerticalAlignment="Top" Width="36" Canvas.Top="3" Fill="#FF2A99F5"/>
+                            <Label Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="SWItalt" FontSize="24" Canvas.Left="4"/>
+                        </Canvas>
+                        <Button x:Name="roverListenBtn" Content="Listen" HorizontalAlignment="Left" Margin="34,9,0,0" Width="74" ToolTip="Listen for the robot over net." VerticalAlignment="Top" FontSize="11" Height="29" FontFamily="Courier New" Click="roverListenBtn_Click"/>
+                        <Label Content="Port:" HorizontalAlignment="Left" Margin="230,12,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Courier New" FontSize="11"/>
+                        <Canvas Margin="-16,0,0,0" Grid.Row="1" Height="72" VerticalAlignment="Top">
+                            <Rectangle HorizontalAlignment="Left" Height="56" VerticalAlignment="Top" Width="343" Fill="#FFFAC313" Canvas.Left="16" Canvas.Top="12">
+                                <Rectangle.Effect>
+                                    <DropShadowEffect ShadowDepth="1" BlurRadius="3"/>
+                                </Rectangle.Effect>
+                            </Rectangle>
+                            <Canvas Height="66" Width="36">
+                                <Ellipse HorizontalAlignment="Left" Height="36" Stroke="White" VerticalAlignment="Top" Width="36" Canvas.Top="2" Fill="#FFFAC313"/>
+                                <Label Content="2" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="SWItalt" FontSize="24" Canvas.Left="2"/>
+                            </Canvas>
+                            <Button x:Name="roverControlBtn" Content="Take Control" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" FontFamily="Courier New" Height="30" FontSize="11" IsEnabled="False" Click="roverControlBtn_Click" Canvas.Left="50" Canvas.Top="24"/>
+                            <RadioButton x:Name="manualControlRB" Content="Manual" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True" FontFamily="Courier New" Foreground="White" FontSize="11" IsEnabled="False" Canvas.Left="253" Canvas.Top="24"/>
+                            <RadioButton x:Name="autoControlRB" Content="Auto" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.494,1.111" IsChecked="False" FontFamily="Courier New" Foreground="White" FontSize="11" IsEnabled="False" Canvas.Left="254" Canvas.Top="44"/>
+                        </Canvas>
+                    </Grid>
+                    <Label x:Name="connectionStatusLbl" Content="Not Connected" Margin="231,14,8,0" Background="{x:Null}" Foreground="Red" FontSize="11" Height="51" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
+                    <Button Content="" HorizontalAlignment="Left" Margin="209,49,0,0" VerticalAlignment="Top" Width="20" Height="20">
+                        <Button.Background>
+                            <ImageBrush ImageSource="Resources/Gear.png"/>
+                        </Button.Background>
+                    </Button>
+                    <Label Content="Settings" HorizontalAlignment="Left" Margin="146,49,0,0" VerticalAlignment="Top" FontFamily="Courier New" FontSize="11" Height="22" Width="63"/>
+                    <Button x:Name="disconnectRoverBtn" Content="Disconnect" HorizontalAlignment="Left" Margin="269,39,0,0" Width="76" IsEnabled="False" Height="26" VerticalAlignment="Top"/>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Base Station">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
+        <TabControl Grid.Column="1" HorizontalAlignment="Left" Height="720" Margin="190,10,0,0" VerticalAlignment="Top" Width="599">
+            <TabItem x:Name="liveTab" Header="Live" IsEnabled="False">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Mission Planner" IsSelected="True">
+                <Grid Background="#FFE5E5E5" Height="688" VerticalAlignment="Top">
+                    <Grid HorizontalAlignment="Left" Height="688" VerticalAlignment="Top" Width="589">
+                        <Label x:Name="plannerMouseLocation" Content="" HorizontalAlignment="Left" Margin="0,524,0,0" VerticalAlignment="Top" Width="569" Foreground="#FF4F4F4F" FontFamily="Courier New" Panel.ZIndex="10000" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="latTxt" HorizontalAlignment="Left" Height="23" Margin="365,560,0,105" TextWrapping="Wrap" VerticalAlignment="Center" Width="68" TextChanged="latTxt_TextChanged" VerticalContentAlignment="Bottom" />
+                        <TextBox x:Name="lonTxt" HorizontalAlignment="Left" Height="23" Margin="511,560,0,105" TextWrapping="Wrap" VerticalAlignment="Center" Width="68" TextChanged="lonTxt_TextChanged" VerticalContentAlignment="Bottom" />
+                        <Label Content="Latitude:" HorizontalAlignment="Left" Margin="302,557,0,105" VerticalAlignment="Center" Width="58" VerticalContentAlignment="Bottom"/>
+                        <Label Content="Longitude:" HorizontalAlignment="Left" Margin="438,557,0,105" VerticalAlignment="Center" Width="68" VerticalContentAlignment="Bottom"/>
+                        <ComboBox x:Name="locationCombo" HorizontalAlignment="Left" Margin="151,559,0,107" VerticalAlignment="Center" Width="120" SelectedIndex="0" SelectionChanged="location_Selection" VerticalContentAlignment="Bottom">
+                            <ComboBoxItem Content="JSC - Houston"/>
+                            <ComboBoxItem Content="WVU - Engineering"/>
+                            <ComboBoxItem Content="Jason's House"/>
+                        </ComboBox>
+                        <Label Content="Predefined Locations:" HorizontalAlignment="Left" Margin="20,556,0,106" VerticalAlignment="Center" Width="126" VerticalContentAlignment="Bottom"/>
+                        <WindowsFormsHost Name="wfhSample" HorizontalAlignment="Right" Width="589" Height="519" VerticalAlignment="Top" >
+                            <WindowsFormsHost.Child>
+                                <wf:GMapControl x:Name="missionPlanner"/>
+                            </WindowsFormsHost.Child>
+                        </WindowsFormsHost>
+                    </Grid>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

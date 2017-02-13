@@ -1,0 +1,7 @@
+D:\MARSROVER\Dropbox\Software (2)\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Release\Jrk.dll
+D:\MARSROVER\Dropbox\Software (2)\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Release\Jrk.pdb
+D:\MARSROVER\Dropbox\Software (2)\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Release\UsbWrapper.dll
+D:\MARSROVER\Dropbox\Software (2)\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Release\UsbWrapper.xml
+D:\MARSROVER\Dropbox\Software (2)\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Release\Jrk.csprojResolveAssemblyReference.cache
+D:\MARSROVER\Dropbox\Software (2)\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Release\Jrk.dll
+D:\MARSROVER\Dropbox\Software (2)\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Release\Jrk.pdb

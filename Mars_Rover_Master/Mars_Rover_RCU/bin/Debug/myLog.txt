@@ -1,0 +1,9 @@
+No Roboteq Specified!
+No APM Specified!
+No ARM Specified!
+No Maestro Specified!
+Jrk #SN 00018877 connected!
+Enter exit to shutdown
+Attempting to connect to 192.168.10.5
+$$ Socket Exception: A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond 192.168.10.5:1111
+Attempting to connect to 192.168.10.5
