@@ -70,27 +70,12 @@ namespace Mars_Rover_RCU.Comms
 
                     RobotReturnState returnState = new RobotReturnState();
 
-                    if (Program._GPS != null)
-                    {
-                        Program._GPS.updatePosition();
-
-                        returnState.PositionReturnState.Lat = Program._GPS.getLat();
-                        returnState.PositionReturnState.Lon = Program._GPS.getLng();
-                        returnState.PositionReturnState.Heading = Program._GPS.getHeading();
-                    }
-                    else
-                    {
-                        returnState.PositionReturnState.Lat = "null";
-                        returnState.PositionReturnState.Lon = "null";
-                        returnState.PositionReturnState.Heading = "null";
-                    }
-
                     returnState.LogState.Data = Logger.getOutgoing();
 
                     returnState.ArmReturnState.ArmFeedback = 1;
                     returnState.ErrorReturnState.ErrorCode = 0xF;
                     returnState.TemperatureReturnState.Temperature = 20;
-
+                    /*
                     if (Program._Roomba != null)
                     {
                         Program._Roomba.readSensors();
@@ -106,6 +91,7 @@ namespace Mars_Rover_RCU.Comms
                         returnState.TemperatureReturnState.barFrontLeftIRSensor = (short)sensors[4];
                         returnState.TemperatureReturnState.barLeftIRSensor = (short)sensors[5];
                     }
+                    */
                     // all UI control received, now send to robot clients
                     using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
                     {

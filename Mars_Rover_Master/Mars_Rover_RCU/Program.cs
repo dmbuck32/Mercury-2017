@@ -1,20 +1,11 @@
 ﻿using System;
-using System.Diagnostics;
-using System.Collections.Generic;
 using System.IO;
-using System.IO.Ports;
-using System.Linq;
-using System.Runtime.InteropServices;
-using System.Text;
 using System.Threading;
 using Mars_Rover_Configuration;
 using Mars_Rover_Comms;
 using System.Xml.Serialization;
-using Mars_Rover_RCU;
 using Mars_Rover_RCU.Comms;
 using Mars_Rover_RCU.Controllers;
-using Pololu.UsbWrapper;
-using Pololu.Usc;
 using Mars_Rover_RCU.Utilities;
 
 namespace Mars_Rover_RCU
@@ -23,19 +14,13 @@ namespace Mars_Rover_RCU
     public class Program
     {
         private static RCUComms comms;
-        static public Usc usc = null;
 
         static bool debug = true;
 
         static ConfigureRCU rcuConfig; //Responsible for sending states back to OCU
         static StreamWriter log;
 
-        //static public Controllers.PhidgetsController _Phidgets;
-        //static Controllers.Maestro _Maestro;
-        //static Controllers.Arm _Arm;
-        static public Controllers.GPS _GPS;
-        static public Controllers.Roomba _Roomba;
-        static public Controllers.MiniMaestro _MiniMaestro;
+        static public Controllers.Maestro _Maestro;
 
         static Utility.UpdateQueue<RobotState> stateQueue = new Utility.UpdateQueue<RobotState>(-1);
         static XmlSerializer robotStateDeserializer = new XmlSerializer(typeof(Mars_Rover_Comms.RobotState));
@@ -43,12 +28,7 @@ namespace Mars_Rover_RCU
         //tcp/ip client for communicating with the ocu
         static public Mars_Rover_Comms.TCP.ZClient client;
 
-        static Boolean useMaestro = false;
-        static Boolean useGPS = false;
-        static Boolean useArm = false;
-        static Boolean usePhidgets = false;
-        static Boolean useRoomba = false;
-        static Boolean useMiniMaestro = true;
+        static Boolean useMaestro = true;
         //static public bool connected;
 
         static Thread stateProcessor;
@@ -60,19 +40,15 @@ namespace Mars_Rover_RCU
 
         static public String IPAddress;
         static public String Port;
-        static public String RoombaCOM;
 
         public static void Main(string[] args)
-        {
-            System.IO.StreamReader file = new System.IO.StreamReader("C:\\Users\\David-Michael\\Desktop\\IP_Port.txt");
+        { 
+            string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            System.IO.StreamReader file = new System.IO.StreamReader(desktop + "\\Mercury-2017\\IP_Port.txt");
             IPAddress = file.ReadLine();
             Port = file.ReadLine();
-            RoombaCOM = file.ReadLine();
             //setup primary comms
             client = new Mars_Rover_Comms.TCP.ZClient(IPAddress, Convert.ToInt32(Port));
-            //client = new Mars_Rover_Comms.TCP.ZClient("157.182.43.8", 1111); //Server Room
-            //client = new Mars_Rover_Comms.TCP.ZClient("127.0.0.1", 1111);  //local host: 127.0.0.1
-            //client = new Mars_Rover_Comms.TCP.ZClient("192.168.1.126", 1111); 
             client.PacketReceived += new EventHandler<DataArgs>(client_PacketReceived);
 
             try
@@ -80,61 +56,17 @@ namespace Mars_Rover_RCU
 
                 comms = RCUComms.Instance; //Responsible for sending states back to OCU
 
-                #region Phidgets
-                if (usePhidgets)
-                    //_Phidgets = new PhidgetsController();
-                #endregion
-
-                # region GPS
-                if (useGPS)
-                {
-                    //_GPS = new GPS();
-                    //_GPS.startPort();
-                }
-                #endregion
-
                 #region Maestro
                 if (useMaestro)
                 {
-                    //_Maestro = new Controllers.Maestro(rcuConfig.MaestroConfig);
-                    //kinematics = new Kinematics.Kinematics(1000);
-                }
-
-                #endregion
-
-                #region Arm
-                if (useArm)
-                {
-                    //_Arm = new Controllers.Arm(rcuConfig.ArmConfig);
-                    //_Arm.ConnectArm(5);
-                    //_Arm.InitializeServos();
-                }
-                #endregion
-
-                #region Roomba
-                if (useRoomba)
-                {
-                    Logger.WriteLine("Creating Roomba");
-                    _Roomba = new Roomba(RoombaCOM);
-                }
-                #endregion
-
-                #region MiniMaestro
-                if (useMiniMaestro)
-                {
                     Logger.WriteLine("Creating Maestro");
-                    _MiniMaestro = new MiniMaestro();
+                    _Maestro = new Maestro();
                 }
                 #endregion
 
                 //Tests
-                //_Roomba.powerHeadlights(1);
-                //_Roomba.powerHeadlights(0);
-                //_MiniMaestro.elbowMovementTest();
-                //_MiniMaestro.shoulderMovementTest();
-                //_MiniMaestro.gripperMovementTest();
-                _MiniMaestro.pauseClaw();
-                _MiniMaestro.resetTrigger();
+                //_Maestro.pauseClaw();
+                //_Maestro.resetTrigger();
                 
                 //packet handler - runs in its own thread
                 stateProcessor = new Thread(new ThreadStart(StateProcessorDoWork));
@@ -164,30 +96,9 @@ namespace Mars_Rover_RCU
             if (stateProcessor != null)
                 stateProcessor.Join();
 
-            if (useMaestro /*&& _Maestro != null*/)
-               // _Maestro.Deactivate();
-
-            if (useArm) // Add check that arm object is not null
+           if (useMaestro && _Maestro != null)
             {
-                //Disconnect Arm
-                //_Arm.DisconnectArm();
-                Logger.WriteLine("Disconnected the arm.");
-            }
-
-            if (usePhidgets /*&& _Phidgets != null*/)
-            {
-                //_Phidgets.lossOfSignalOff();
-                //_Phidgets.closePhidgetsController();
-            }
-
-            if (useRoomba && _Roomba != null)
-            {
-                _Roomba.closeRoomba();
-            }
-
-            if (useMiniMaestro && _MiniMaestro != null)
-            {
-                _MiniMaestro.TryToDisconnect();
+                _Maestro.TryToDisconnect();
             }
 
         } //End Main
@@ -197,11 +108,11 @@ namespace Mars_Rover_RCU
         {
             if (client.IsConnected())
             {
-                _Roomba.connected();
+                //Not LOS
             }
             else
             {
-                _Roomba.LOS();
+                //LOS
             }
             try
             {
@@ -231,6 +142,7 @@ namespace Mars_Rover_RCU
                     {
                         if (robotState.DriveState != null)
                         {
+                            /*
                             if (robotState.DriveState.FrontStopArmUp == true && _Roomba.getAutobrake() == false)
                             {
                                 _Roomba.setAutobrake(true);
@@ -282,6 +194,7 @@ namespace Mars_Rover_RCU
                             {
                                 _MiniMaestro.resetLaunch();//F2
                             }
+                            */
                         }
                     }
                     else

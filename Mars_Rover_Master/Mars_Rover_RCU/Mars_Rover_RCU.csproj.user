@@ -12,7 +12,7 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
-    <StartArguments>--config=rcu_config.xml --no_gps --no_arm</StartArguments>
+    <StartArguments>--config=rcu_config.xml</StartArguments>
     <StartWorkingDirectory>
     </StartWorkingDirectory>
     <RemoteDebugEnabled>false</RemoteDebugEnabled>

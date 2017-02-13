@@ -99,16 +99,11 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Components\TurningServo.cs" />
-    <Compile Include="Controllers\MiniMaestro.cs" />
-    <Compile Include="Controllers\Roomba.cs" />
-    <Compile Include="Controllers\GPS.cs" />
     <Compile Include="Controllers\Maestro.cs" />
-    <Compile Include="Controllers\PhidgetsController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Kinematics\Constants.cs" />
     <Compile Include="Kinematics\Kinematics.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Controllers\Arm.cs" />
     <Compile Include="Utilities\Logger.cs" />
   </ItemGroup>
   <ItemGroup>
