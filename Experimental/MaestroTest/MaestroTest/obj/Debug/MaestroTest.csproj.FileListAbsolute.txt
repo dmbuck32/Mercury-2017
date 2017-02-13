@@ -1,0 +1,11 @@
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\bin\Debug\MaestroTest.exe.config
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\obj\Debug\MaestroTest.csprojResolveAssemblyReference.cache
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\bin\Debug\MaestroTest.exe
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\bin\Debug\MaestroTest.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\bin\Debug\UsbWrapper.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\bin\Debug\Usc.dll
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\bin\Debug\UsbWrapper.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\bin\Debug\Usc.pdb
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\bin\Debug\Usc.xml
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\obj\Debug\MaestroTest.exe
+E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\MaestroTest\MaestroTest\obj\Debug\MaestroTest.pdb

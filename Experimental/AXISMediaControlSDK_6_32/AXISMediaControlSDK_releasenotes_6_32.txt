@@ -1,0 +1,591 @@
+﻿
+                         NEW SOFTWARE RELEASE
+                         ====================
+
+
+Products involved: AXIS Media Control
+
+Release date:      November 11, 2013
+
+Release type:      Production
+
+Software version:  6.32
+
+File name(s):      AxisMediaControl.dll
+
+Supported OS:      XP Professional, 2003 Server,
+                   Vista, 2008 Server,
+                   Windows 7, 2012 Server
+                   and Windows 8.
+                   Use latest Service Packs.
+
+Preceding release: 6.31
+
+--------------------------------------------------------------------------------
+
+
+INSTALLATION INSTRUCTIONS
+=========================
+
+Please follow the instructions in readme_AMC_SDK.txt.
+
+--------------------------------------------------------------------------------
+
+
+RELEASE 6.32
+================
+
+Corrections
+============
+C01 Fixed hang when frame-stepping to the end of a file/stream.
+C02 OnNewVideoSize now correctly returns zero width and height for non-video streams.
+C03 Mjpeg sometimes didn't work if the proxy settings in Internet Explorer was changed.
+C04 Name of components are now in English for all languages.
+C05 Fixed an error that RTSP responses was not deleted when not waiting for the RTSP response.
+
+Modifications
+=============
+M01 Calls to FrameStep might be aggregated if made too frequent.
+
+
+RELEASE 6.31
+============
+
+Corrections
+===========
+C01 Fixed problem with unexpected network timeout shortly after recording is started when using RTP unicast/multicast.
+C02 ASF-files containing h264 video does not longer show a initial "green screen" in newer vlc releases.
+C03 File name reflects the correct time when taking snapshot when stream is stopped.
+C04 Fixed problem with wrong textual error messages from ActiveX interface, e.g. "XML document must have a top level element."
+C05 No error when setting playback rate before starting playback.
+C06 AMC_USER_WINDOW_PROPERTY_SHOW_DIMENSIONS does not longer hide the window header. AMC_USER_WINDOW_PROPERTY_NO_HEADER_LINE should be used to hide the window header.
+C07 Support seeking of Edge Storage recordings in Windows Media Player.
+C08 Fixed an error that caused the language dll not to be correctly uninstalled.
+
+New Features
+============
+
+Modifications
+=============
+M01 Improved readability of pixel counter.
+
+
+RELEASE 6.30
+============
+
+Corrections
+===========
+C01 ASF-files including AAC-audio does not longer stutter when played in VLC or uploaded to YouTube.
+C02 AMC now supports H.264 high profile.
+C03 Fixed problem with connecting channels from devices with untrusted certificates with invalid data and/or Common Name.
+C04 Preferred video renderer can now be selected in AMC Control Panel for file playback.
+C05 Corrected problem with G.711 stream in ASF recordings not compatible with the built-in G.711 Wrapper MFT in (Windows Media Foundation).
+C06 A video buffer was to small and could cause a crash when running very high resolutions. This buffer is now correctly sized according to the used resolution.
+C07 TransmitFile now works even if the computer has disabled audio inputs.
+C08 MJPEG over http does not longer stop when the time is decreased on the machine.
+C09 Recording status is now removed also after a network loss.
+C10 AMC no longer crashes on machines with more than 8 logical CPU Cores.
+C11 No latency when pausing/resuming RTSP stream.
+C12 No hanging when locking/unlocking screen using VRM7 on Windows 7.
+C13 No hanging when switching between remote desktop and local login.
+C14 Backward compatibility with AXIS H.264 decoder versions <= 2.1.9.0.
+
+New Features
+============
+F01 Edge Storage streamed playback (seeking/pause).
+F02 Panopsis GUI mode including magnify and overview windows.
+F03 Support for Simplified Chinese, Traditional Chinese, Japanese, French, German, Italian, Spanish and Brazilian Portuguese languages.
+F04 Two new UIMode enumerations: "ptzmap" and "ptzmap-relative" which enables the mini map.
+F05 New property: PTZMapURL specifies from which url the minimap should fetch the images.
+F06 New property: PTZPresetURL can be configured to show PTZ preset shortcuts in context menu and in the mini map.
+F07 New property: Language. Can be set to any of the supported language codes.
+F08 Support for Chinese, Japanese, French, German, Italian, Spanish and Brazilian Portuguese languages.
+F09 New metadata capture flag (RTP Source filter): METADATA_FLAG_FORCED_START. Forces push of metadata samples with yet unknown times (faster stream start)
+F10 Pixel counter menu item can be removed from the context menu by using the ToolbarConfiguration property ("-pixcount").
+F11 Settings menu item can be removed from the context menu by using the ToolbarConfiguration property ("-settings").
+F12 New user object property: USER_OBJECT_PROPERTY_TRANSPARENCY.
+F13 New property: FocusWindowMode can be set to allow the user to specify a focus window.
+F14 Forward frame stepping supported for streamed recordings.
+F15 New API method: FrameStep
+F16 RTP/RTSP Source Filter redesigned.
+F17 Proxy support for http/https.
+F18 New method: SetProxy. Specifies the proxy used for all http/https connections.
+
+
+Modifications
+=============
+M01 VMR9 (Video Mixing Renderer 9) is now used as default.
+M02 Changed meaning for reserved parameter in SetAdditionalMediaSource API method. The fifth parameter can now be used to specify HTTP port for media source URL.
+M03 New appearance for the message window.
+M04 If the parameter "flags" in StartRecordMedia is set to 0, the control panel settings, e.g recording limit features, will be used.
+M05 Improved mouse wheel zoom.
+M06 UserObject: Left-mouse-button click is now used to add points to Polygon/Polyline/DirectionalLine primitives.
+M07 UserObject: Polygon/Polyline/DirectionalLine/Ellipse is now moved by dragging the shape bounding box (visible when mouse hover).
+M08 Improved UserObject interaction, e.g. Video Motion Detection 2.1 configuration, to make it easier for the user to move and modify overlapping objects.
+
+
+
+
+RELEASE 6.0.6.9
+================
+
+Corrections
+===========
+C01 MPEG-4/H264 streaming now works in windows 8.
+C02 Disabled recording buffer to avoid problems with antivirus software.
+
+
+
+RELEASE 6.0.6.7-2
+================
+
+Corrections
+===========
+C01 Prevented a potential deadlock in RTP Source.
+C02 Fixed problem with undetected network loss when streaming over RTP.
+
+
+
+RELEASE 6.0.6.6
+================
+
+Corrections
+===========
+C01 A video buffer was to small and could cause a crash when running very high resolutions. This buffer is now correctly sized according to the used resolution.
+
+Modifications
+=============
+M01 Changed meaning for reserved parameter in SetAdditionalMediaSource API method. The fifth parameter can now be used to specify HTTP port for media source URL.
+
+
+
+RELEASE 6.0.6.4
+================
+
+Corrections
+===========
+C01 AMC is now more tolerant for invalid ptz parameter input.
+C02 Fixed resource leak in HTTP-audio component.
+C03 Fixed issue with image display size calculation when changing video source, e.g. from 16:9 format to 4:3.
+C04 Pixel counter is now updated correctly when changing video source (resolution).
+C05 Volume slider (receive) works also when NOT setting AudioConfigURL.
+C06 Fixed problem with parsing PTZ status messages in metadata stream.
+C07 The MPEG-4 stream stored in ASF container is now compatible with Windows 7 decoder.
+C08 The signed product name of some sub modules has been fixed.
+C09 MJPEG Decoder (RTSP): Fixed "COM Surrogate error" problem generating thumbnails in Windows Explorer.
+C10 MJPEG Decoder (RTSP): Decoder output full range YUV also for JPEG-411.
+C11 Fixed memory leak when reading from registry.
+C12 Fixed problems with running AMC in Power Point presentation.
+C13 No video flickering when resizing (DShow)
+C14 AMC only releases mouse capture when it is needed.
+C15 AMC only sets/restores cursor icon when it is needed.
+C16 The CurrentPosition(64) property works with audio-only media.
+C17 Prevent display of outdated cached image data ("Video stopped").
+C18 File playback will start from beginning of playing range if replayed after playback has finished.
+C19 AMC snapshot functions will generate an error instead of using an old cached image when no up-to-date image data is available.
+C20 RTP Source Filter handles meta data packages with very different timestamps.
+C21 Added RTCP support when using the axsdp:// protocol.
+C22 MPEG-4 and H264 timestamps now has a correct duration. This fixes a duration problem when writing avi-files.
+C23 Handling playback failure when playing a file from a disconnecting network share.
+C24 Only video-stopped overlay is shown when stopped in full screen.
+C25 Full screen only loose focus when using PTZ controls.
+C26 UserWndChanged event will not be triggered when moving the pixel counter window.
+C27 The server validation done by rtpsrcfilter when using digest authentication (encrypted) failed if qop (quality of protection) wasn't enabled in the server.
+C28 AMC can now be disposed or stopped immediately during an attempt to open the transmit channel when another client is already transmitting.
+C29 CurrentPosition(64) property now correctly reflects the stream position after the end of stream/file has been reached.
+C30 Corrected problem with G.711 stream in ASF recordings not compatible with the built-in G.711 Wrapper MFT in (Windows Media Foundation).
+C31 AMC can no receive UDP packages that is larger than 1500bytes.
+
+New Features
+============
+F01 Always multicast, axsdp, is now supported.
+F02 AMC uses Axis decoders when playing ASF or MKV files.
+F03 Still image ('Video stopped') is shown when an ASF/MKV-file stream is stopped.
+F04 Snapshots in ASF/MKV-file playback.
+F05 Improved responsiveness when resizing.
+F06 New API Event: OnNewVideoSize
+F07 Duration can be retrieved for audio-only files.
+F08 Receive and Transmit volume level can be set to -1 (undefined) via API. This is useful in design mode when AMC should preserve the current system volume.
+F09 OnNewImage events are sent regularly also for audio-only media.
+F10 Increased responsivity of CurrentPosition64, Volume and AudioTransmitVolume API property when set very frequently.
+F11 New property: Duration64
+F12 Error message (AXIS_E_SNAPSHOT) is sent when SaveCurrentImage fails.
+F13 Enabled RTSP-streaming with isolated (non-registered) decoders.
+F14 Username and password can now be embedded in the url: axrtsp://username:password@server/axis-media/media.amp
+F15 Irrelevant meta data samples are discarded in overlay filter to achieve better synchronization.
+F16 AMC supports isolation (registration-free installation).
+F17 File playback: AMC sends/shows error message (AXIS_E_NO_AUDIO_HW) if audio could not be rendered due to missing audio hardware.
+F18 Support for streaming audio from secondary audio input on camera/encoder.
+F19 H264 Config Header is now injected before every IDR-frame in ASF-recordings. This makes it possible to start playing the asf-file from another position than the start of the file.
+F20 Added support for using Enhanced Video Renderer (Windows 7 or above).
+F21 Most read/write properties in API are now included in the property map. For example, this makes property persistence in Visual Studio design mode possible.
+F22 Added support for using Enhanced Video Renderer (Windows 7 or above).
+
+Modifications
+=============
+M01 Removed extra HTTP request to grab credentials from IE when running non-HTTP RTP. This only worked for basic authentication and could impact performance and stability.
+M02 The talk/listen tooltip has been changed to "Click to talk/Click to listen" in toggle mode and "Push to talk" in Push to talk mode.
+M03 Duration property can be retrieved directly after status has changed to playing (+playing,-opening).
+M04 Receive and transmit volumes are -1 (undefined) until synchronized with system levels.
+M05 Cached image data will be discarded when a new file/stream successfully started playing.
+M06 Most read/write properties in API are now included in the property map. For example, this makes property persistence in Visual Studio design mode possible.
+M07 New property: VideoRenderer. Added global video renderer property to replace all payload specific variants and to support this functionality also for file playback.
+M08 Ability to browse error/notification messages.
+M09 SaveCurrentImage with empty string as filename parameter will now save the snapshot to the location specified in AMC Control Panel.
+
+
+
+
+Corrections
+===========
+C01 Corrected problem with G.711 stream in ASF recordings not compatible with the built-in G.711 Wrapper MFT in (Windows Media Foundation).
+C02 AMC can no receive UDP packages that is larger than 1500bytes.
+C03 Decreased metadata stream startup time.
+C04 TransmitFile now works even if the computer has disabled audio inputs.
+
+New Features
+============
+F01 Panopsis GUI mode including magnify and overview windows.
+F02 New property: PTZPresetURL. AMC can be configured to show PTZ preset shortcuts in context menu and in overview window (Panopsis).
+F03 Support for Chinese, Japanese, French, German, Italian, Spanish and Brazilian Portuguese languages.
+
+Modifications
+=============
+M01 Changed meaning for reserved parameter in SetAdditionalMediaSource API method. The fifth parameter can now be used to specify HTTP port for media source URL.
+
+
+
+
+RELEASE 6.0.6.0
+================
+
+Corrections
+===========
+C01 AMC is now more tolerant for invalid ptz parameter input.
+C02 Fixed resource leak in HTTP-audio component.
+C03 Fixed issue with image display size calculation when changing video source, e.g. from 16:9 format to 4:3.
+C04 Pixel counter is now updated correctly when changing video source (resolution).
+C05 Volume slider (receive) works also when NOT setting AudioConfigURL.
+C06 Fixed problem with parsing PTZ status messages in metadata stream.
+C07 The MPEG-4 stream stored in ASF container is now compatible with Windows 7 decoder.
+C08 The signed product name of some sub modules has been fixed.
+C09 MJPEG Decoder (RTSP): Fixed "COM Surrogate error" problem generating thumbnails in Windows Explorer.
+C10 MJPEG Decoder (RTSP): Decoder output full range YUV also for JPEG-411.
+C11 Fixed memory leak when reading from registry.
+C12 Fixed problems with running AMC in Power Point presentation.
+C13 No video flickering when resizing (DShow)
+C14 AMC only releases mouse capture when it is needed.
+C15 AMC only sets/restores cursor icon when it is needed.
+C16 The CurrentPosition(64) property works with audio-only media.
+C17 Prevent display of outdated cached image data ("Video stopped").
+C18 File playback will start from beginning of playing range if replayed after playback has finished.
+C19 AMC snapshot functions will generate an error instead of using an old cached image when no up-to-date image data is available.
+C20 RTP Source Filter handles meta data packages with very different timestamps.
+C21 Added RTCP support when using the axsdp:// protocol.
+C22 MPEG-4 and H264 timestamps now has a correct duration. This fixes a duration problem when writing avi-files.
+C23 Handling playback failure when playing a file from a disconnecting network share.
+C24 Only video-stopped overlay is shown when stopped in full screen.
+C25 Full screen only loose focus when using PTZ controls.
+C26 UserWndChanged event will not be triggered when moving the pixel counter window.
+C27 The server validation done by rtpsrcfilter when using digest authentication (encrypted) failed if qop (quality of protection) wasn't enabled in the server.
+C28 AMC can now be disposed or stopped immediately during an attempt to open the transmit channel when another client is already transmitting.
+C29 CurrentPosition(64) property now correctly reflects the stream position after the end of stream/file has been reached.
+
+New Features
+============
+F01 Always multicast, axsdp, is now supported.
+F02 AMC uses Axis decoders when playing ASF or MKV files.
+F03 Still image ('Video stopped') is shown when an ASF/MKV-file stream is stopped.
+F04 Snapshots in ASF/MKV-file playback.
+F05 Improved responsiveness when resizing.
+F06 New API Event: OnNewVideoSize
+F07 Duration can be retrieved for audio-only files.
+F08 Receive and Transmit volume level can be set to -1 (undefined) via API. This is useful in design mode when AMC should preserve the current system volume.
+F09 OnNewImage events are sent regularly also for audio-only media.
+F10 Increased responsivity of CurrentPosition64, Volume and AudioTransmitVolume API property when set very frequently.
+F11 New property: Duration64
+F12 Error message (AXIS_E_SNAPSHOT) is sent when SaveCurrentImage fails.
+F13 Enabled RTSP-streaming with isolated (non-registered) decoders.
+F14 Username and password can now be embedded in the url: axrtsp://username:password@server/axis-media/media.amp
+F15 Irrelevant meta data samples are discarded in overlay filter to achieve better synchronization.
+F16 AMC supports isolation (registration-free installation).
+F17 File playback: AMC sends/shows error message (AXIS_E_NO_AUDIO_HW) if audio could not be rendered due to missing audio hardware.
+F18 Support for streaming audio from secondary audio input on camera/encoder.
+F19 H264 Config Header is now injected before every IDR-frame in ASF-recordings. This makes it possible to start playing the asf-file from another position than the start of the file.
+F20 Added support for using Enhanced Video Renderer (Windows 7 or above).
+F21 Most read/write properties in API are now included in the property map. For example, this makes property persistence in Visual Studio design mode possible.
+F22 Added support for using Enhanced Video Renderer (Windows 7 or above).
+
+Modifications
+=============
+M01 Removed extra HTTP request to grab credentials from IE when running non-HTTP RTP. This only worked for basic authentication and could impact performance and stability.
+M02 The talk/listen tooltip has been changed to "Click to talk/Click to listen" in toggle mode and "Push to talk" in Push to talk mode.
+M03 Duration property can be retrieved directly after status has changed to playing (+playing,-opening).
+M04 Receive and transmit volumes are -1 (undefined) until synchronized with system levels.
+M05 Cached image data will be discarded when a new file/stream successfully started playing.
+M06 Most read/write properties in API are now included in the property map. For example, this makes property persistence in Visual Studio design mode possible.
+M07 New property: VideoRenderer. Added global video renderer property to replace all payload specific variants and to support this functionality also for file playback.
+M08 Ability to browse error/notification messages.
+
+
+RELEASE 5.9.9.0
+===============
+
+Corrections
+===========
+C01 Motion Detection configuration pane is now operational when no video stream is rendered.
+C02 Fixed problem with volume sliders (introduced in version 5.6.4.0).
+C03 Fixed problem with Motion JPEG over RTP/RTSP using odd resolutions, i.e. 800x450.
+C04 Enable/disable audio in default stream profiles now works.
+C05 Fixed problem with remaining TCP connections when transmitting audio.
+C06 Fixed problems with toolbar and statusbar when control i scaled.
+C07 Fixed GDI resource leak.
+C08 The client ports selection, when using rtp unicast, is now making sure that the ports are unused before binding them.
+C09 Fixed problem with adding/removing points on user objects when running RTSP.
+C10 Fixed problem with disappearing ptz-control overlays when using small viewing size compared to dimensions of the video stream (RTSP).
+C11 Resolved crash using full-duplex multipart audio when restarting transmit stream.
+C12 Fixed problem with losing receive audio when starting transmit stream using full duplex + multipart-message type (reproducible only with FW < 5.50).
+C13 UserWindows are unselected when setting the not-selectable flag.
+C14 Parsing of RTSP responses after a RTSP SET_PARAMETER (renew stream) has no been fixed.
+C15 Fixed problem connecting to multiple source when some RTSP sessions are ignored due to video or audio stream limits.
+C16 Added the possibility to map the audio buttons in the AMC toolbar to Joystick buttons.
+C17 Added the possibility to map recording action to Joystick buttons.
+C18 AMC user object lines can be changed when zero length.
+C19 Fixed problem with RTP source failing to receive RTSP::PAUSE response after a number of pause/resume operations. AMC reported "Server did not respond" after moving AMC between primary and secondary monitor many times.
+C20 Prevented AMC of opening active-movie window. Instead an error message is sent when this is unavoidable.
+C21 Prevented RTP packet buffers to fill up and block sample generation when some pins are unconnected (RTSP and RTSP over HTTP)
+C22 Fixed problem with popup-window disappearing when scrolling parent window when AMC is stopped.
+C23 AMC aborts relative ptz operation when control focus is lost, e.g. when login dialog pops up.
+C24 Fixed problem with playback of some file types (WMV).
+
+New Features
+============
+F01 OnNewImage events are now triggered also for video file playback.
+F02 Added possibility to pause RTSP streams with fixed media duration - not live streams.
+F03 Properties to specify playing range within a stream/file.
+F04 New property: CurrentPosition64
+F05 New property: StartPosition64
+F06 New property: StopPosition64
+F07 New method: SetPositions32
+F08 Seeking in RTSP streams with fixed media duration (requires RTP Source filter >= 2.6.0.0)
+F09 Added support for recording audio only to asf.
+F10 ONVIF meta data stream support.
+F11 Recording can now be started and stopped from the context menu.
+F12 Support for transmitting G.711 audio in 16 kHz.
+F13 New property: AudioOnlyRTPDelay - RTP buffer size when using only audio.
+F14 New property: EnableOverlays - enables or disables all overlay functionality regardless of payload type.
+F15 A pixel counter can now be enabled via AMC context menu.
+F16 Support for parsing and overlaying VideoMotionDetection ONVIF meta stream events.
+F17 ONVIF meta data overlays can now be oriented according to the rotation and mirror properties of the video stream.
+F18 Added line shadow option to UserObject API.
+F19 TogglePause method can be called instead of Play to start a stream in paused state, rendering the first image.
+F20 New property: PlaybackRate.
+F21 UserWindows does not show header line or resize corner when not-selectable flag is set.
+F22 Added SELECT flag to User Windows to select a window using the API.
+F23 Improved DirectX version check.
+F24 Added support for multicast when using IPv6 in AMC.
+F25 Basic support for ONVIF Video Analytics metadata visualization.
+F26 New event: OnKeyDown
+F27 New event: OnKeyUp
+F28 SynchronizeUsingRTCP property can be change during streaming.
+
+Modifications
+=============
+M01 Simplified RTP buffer settings in Control Panel (buffer settings are now payload independent).
+M02 Added new property page to Control Panel, 'Streaming', containing RTSP/RTP settings.
+M03 Simplified video rendering options in Control Panel (video rendering options are now payload independent).
+M04 Added new property page to Control Panel, 'Video'.
+M05 The layout of the context menu now correlates to the toolbar configuration, i.e. there is no snapshot menu option if no snapshot button has been configured.
+M06 ADTS header is no longer added to the AAC samples in the ASF file. AAC audio stream will now be playable in Windows 7 and compatible with some third-party audio codecs.
+M07 RTSP OPTIONS is now used for keep-alive. This prevents stream timeout if RTCP sender reports cannot reach the camera.
+M08 Removed support for audio transmit using HTTP-multicast (server support has been removed from FW 5.xx). Singlepart will be used always regardless of message type setting used by the encoder.
+M09 User Windows are now selected upon creation.
+M10 Changed error code for warning message: "Unable to find preferred video renderer. Switching to..." (from 0x80040302 to 0x0).
+M11 Visual event notifications are shown for a fixed duration, e.g. cross line events are shown for at least 1 sec.
+M12 RTP Source allow loading with no streams/output pins. Application should handle this scenario.
+M13 AMC will send error message (AXIS_E_MEDIA_FAIL) when successfully loaded RTP Source but when no streams are provided.
+
+RELEASE 5.6.2.4
+===============
+
+Corrections
+===========
+C01 MJPEG recording is now working if recording is started when video window is hidden.
+C03 Fixed problem with hanging AMC related to "Input Volume Msg Wnd" not responding.
+C04 AMC now restarts the stream after the screen has been locked/unlocked.
+C05 Fixed sometimes occurring hang when starting a recording while using the RTSP/RTP protocol.
+C06 Fixed problem with AMC freezes when the receive buffer is full (RTP). AMC now always stops when this buffer is full.
+C07 The audio stream was not started correctly when running audio without video. This has now been fixed.
+C08 Fixed problem with trashed image in H.264 using image widths not dividable by 16 (i.e. 450x800).
+C09 Improved volume slider responsiveness.
+
+New Features
+============
+F01 Motion JPEG over RTP/RTSP
+F02 Added possibility to turn of RTCP synchronization using API
+F03 User Object API/framework added - allows application/user to define geometric primitives on top of video canvas.
+F05 New property: BackgroundColor
+F06 New property: MJPEGVideoRenderer
+F07 New property: MJPEGRTPDelay
+F08 New property: MJPEGRTPDelayAudio
+F09 New method: BeginUserObject
+F10 New method: EndUserObject
+F11 New method: SetUserObject
+F12 New method: GetUserObject
+F13 New method: RemoveUserObject
+F14 Added AMC_USER_WINDOW_PROPERTY_MAINTAIN_ASPECT_RATIO=8 property flag to user window API, which constraints resizing of the window to the current aspect ratio.
+F15 Motion detection windows displays the window id together with the name.
+F16 Added error message when saving Motion Detection configuration failed.
+F17 Added option in API/Control Panel to enable/disable deblocking filter for MPEG-4.
+F18 Added option in API/Control Panel to specify decoding quality for H.264.
+F19 Added option in API/Control Panel to allow frame dropping in decoder (default) for MPEG-4/H.264.
+F20 Added possibility to select audio input source (default: Microphone) from Control Panel.
+F21 New options added to MPEG4VideoDecodingMode property.
+F22 New options added to H264VideoDecodingMode property.
+F23 MaintainAspectRatio property now also applies to file playback
+F24 Snapshots are aspect ratio corrected.
+F25 Added NOT_SELECTABLE flag to User Windows to prevent user from selecting a particular window.
+F26 Support for receiving video and audio from different RTSP servers.
+F27 New method: SetAdditionalMediaSource
+
+Modifications
+=============
+M01 Added a possibility to use a very small playout buffer (small delay) when running MJPEG ('Min'). 'Medium' is now equal to the old 'Min' option (stil default).
+M02 The RTP buffer max size has been reduced.
+M03 Disabled transparency effect on Motion Detection windows due to performance issues.
+M04 AMC requires version 2.1.1.0 or higher of the MPEG-4 decoder.
+M05 Fullscreen background color is now black on default.
+M06 Audio toggle/push/secrecy buttons now unmutes the designated audio channel.
+M07 Changed selection z-order of User Windows. User windows with high index lies on top of windows with lower index (both in regards to selection priority and drawing order)
+M08 Payload dependent properties, i.e. Advanced Video rendering, are now correctly set when MediaType property are unset (there is no reason to explicity specify MediaType when using RTSP/RTP)
+M09 Audio clock is now used for media stream synchronization instead of CPU clock as before.
+M10 AudioConfigURL property is no longer mandatory to enable audio streaming in AMC. Default configuration is receive-only.
+M11 AMC SDK does not longer share registry setting with AMC Embedded.
+
+RELEASE 5.4.17.11
+================
+
+Corrections
+===========
+C01 Fixed problem with Motion Detection using multiple video sources.
+C02 The red PTZ vector is now working after a play/stop in MPEG-4.
+C03 Fixed problem with missing error messages in motion detection configuration.
+C04 Fixed audio quality problem when transmitting G726 24kbits/s.
+C05 General improvements for audio transmission.
+C06 Fixed fullscreen problem when using same resolution on desktop and camera.
+C07 Fixed an error when encoding the IPv6 URL.
+C08 Fixed problem with recording MPEG-4 in Vista + protected mode on.
+C09 Fixed an issue where stop would sometimes hang for about 20 seconds.
+C10 A couple of problems using joystick have been fixed.
+C11 Fixed "Windowless ActiveX controls are not supported" error on Vista.
+C12 Compatible with Microsoft Visual Studio 2008 on Windows Vista.
+C13 Fixed crash when trying to receive AAC audio over http without having AAC decoder installed.
+
+New Features
+============
+F01 RTCP support
+F02 Audio transmission over HTTPS
+F03 Added possibility to configure mouse wheel sensitivity when zooming.
+F04 The error message "Could not write to recording file" will be shown if the disk is full.
+F05 Enable Overlays checkbox is available in Mpeg4 and H264.
+F06 Ctrl+Shift+S show statistics from AMC in separate window (AMC must have focus).
+F07 New property: MPEG4RTPDelay 
+F08 New property: MPEG4RTPDelayAudio 
+F09 New property: H264RTPDelay 
+F10 New property: H264RTPDelayAudio 
+F11 New method: GetVersionPart 
+F12 New method: SetUserWindow 
+F13 New method: GetUserWindow 
+F14 New method: RemoveUserWindow 
+F15 New event: OnUserWindowChanged 
+
+Modifications
+=============
+M01 Changed "No Video!" to "Video stopped!" to avoid misinterpretation.
+M02 AxisMediaControl.dll now uses version 8.0 of Microsoft C++ run-time libary (static link).
+
+
+RELEASE 5.4.8.0
+===============
+
+Corrections
+===========
+
+New Features
+============
+F01 Support for H.264
+
+Modifications
+=============
+M03 Added a configurable delay buffer to be able to get a better playback quality on slower networks.
+
+
+RELEASE 5.2.13.12
+=================
+
+Corrections
+===========
+C01 Corrected fullscreen problem when using same resolution on desktop and camera.
+C02 Fixed Joystick problem on Internet Explorer 7.
+
+Modifications
+=============
+M01 Improved reconnection stability.
+
+
+RELEASE 5.2.13.3
+================
+
+Corrections
+===========
+C01 Using mouse wheel for zooming in and out should now work properly.
+
+Modifications
+=============
+M01 MD configuration now handles "���" and other "unsafe characters".
+
+
+RELEASE 5.2.12.0
+================
+
+Corrections
+===========
+C01 Fullscreen on secondary monitor fixed.
+C02 Fixed scaling problem for overlays in MPEG-4.
+
+New Features
+============
+F01 Overlay functionality is also supported for the VMR7 renderer (Advanced Rendering disabled in MPEG-4).
+
+Modifications
+=============
+M01 The video stream is now centered when the viewing window is larger than video dimensions.
+
+
+RELEASE 5.2.11.0
+================
+
+New Features
+=============
+F01  AMC core functionality rewritten for higher stability and performance.
+F02  Supports digest authentication.
+F03  Middle button click now zooms out.
+
+Modifications
+=============
+M01  Snapshot and recording folders are no longer opened per default.
+M02  Windowless rendering for MPEG-4 and other DirectShow based media types
+M03  It is now possible to take snapshot and enter/exit fullscreen while stopped.
+
+
+Known limitations
+=================
+
+L01  Trying to play MPEG-4/H.264 video on some netbooks with Windows 7 may freeze computer and require reboot.
+Workaround: Enable 'Use Advanced Video Rendering' or disable overlay support in the 'Video' tab of AMC Control Panel.
+
+L02  The client may stop displaying the MPEG-4/H.264 video stream after the PC has been locked. 
+Workaround: Reload the Live View page.
+
+L03  Taking a snapshot or recording a stream when having the option "Open folder in backgound" enabled will cause the browser to lose focus and joysticks to give up control over AMC.
+Workaround: Disable option "Open folder in backgound" in AMC Control Panel.
