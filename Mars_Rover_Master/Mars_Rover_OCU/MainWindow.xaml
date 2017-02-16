@@ -404,7 +404,16 @@
             <Label Content="Rear Sensor:" Margin="0,0,326,95" Width="76" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom" Visibility="Hidden"/>
             <Label Content="Left Sensor:" Margin="0,0,547.8,426" Width="72" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
             <Label Content="Right Sensor:" Margin="0,0,31,426" Width="82" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
-            <Image x:Name="create2_png" Margin="106,86,103.8,146" Source="Resources/create2.png" Stretch="Fill"/>
+            <Image x:Name="image" HorizontalAlignment="Left" Height="896" VerticalAlignment="Top" Width="440" Source="Resources/Robot2.PNG" Margin="106,159,0,-335" RenderTransformOrigin="0.5,0.5">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90.341"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
         </Grid>
         <Image x:Name="wv_png" Margin="40,40,988,646" Stretch="Fill" Source="Resources/wv.png"/>
 
