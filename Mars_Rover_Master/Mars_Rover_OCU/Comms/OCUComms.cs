@@ -119,10 +119,10 @@ namespace Mars_Rover_OCU.Comms
         private String _lng = "null";
         private String _heading = "null";
 
-        private short LeftSensor = 0; // global sensors-- info from rcu
-        private short RightSensor = 0;
-        private short FrontLeftSensor = 0;
-        private short FrontRightSensor = 0;
+        private string LeftSensor; // global sensors-- info from rcu
+        private string RightSensor;
+        private string FrontSensor;
+        private string RearSensor;
         private short barLeftSensor = 0;
         private short barFrontLeftSensor = 0;
         private short barCenterLeftSensor = 0;
@@ -738,14 +738,14 @@ namespace Mars_Rover_OCU.Comms
                {                                              
                 Mars_Rover_Comms.RobotReturnState robotState = stateQueue.Dequeue(tokenSource.Token);
 
-                _lat = robotState.PositionReturnState.Lat;
-                _lng = robotState.PositionReturnState.Lon;
-                _heading = robotState.PositionReturnState.Heading;
+                //_lat = robotState.PositionReturnState.Lat;
+                //_lng = robotState.PositionReturnState.Lon;
+                //_heading = robotState.PositionReturnState.Heading;
 
-                    LeftSensor = robotState.TemperatureReturnState.LeftIRSensor;
-                    RightSensor = robotState.TemperatureReturnState.RightIRSensor;
-                    FrontLeftSensor = robotState.TemperatureReturnState.FrontLeftIRSensor;
-                    FrontRightSensor = robotState.TemperatureReturnState.FrontRightIRSensor;
+                    LeftSensor = robotState.PositionReturnState.leftDistance;
+                    RightSensor = robotState.PositionReturnState.rightDistance;
+                    FrontSensor = robotState.PositionReturnState.frontDistance;
+                    RearSensor = robotState.PositionReturnState.frontDistance;
                     barLeftSensor = robotState.TemperatureReturnState.barLeftIRSensor;
                     barFrontLeftSensor = robotState.TemperatureReturnState.barFrontLeftIRSensor;
                     barCenterLeftSensor = robotState.TemperatureReturnState.barCenterLeftIRSensor;
@@ -801,24 +801,24 @@ namespace Mars_Rover_OCU.Comms
             return _heading;
         }
 
-        public short getLeftSensor()
+        public string getLeftSensor()
         {
             return LeftSensor;
         }
            
-        public short getRightSensor()
+        public string getRightSensor()
         {
             return RightSensor;
         }
 
-        public short getFrontLeftSensor()
+        public string getFrontLeftSensor()
         {
-            return FrontLeftSensor;
+            return FrontSensor;
         }
 
-        public short getFrontRightSensor()
+        public string getFrontRightSensor()
         {
-            return FrontRightSensor;           
+            return RearSensor;           
         }
 
         public short getBarLeftSensor()

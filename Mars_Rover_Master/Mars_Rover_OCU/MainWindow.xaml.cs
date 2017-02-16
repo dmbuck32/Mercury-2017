@@ -398,10 +398,10 @@ namespace Mars_Rover_OCU
             {
                 this.Dispatcher.Invoke((Action)(() =>
                 {
-                    LeftSensor.Content = comms.getLeftSensor().ToString();
-                    RightSensor.Content = comms.getRightSensor().ToString();
-                    FrontLeftSensor.Content = comms.getFrontLeftSensor().ToString();
-                    FrontRightSensor.Content = comms.getFrontRightSensor().ToString();
+                    LeftSensor.Content = comms.getLeftSensor();
+                    RightSensor.Content = comms.getRightSensor();
+                    FrontSensor.Content = comms.getFrontLeftSensor();
+                    RearSensor.Content = comms.getFrontRightSensor();
                     
 
                     SpeedSensitivity.Text = ControllerSettings.Default.SpeedSensitivity.ToString();

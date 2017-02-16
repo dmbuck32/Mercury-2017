@@ -75,6 +75,19 @@ namespace Mars_Rover_RCU.Comms
                     returnState.ArmReturnState.ArmFeedback = 1;
                     returnState.ErrorReturnState.ErrorCode = 0xF;
                     returnState.TemperatureReturnState.Temperature = 20;
+
+                    returnState.PositionReturnState.frontDistance = Program.sensorData[0, 0];
+                    returnState.PositionReturnState.frontAmbient = Program.sensorData[0, 1];
+
+                    returnState.PositionReturnState.rearDistance = Program.sensorData[1, 0];
+                    returnState.PositionReturnState.rearAmbient = Program.sensorData[1, 1];
+
+                    returnState.PositionReturnState.leftDistance = Program.sensorData[2, 0];
+                    returnState.PositionReturnState.leftAmbient = Program.sensorData[2, 1];
+
+                    returnState.PositionReturnState.rightDistance = Program.sensorData[3, 0];
+                    returnState.PositionReturnState.rightAmbient = Program.sensorData[3, 1];
+
                     /*
                     if (Program._Roomba != null)
                     {
