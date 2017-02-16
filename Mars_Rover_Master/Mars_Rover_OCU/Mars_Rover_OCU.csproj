@@ -205,7 +205,9 @@
       <Name>Utility</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Robot2.PNG" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Car.png" />
   </ItemGroup>
