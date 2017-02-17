@@ -1,6 +1,0 @@
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\Arduino_LED\Arduino_LED\Arduino_LED_Client\bin\Release\Arduino_LED_Client.exe.config
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\Arduino_LED\Arduino_LED\Arduino_LED_Client\bin\Release\Arduino_LED_Client.exe
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\Arduino_LED\Arduino_LED\Arduino_LED_Client\bin\Release\Arduino_LED_Client.pdb
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\Arduino_LED\Arduino_LED\Arduino_LED_Client\obj\Release\Arduino_LED_Client.csprojResolveAssemblyReference.cache
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\Arduino_LED\Arduino_LED\Arduino_LED_Client\obj\Release\Arduino_LED_Client.exe
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\Arduino_LED\Arduino_LED\Arduino_LED_Client\obj\Release\Arduino_LED_Client.pdb

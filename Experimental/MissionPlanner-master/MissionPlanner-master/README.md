@@ -1,4 +1,0 @@
-MissionPlanner
-==============
-
-Mission Planner
