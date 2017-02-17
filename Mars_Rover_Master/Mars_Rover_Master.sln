@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mars_Rover_Comms", "Mars_Rover_Comms\Mars_Rover_Comms.csproj", "{ABFF3B63-5630-42CD-9299-52F712C99537}"
 EndProject
@@ -13,15 +13,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mars_Rover_Configuration", "Mars_Rover_Configuration\Mars_Rover_Configuration.csproj", "{13826DCF-28CA-498C-A410-E9F797AD957E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mars_Rover_RCU", "Mars_Rover_RCU\Mars_Rover_RCU.csproj", "{86153CA3-DF49-41C0-ABEC-EAF1CCAB5C58}"
-	ProjectSection(ProjectDependencies) = postProject
-		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D} = {7F7994CE-823F-4A04-BBEA-D0A3808FF56D}
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jrk", "..\Experimental\pololu-usb-sdk\Jrk\Jrk\Jrk.csproj", "{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeoUtility", "..\Experimental\MissionPlanner-master\MissionPlanner-master\ExtLibs\GeoUtility\GeoUtility.csproj", "{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +48,6 @@ Global
 		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7F7994CE-823F-4A04-BBEA-D0A3808FF56D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -49,15 +49,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BlockingQueue.cs" />
-    <Compile Include="PointLatLngAlt.cs" />
     <Compile Include="UpdateQueue.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Experimental\MissionPlanner-master\MissionPlanner-master\ExtLibs\GeoUtility\GeoUtility.csproj">
-      <Project>{7f7994ce-823f-4a04-bbea-d0a3808ff56d}</Project>
-      <Name>GeoUtility</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

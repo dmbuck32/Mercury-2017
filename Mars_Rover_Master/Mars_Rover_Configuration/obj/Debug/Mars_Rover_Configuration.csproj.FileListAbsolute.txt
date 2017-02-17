@@ -250,3 +250,13 @@ C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configu
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
