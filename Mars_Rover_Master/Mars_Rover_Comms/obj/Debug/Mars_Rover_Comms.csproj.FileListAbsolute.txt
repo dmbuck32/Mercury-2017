@@ -207,12 +207,7 @@ C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\b
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Mars_Rover_Comms.dll
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Mars_Rover_Comms.pdb
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Utility.dll
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\ProjNet.dll
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\GMap.NET.Core.dll
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\GeoUtility.dll
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Utility.pdb
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\GMap.NET.Core.xml
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\GeoUtility.pdb
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.csprojResolveAssemblyReference.cache
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.dll
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.pdb

@@ -158,10 +158,6 @@ C:\Users\David-Michael\Documents\GitHub\Mercury\Mars_Rover_Master\Utility\obj\De
 C:\Users\David-Michael\Documents\GitHub\Mercury\Mars_Rover_Master\Utility\obj\Debug\Utility.pdb
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\bin\Debug\Utility.dll
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\bin\Debug\Utility.pdb
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\bin\Debug\GeoUtility.dll
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\bin\Debug\GMap.NET.Core.dll
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\bin\Debug\ProjNet.dll
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\bin\Debug\GeoUtility.pdb
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\bin\Debug\GMap.NET.Core.xml
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\obj\Debug\Utility.csprojResolveAssemblyReference.cache
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Utility\obj\Debug\Utility.dll

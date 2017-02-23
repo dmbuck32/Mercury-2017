@@ -740,8 +740,6 @@ C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\Mars_Rover_OCU.exe
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\Mars_Rover_OCU.pdb
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\GeoUtility.dll
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\GMap.NET.Core.dll
-C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\GMap.NET.WindowsForms.dll
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\Mars_Rover_Comms.dll
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\ProjNet.dll
 C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\System.Reactive.Core.dll
@@ -801,3 +799,4 @@ C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Debug\M
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Debug\Mars_Rover_OCU.g.resources
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Debug\Mars_Rover_OCU.Properties.Resources.resources
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Debug\Mars_Rover_OCU.csproj.GenerateResource.Cache
+C:\Users\senior_design\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\Microsoft.Xna.Framework.dll
