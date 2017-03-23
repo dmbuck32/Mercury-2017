@@ -24,9 +24,6 @@ resolution of 0.32 lux/count, the light level is therefore
 
 The range readings are in units of mm. */
 
-#include <Wire.h>
-
-
 void Distance_Init()
 {
   pinMode(7,OUTPUT);
