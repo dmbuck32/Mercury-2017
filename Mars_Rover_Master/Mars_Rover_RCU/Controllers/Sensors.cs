@@ -13,12 +13,12 @@ namespace Mars_Rover_RCU.Controllers
     public class Sensors
     {
         private SerialPort Arduino;
-        private String[,] sensorData;
+        private String[] sensorData;
 
 
         public Sensors()
         {
-            sensorData = new String[4, 2];
+            sensorData = new String[6];
         }
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace Mars_Rover_RCU.Controllers
         /// <summary>
         /// Gets the current value of all the sensors.
         /// </summary>
-        /// <returns>A 4x2 array of each sensor's ambient and range measurement.</returns>
-        public String[,] getData()
+        /// <returns>A 6 element array of each sensor's ambient and range measurement.</returns>
+        public String[] getData()
         {
             return sensorData;
         }
@@ -81,40 +81,10 @@ namespace Mars_Rover_RCU.Controllers
         /// <param name="e"></param>
         private void DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            string data = this.Arduino.ReadLine();
+            String input = Arduino.ReadLine();
 
-            if (data.Contains("A1"))
-            {
-                sensorData[0,0] = data.Substring(4);
-            }
-            else if (data.Contains("R1"))
-            {
-                sensorData[0,1] = data.Substring(4);
-            }
-            else if (data.Contains("A2"))
-            {
-                sensorData[1,0] = data.Substring(4);
-            }
-            else if (data.Contains("R2"))
-            {
-                sensorData[1,1] = data.Substring(4);
-            }
-            else if (data.Contains("A3"))
-            {
-                sensorData[2,0]  = data.Substring(4);
-            }
-            else if (data.Contains("R3"))
-            {
-                sensorData[2,1] = data.Substring(4);
-            }
-            else if (data.Contains("A4"))
-            {
-                sensorData[3,0] = data.Substring(4);
-            }
-            else if (data.Contains("R4"))
-            {
-                sensorData[3,1] = data.Substring(4);
-            }
+            //This will take the data string 
+            sensorData = input.Split(',');
         }
     }
     }

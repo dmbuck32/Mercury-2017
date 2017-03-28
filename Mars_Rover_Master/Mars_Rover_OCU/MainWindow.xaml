@@ -406,11 +406,9 @@
             <Label Content="Elapsed Time:" Margin="0,0,342,12" Width="82" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
             <Button x:Name="stopWatchResetBtn" Content="Reset" Margin="0,0,221,12" Click="stopWatchReset_Clicked" Width="48" HorizontalAlignment="Right" Height="22" VerticalAlignment="Bottom"/>
             <Label x:Name="FrontSensor" Content="0000" Margin="0,0,303,628" FontSize="18" Width="51" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
-            <Label x:Name="RearSensor" Content="0000" Margin="0,0,303,65" FontSize="18" Width="51" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
             <Label x:Name="LeftSensor" Content="0000" Margin="0,0,559.8,391" FontSize="18" Width="52" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
             <Label x:Name="RightSensor" Content="0000" Margin="0,0,46.8,385" FontSize="18" Width="52" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
             <Label Content="Front Sensor:" Margin="0,0,269,663" Width="107" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
-            <Label Content="Rear Sensor:" Margin="0,0,251,95" Width="117" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom" RenderTransformOrigin="2.963,0.5"/>
             <Label Content="Rear Sensor:" Margin="0,0,326,95" Width="76" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom" Visibility="Hidden"/>
             <Label Content="Left Sensor:" Margin="0,0,547.8,426" Width="72" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
             <Label Content="Right Sensor:" Margin="0,0,31,426" Width="82" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>

@@ -122,13 +122,6 @@ namespace Mars_Rover_OCU.Comms
         private string LeftSensor; // global sensors-- info from rcu
         private string RightSensor;
         private string FrontSensor;
-        private string RearSensor;
-        private short barLeftSensor = 0;
-        private short barFrontLeftSensor = 0;
-        private short barCenterLeftSensor = 0;
-        private short barCenterRightSensor = 0;
-        private short barFrontRightSensor = 0;
-        private short barRightSensor = 0;
 
         private ZServer server;
         private XmlSerializer serializer;
@@ -745,13 +738,6 @@ namespace Mars_Rover_OCU.Comms
                     LeftSensor = robotState.PositionReturnState.leftDistance;
                     RightSensor = robotState.PositionReturnState.rightDistance;
                     FrontSensor = robotState.PositionReturnState.frontDistance;
-                    RearSensor = robotState.PositionReturnState.frontDistance;
-                    barLeftSensor = robotState.TemperatureReturnState.barLeftIRSensor;
-                    barFrontLeftSensor = robotState.TemperatureReturnState.barFrontLeftIRSensor;
-                    barCenterLeftSensor = robotState.TemperatureReturnState.barCenterLeftIRSensor;
-                    barCenterRightSensor = robotState.TemperatureReturnState.barCenterRightIRSensor;
-                    barFrontRightSensor = robotState.TemperatureReturnState.barFrontRightIRSensor;
-                    barRightSensor = robotState.TemperatureReturnState.barRightIRSensor;
 
                     updateLogString(robotState.LogState.Data);
 
@@ -814,41 +800,6 @@ namespace Mars_Rover_OCU.Comms
         public string getFrontLeftSensor()
         {
             return FrontSensor;
-        }
-
-        public string getFrontRightSensor()
-        {
-            return RearSensor;           
-        }
-
-        public short getBarLeftSensor()
-        {
-            return barLeftSensor;
-        }
-
-        public short getBarFrontLeftSensor()
-        {
-            return barFrontLeftSensor;
-        }
-
-        public short getBarCenterLeftSensor()
-        {
-            return barCenterLeftSensor;
-        }
-
-        public short getBarCenterRightSensor()
-        {
-            return barCenterRightSensor;
-        }
-
-        public short getBarFrontRightSensor()
-        {
-            return barFrontRightSensor;
-        }
-
-        public short getBarRightSensor()
-        {
-            return barRightSensor;
         }
 
         public bool getF1()

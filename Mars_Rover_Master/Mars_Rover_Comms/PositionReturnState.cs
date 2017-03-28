@@ -18,9 +18,6 @@ namespace Mars_Rover_Comms
         [XmlAttribute("rightDistance")]
         public string rightDistance;
 
-        [XmlAttribute("rearDistance")]
-        public string rearDistance;
-
         [XmlAttribute("frontAmbient")]
         public string frontAmbient;
 
@@ -29,9 +26,6 @@ namespace Mars_Rover_Comms
 
         [XmlAttribute("rightAmbient")]
         public string rightAmbient;
-
-        [XmlAttribute("rearAmbient")]
-        public string rearAmbient;
 
         public PositionReturnState()
         {

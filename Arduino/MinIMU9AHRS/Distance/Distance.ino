@@ -29,6 +29,13 @@ The range readings are in units of mm. */
 
 #define DEBUG 0
 
+/*
+0 = front
+1 = left
+2 = right
+[x,0] is distance
+[x,1] is ambient 
+*/
 long distanceSensors[3][2];
 VL6180X sensor[4];
 
@@ -37,11 +44,9 @@ void setup()
   pinMode(7,OUTPUT);
   pinMode(8,OUTPUT);
   pinMode(9,OUTPUT);
-  pinMode(10,OUTPUT);
   digitalWrite(7,LOW);
   digitalWrite(8,LOW);
   digitalWrite(9,LOW);
-  digitalWrite(10,LOW);
   
   Wire.begin();
   
@@ -79,22 +84,10 @@ void setup()
   sensor[2].writeReg16Bit(VL6180X::SYSALS__INTEGRATION_PERIOD, 50);
   sensor[2].stopContinuous();
 
-  digitalWrite(10,HIGH);
-  delay(50);  
-  sensor[3].init();
-  sensor[3].configureDefault();
-  delay(1000);
-  sensor[3].setTimeout(500);
-  sensor[3].setAddress(0x33);
-  sensor[3].writeReg(VL6180X::SYSRANGE__MAX_CONVERGENCE_TIME, 30);
-  sensor[3].writeReg16Bit(VL6180X::SYSALS__INTEGRATION_PERIOD, 50);
-  sensor[3].stopContinuous();
-
   delay(300);
   sensor[0].startInterleavedContinuous(100);
   sensor[1].startInterleavedContinuous(100);
   sensor[2].startInterleavedContinuous(100);
-  sensor[3].startInterleavedContinuous(100);
   
 }
 
@@ -102,7 +95,7 @@ void loop()
 {
   while(!Serial);
  
-  for(int i=0;i<4;i++)
+  for(int i=0;i<3;i++)
   {
     distanceSensors[i][0] = sensor[i].readRangeContinuousMillimeters();
     if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
@@ -118,14 +111,11 @@ void loop()
     Serial.print (",");
     Serial.print(distanceSensors[2][0]);
     Serial.print (",");
-    Serial.print(distanceSensors[3][0]);
-    Serial.print (",");
     Serial.print(distanceSensors[0][1]);
     Serial.print (",");
     Serial.print(distanceSensors[1][1]);
     Serial.print (",");
     Serial.print(distanceSensors[2][1]);
-    Serial.print (",");
     Serial.println();
 
     #else
@@ -150,13 +140,6 @@ void loop()
     if (error == 0)
     {
        Serial.print("I2C device found at address 32!");
-    }
-
-    Wire.beginTransmission(0x33);
-    error = Wire.endTransmission();
-    if (error == 0)
-    {
-       Serial.print("I2C device found at address 33!");
     }
       
     #endif

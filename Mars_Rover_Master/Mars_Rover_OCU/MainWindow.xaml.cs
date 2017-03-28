@@ -401,8 +401,6 @@ namespace Mars_Rover_OCU
                     LeftSensor.Content = comms.getLeftSensor();
                     RightSensor.Content = comms.getRightSensor();
                     FrontSensor.Content = comms.getFrontLeftSensor();
-                    RearSensor.Content = comms.getFrontRightSensor();
-                    
 
                     SpeedSensitivity.Text = ControllerSettings.Default.SpeedSensitivity.ToString();
                 }));

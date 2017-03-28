@@ -11,7 +11,6 @@ namespace Mars_Rover_Comms
         public PositionReturnState PositionReturnState;
         public ArmReturnState ArmReturnState;
         public ErrorReturnState ErrorReturnState;
-        public TemperatureReturnState TemperatureReturnState;
         public LogState LogState;
 
           public RobotReturnState()
@@ -19,7 +18,6 @@ namespace Mars_Rover_Comms
             PositionReturnState = new PositionReturnState();
             ArmReturnState = new ArmReturnState();
             ErrorReturnState = new ErrorReturnState();
-            TemperatureReturnState = new TemperatureReturnState();
             LogState = new LogState();
         }
     }

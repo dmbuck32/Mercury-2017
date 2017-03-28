@@ -24,7 +24,7 @@ namespace Mars_Rover_RCU
 
         //Sensors
         static Controllers.Sensors _Sensors;
-        static public String[,] sensorData;
+        static public String[] sensorData;
 
         static Utility.UpdateQueue<RobotState> stateQueue = new Utility.UpdateQueue<RobotState>(-1);
         static XmlSerializer robotStateDeserializer = new XmlSerializer(typeof(Mars_Rover_Comms.RobotState));
@@ -74,7 +74,7 @@ namespace Mars_Rover_RCU
 
                 #region Sensors
                 _Sensors = new Sensors();
-                sensorData = new string[4, 2];
+                sensorData = new string[6];
                 #endregion
 
 
@@ -128,7 +128,7 @@ namespace Mars_Rover_RCU
             {
                 using (MemoryStream ms = new MemoryStream(e.Data))
                 {
-                    Logger.WriteLine("Packet Receieved");
+                    Logger.WriteLine("Packet Received");
                     // robot drive state received - enqueue the state so it is processed in the StateProcessorDoWork() below
                     RobotState state = (RobotState)robotStateDeserializer.Deserialize(ms);
                     stateQueue.Enqueue(state);
