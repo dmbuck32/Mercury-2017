@@ -24,14 +24,24 @@ resolution of 0.32 lux/count, the light level is therefore
 
 The range readings are in units of mm. */
 
-void Distance_Init()
+#include <Wire.h>
+#include <VL6180X.h>
+
+#define DEBUG 0
+
+long distanceSensors[3][2];
+VL6180X sensor[4];
+
+void setup()
 {
   pinMode(7,OUTPUT);
   pinMode(8,OUTPUT);
   pinMode(9,OUTPUT);
+  pinMode(10,OUTPUT);
   digitalWrite(7,LOW);
   digitalWrite(8,LOW);
   digitalWrite(9,LOW);
+  digitalWrite(10,LOW);
   
   Wire.begin();
   
@@ -68,74 +78,86 @@ void Distance_Init()
   sensor[2].writeReg(VL6180X::SYSRANGE__MAX_CONVERGENCE_TIME, 30);
   sensor[2].writeReg16Bit(VL6180X::SYSALS__INTEGRATION_PERIOD, 50);
   sensor[2].stopContinuous();
-  
+
+  digitalWrite(10,HIGH);
+  delay(50);  
+  sensor[3].init();
+  sensor[3].configureDefault();
+  delay(1000);
+  sensor[3].setTimeout(500);
+  sensor[3].setAddress(0x33);
+  sensor[3].writeReg(VL6180X::SYSRANGE__MAX_CONVERGENCE_TIME, 30);
+  sensor[3].writeReg16Bit(VL6180X::SYSALS__INTEGRATION_PERIOD, 50);
+  sensor[3].stopContinuous();
 
   delay(300);
   sensor[0].startInterleavedContinuous(100);
   sensor[1].startInterleavedContinuous(100);
   sensor[2].startInterleavedContinuous(100);
+  sensor[3].startInterleavedContinuous(100);
   
 }
 
-void readDistance()
+void loop()
 {
-  //while(!Serial);
-  
-//  Wire.beginTransmission(0x30);
-//  byte error;
-//  error = Wire.endTransmission();
-//  if (error == 0)
-//  {
-//     Serial.print("I2C device found at address 30!");
-//  }
-//  
-//  Wire.beginTransmission(0x31);
-//  error = Wire.endTransmission();
-//  if (error == 0)
-//  {
-//     Serial.print("I2C device found at address 31!");
-//  }
-//  
-//  Wire.beginTransmission(0x32);
-//  error = Wire.endTransmission();
-//  if (error == 0)
-//  {
-//     Serial.print("I2C device found at address 32!");
-//  }
+  while(!Serial);
+ 
+  for(int i=0;i<4;i++)
+  {
+    distanceSensors[i][0] = sensor[i].readRangeContinuousMillimeters();
+    if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
+    
+    distanceSensors[i][1] = sensor[i].readAmbientContinuous();
+    if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
+  }
 
-  
-//  Serial.print("A1: ");
-//  Serial.println(sensor[0].readAmbientContinuous());
-//  if (sensor[0].timeoutOccurred()) { Serial.println(" TIMEOUT"); }
-//
-//  Serial.print("R1: ");
-//  Serial.println(sensor[0].readRangeContinuousMillimeters());
-//  if (sensor[0].timeoutOccurred()) { Serial.println(" TIMEOUT"); }
-//  
-//  Serial.print("A2: ");
-//  Serial.println(sensor[1].readAmbientContinuous());
-//  if (sensor[1].timeoutOccurred()) { Serial.println(" TIMEOUT"); }
-//
-//  Serial.print("R2: ");
-//  Serial.println(sensor[1].readRangeContinuousMillimeters());
-//  if (sensor[1].timeoutOccurred()) { Serial.println(" TIMEOUT"); }
-//
-//  Serial.print("A3: ");
-//  Serial.println(sensor[2].readAmbientContinuous());
-//  if (sensor[1].timeoutOccurred()) { Serial.println(" TIMEOUT"); }
-//
-//  Serial.print("R3: ");
-//  Serial.println(sensor[2].readRangeContinuousMillimeters());
-//  if (sensor[2].timeoutOccurred()) { Serial.println(" TIMEOUT"); }
-//  
-//  delay(1000);
+    #if DEBUG == 0
+    Serial.print(distanceSensors[0][0]);
+    Serial.print (",");
+    Serial.print(distanceSensors[1][0]);
+    Serial.print (",");
+    Serial.print(distanceSensors[2][0]);
+    Serial.print (",");
+    Serial.print(distanceSensors[3][0]);
+    Serial.print (",");
+    Serial.print(distanceSensors[0][1]);
+    Serial.print (",");
+    Serial.print(distanceSensors[1][1]);
+    Serial.print (",");
+    Serial.print(distanceSensors[2][1]);
+    Serial.print (",");
+    Serial.println();
 
+    #else
+    byte error;
+    
+    Wire.beginTransmission(0x30);
+    error = Wire.endTransmission();
+    if (error == 0)
+    {
+       Serial.print("I2C device found at address 30!");
+    }
+    
+    Wire.beginTransmission(0x31);
+    error = Wire.endTransmission();
+    if (error == 0)
+    {
+       Serial.print("I2C device found at address 31!");
+    }
+    
+    Wire.beginTransmission(0x32);
+    error = Wire.endTransmission();
+    if (error == 0)
+    {
+       Serial.print("I2C device found at address 32!");
+    }
 
-  distanceSensors[0][0] = sensor[0].readRangeContinuousMillimeters()
-  distanceSensors[1][0] = sensor[1].readRangeContinuousMillimeters()
-  distanceSensors[2][0] = sensor[2].readRangeContinuousMillimeters()
-  
-  distanceSensors[0][1] = sensor[0].readAmbientContinuous()
-  distanceSensors[1][1] =  sensor[1].readAmbientContinuous()
-  distanceSensors[2][1] =  sensor[2].readAmbientContinuous()
+    Wire.beginTransmission(0x33);
+    error = Wire.endTransmission();
+    if (error == 0)
+    {
+       Serial.print("I2C device found at address 33!");
+    }
+      
+    #endif
 }

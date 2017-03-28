@@ -392,7 +392,7 @@
         </TabControl>
 
         <Grid Margin="421,8,6,10">
-            <Image x:Name="image" HorizontalAlignment="Left" Height="896" VerticalAlignment="Top" Width="440" Source="Resources/Robot2.PNG" Margin="106,159,0,-335" RenderTransformOrigin="0.5,0.5">
+            <Image x:Name="image" HorizontalAlignment="Left" Height="896" VerticalAlignment="Top" Width="440" Source="Resources/Robot2.PNG" Margin="104,117,0,-293" RenderTransformOrigin="0.5,0.5">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
