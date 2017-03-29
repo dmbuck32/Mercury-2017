@@ -36,15 +36,33 @@ namespace Mars_Rover_RCU.Controllers
         private ushort off = 5045;
         private ushort on = 6000;
         */
-        private byte gripperChannel = 0;
-        private byte elbowChannel = 1;
-        private byte shoulderChannel = 2;
-        private byte leftDriveChannel = 6;
-        private byte rightDriveChannel = 7;
-        private byte frontLeftSteeringChannel = 8;
-        private byte backLeftSteeringChannel = 9;
-        private byte frontRightSteeringChannel = 10;
-        private byte backRightSteeringChannel = 11;
+
+        // PWM Channels for Maestro
+        private byte LeftMotors = 0;
+        private byte RightMotors = 1;
+        private byte RearRightServo = 2;
+        private byte RearLeftServo = 3;
+        private byte FrontRightServo = 4;
+        private byte FrontLeftServo = 5;
+        private byte LOS_LED = 6;
+        private byte HeadLights = 7;
+        private byte ShoulderServo = 8;
+        private byte ElbowServo = 9;
+        private byte WristServo = 10;
+        private byte GripperServo = 11;
+
+        // PWM multiplier for Pololu Maestro
+        private byte PWM_Multiplier = 4;
+
+        // Initial Values to make wheels straight
+        private int RearLeftInit = 1500;
+        private int RearRightInit = 1500;
+        private int FrontLeftInit = 1500;
+        private int FrontRightInit = 1500;
+
+        private int GripperOpen = 1500;
+        private int GripperClosed = 1100;
+
         public Maestro()
         {
             var devicelist = Usc.getConnectedDevices();
@@ -53,6 +71,7 @@ namespace Mars_Rover_RCU.Controllers
                 if (d.serialNumber == devicelist[0].serialNumber)
                 {
                     usc = new Usc(d);
+                    initializeDrive();
                     /*
                     usc.setTarget(clawChannel, clawTargetValues[clawTargetIndex]);
                     usc.setTarget(elbowChannel, elbowTargetValues[elbowTargetIndex]);
@@ -62,6 +81,29 @@ namespace Mars_Rover_RCU.Controllers
                 }
             }
         }
+
+        // Initialize turning servos to straight positions
+        public void initializeDrive()
+        {
+            usc.setTarget(RearLeftServo, (ushort)(PWM_Multiplier * RearLeftInit));
+            usc.setTarget(RearRightServo, (ushort)(PWM_Multiplier * RearRightInit));
+            usc.setTarget(FrontLeftServo, (ushort)(PWM_Multiplier * FrontLeftInit));
+            usc.setTarget(FrontRightServo, (ushort)(PWM_Multiplier * FrontRightInit));
+        }
+
+        // Open Gripper
+        public void openGripper()
+        {
+            usc.setTarget(GripperServo, (ushort)(PWM_Multiplier * GripperOpen));
+        }
+
+        // Close Gripper
+        public void closeGripper()
+        {
+            usc.setTarget(GripperServo, (ushort)(PWM_Multiplier * GripperClosed));
+        }
+
+
         /*
         public void moveClaw(int direction)
         {

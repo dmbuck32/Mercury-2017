@@ -232,3 +232,11 @@ C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.csprojResolveAssemblyReference.cache
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.dll
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.pdb
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Mars_Rover_Comms.dll.config
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Utility.dll
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\bin\Debug\Utility.pdb
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.csprojResolveAssemblyReference.cache
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.dll
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Comms\obj\Debug\Mars_Rover_Comms.pdb

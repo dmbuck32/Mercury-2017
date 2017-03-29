@@ -752,3 +752,7 @@ C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\U
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.exe
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.pdb
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\obj\Debug\Mars_Rover_RCU.csprojResolveAssemblyReference.cache

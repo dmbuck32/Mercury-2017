@@ -74,7 +74,7 @@ namespace Mars_Rover_RCU.Comms
 
                     returnState.ArmReturnState.ArmFeedback = 1;
                     returnState.ErrorReturnState.ErrorCode = 0xF;
-                    returnState.TemperatureReturnState.Temperature = 20;
+                    //returnState.TemperatureReturnState.Temperature = 20;
 
                     returnState.PositionReturnState.frontDistance = Program.sensorData[0];
                     returnState.PositionReturnState.frontAmbient = Program.sensorData[1];

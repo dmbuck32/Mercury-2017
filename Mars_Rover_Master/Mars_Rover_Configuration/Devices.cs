@@ -10,6 +10,7 @@ namespace Mars_Rover_Configuration
     //These values match the corresponding maestro pins
     public enum Devices : byte
     {
+        /*
         FrontLeftWheel = 14, //was 1
         FrontRightWheel = 16, //was 4\was 10, now mercury arm motor
         MidLeftWheel = 4, //was 0\was 7, Now Mercury left wheels
@@ -23,6 +24,21 @@ namespace Mars_Rover_Configuration
         RearLeftSteering = 2,  //was 14
 
         ControlSignal = 23
+        */
+        LeftMotors = 0,
+        RightMotors = 1,
 
+        RearRightServo = 2,
+        RearLeftServo = 3,
+        FrontRightServo = 4,
+        FrontLeftServo = 5,
+
+        LOS_LED = 6,
+        HeadLights = 7,
+
+        ShoulderServo = 8,        
+        ElbowServo = 9,
+        WristServo = 10,
+        GripperServo = 11
     }
 }
