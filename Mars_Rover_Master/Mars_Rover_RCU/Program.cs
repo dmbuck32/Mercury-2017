@@ -46,9 +46,10 @@ namespace Mars_Rover_RCU
         static public String Port;
 
         public static void Main(string[] args)
-        { 
-            string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            System.IO.StreamReader file = new System.IO.StreamReader(desktop + "\\Mercury-2017\\IP_Port.txt");
+        {
+            //string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //System.IO.StreamReader file = new System.IO.StreamReader(desktop + "\\Mercury-2017\\IP_Port.txt");
+            System.IO.StreamReader file = new System.IO.StreamReader("..\\..\\IP_Port.txt");
             IPAddress = file.ReadLine();
             Port = file.ReadLine();
             //setup primary comms
