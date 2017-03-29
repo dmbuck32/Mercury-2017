@@ -26,8 +26,17 @@ The range readings are in units of mm. */
 
 #include <Wire.h>
 #include <VL6180X.h>
+#include <SharpIR.h>
 
 #define DEBUG 0
+
+#define FRONTTOF 7
+#define LEFTTOF 8
+#define RIGHTTOF 9
+
+#define FRONTSHARP A0
+#define LEFTSHARP A1
+#define RIGHTSHARP A2
 
 /*
 0 = front
@@ -38,19 +47,31 @@ The range readings are in units of mm. */
 */
 long distanceSensors[3][2];
 VL6180X sensor[4];
+//sensor objects had to be declared like this because of constructor design
+SharpIR sharpsensor[3] = {
+  SharpIR(FRONTSHARP,1080),
+  SharpIR(LEFTSHARP,1080),
+  SharpIR(RIGHTSHARP,1080)
+};
 
 void setup()
 {
-  pinMode(7,OUTPUT);
-  pinMode(8,OUTPUT);
-  pinMode(9,OUTPUT);
-  digitalWrite(7,LOW);
-  digitalWrite(8,LOW);
-  digitalWrite(9,LOW);
-  
+
+//*** Sensor initialization ***//
+
+  //Set the CE pins to output and turn the sensors off
+  pinMode(FRONTTOF,OUTPUT);
+  pinMode(LEFTTOF,OUTPUT);
+  pinMode(RIGHTTOF,OUTPUT);
+  digitalWrite(FRONTTOF,LOW);
+  digitalWrite(LEFTTOF,LOW);
+  digitalWrite(RIGHTTOF,LOW);
+
+  //begin transmitting on the I2C bus
   Wire.begin();
-  
-  digitalWrite(7,HIGH);
+
+  //enables the first sensor and configures it according to the library and manual
+  digitalWrite(FRONTTOF,HIGH);
   delay(50);
   sensor[0].init();
   sensor[0].configureDefault();
@@ -62,7 +83,7 @@ void setup()
   sensor[0].stopContinuous();
  
 
-  digitalWrite(8,HIGH);
+  digitalWrite(LEFTTOF,HIGH);
   delay(50);  
   sensor[1].init();
   sensor[1].configureDefault();
@@ -73,7 +94,7 @@ void setup()
   sensor[1].writeReg16Bit(VL6180X::SYSALS__INTEGRATION_PERIOD, 50);
   sensor[1].stopContinuous();
   
-  digitalWrite(9,HIGH);
+  digitalWrite(RIGHTTOF,HIGH);
   delay(50);  
   sensor[2].init();
   sensor[2].configureDefault();
@@ -93,17 +114,21 @@ void setup()
 
 void loop()
 {
+  //Spin tires while there is no valid serial connection (gives the finicky sensors a rest).
   while(!Serial);
- 
+
+ //*** Read Sensors ***//
   for(int i=0;i<3;i++)
   {
+    //If the VL610X has malfunctioned, read the Sharp sensor (this is in centimeters so multiplied by 1000 to convert.)
     distanceSensors[i][0] = sensor[i].readRangeContinuousMillimeters();
-    if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
+    if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=(sharpsensor[i].distance()*1000); }
     
     distanceSensors[i][1] = sensor[i].readAmbientContinuous();
     if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
   }
 
+//*** Print sensor readings ***//
     #if DEBUG == 0
     Serial.print(distanceSensors[0][0]);
     Serial.print (",");
@@ -117,11 +142,14 @@ void loop()
     Serial.print (",");
     Serial.print(distanceSensors[2][1]);
     Serial.println();
-
+    
+//*** Debug I2C Scanner ***//
     #else
     byte error;
-    
+
+    //attempts to open communication with device at address 0x30
     Wire.beginTransmission(0x30);
+    //ends the transmission and receives the status of the success of the connection
     error = Wire.endTransmission();
     if (error == 0)
     {
