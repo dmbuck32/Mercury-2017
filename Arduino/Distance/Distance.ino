@@ -1,4 +1,4 @@
-/* This example demonstrates how to use interleaved mode to
+/* This uses interleaved mode to
 take continuous range and ambient light measurements. The
 datasheet recommends using interleaved mode instead of
 running "range and ALS continuous modes simultaneously (i.e.
@@ -7,8 +7,8 @@ asynchronously)".
 In order to attain a faster update rate (10 Hz), the max
 convergence time for ranging and integration time for
 ambient light measurement are reduced from the normally
-recommended defaults. See section 2.4.4 ("Continuous mode
-limits") and Table 6 ("Interleaved mode limits (10 Hz
+recommended defaults. See section 2.5.2 ("Continuous mode
+limits") and Table 9 ("Interleaved mode limits (10 Hz
 operation)") in the VL6180X datasheet for more details.
 
 Raw ambient light readings can be converted to units of lux
@@ -46,6 +46,8 @@ The range readings are in units of mm. */
 [x,1] is ambient 
 */
 long distanceSensors[3][2];
+unsigned long timeOld;
+unsigned long timeNew;
 VL6180X sensor[4];
 //sensor objects had to be declared like this because of constructor design
 SharpIR sharpsensor[3] = {
@@ -109,6 +111,9 @@ void setup()
   sensor[0].startInterleavedContinuous(100);
   sensor[1].startInterleavedContinuous(100);
   sensor[2].startInterleavedContinuous(100);
+
+  //get the current time in milliseconds
+  timeOld=millis();
   
 }
 
@@ -117,19 +122,27 @@ void loop()
   //Spin tires while there is no valid serial connection (gives the finicky sensors a rest).
   while(!Serial);
 
- //*** Read Sensors ***//
-  for(int i=0;i<3;i++)
-  {
-    //If the VL610X has malfunctioned, read the Sharp sensor (this is in centimeters so multiplied by 1000 to convert.)
-    distanceSensors[i][0] = sensor[i].readRangeContinuousMillimeters();
-    if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=(sharpsensor[i].distance()*1000); }
-    
-    distanceSensors[i][1] = sensor[i].readAmbientContinuous();
-    if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
-  }
+  //If not in debugging mode
+  #if DEBUG == 0
 
-//*** Print sensor readings ***//
-    #if DEBUG == 0
+  //get the current time in milliseconds
+  timeNew=millis();
+
+  //If it's been equal to or longer than the period of the refresh rate of the sensor
+  if((timeNew-timeOld) >= 100)
+  {
+    //*** Read sensors ***//
+    for(int i=0;i<3;i++)
+    {
+      //If the VL610X has malfunctioned, read the Sharp sensor (this is in centimeters so multiplied by 1000 to convert.)
+      distanceSensors[i][0] = sensor[i].readRangeContinuousMillimeters();
+      if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=(sharpsensor[i].distance()*1000); }
+      
+      distanceSensors[i][1] = sensor[i].readAmbientContinuous();
+      if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
+    }
+  
+    //*** Print sensor readings ***//
     Serial.print(distanceSensors[0][0]);
     Serial.print (",");
     Serial.print(distanceSensors[1][0]);
@@ -142,33 +155,36 @@ void loop()
     Serial.print (",");
     Serial.print(distanceSensors[2][1]);
     Serial.println();
-    
+  
+    timeOld=timeNew;
+  }
+  
 //*** Debug I2C Scanner ***//
-    #else
-    byte error;
+  #else
+  byte error;
 
-    //attempts to open communication with device at address 0x30
-    Wire.beginTransmission(0x30);
-    //ends the transmission and receives the status of the success of the connection
-    error = Wire.endTransmission();
-    if (error == 0)
-    {
-       Serial.print("I2C device found at address 30!");
-    }
+  //attempts to open communication with device at address 0x30
+  Wire.beginTransmission(0x30);
+  //ends the transmission and receives the status of the success of the connection
+  error = Wire.endTransmission();
+  if (error == 0)
+  {
+     Serial.print("I2C device found at address 30!");
+  }
+  
+  Wire.beginTransmission(0x31);
+  error = Wire.endTransmission();
+  if (error == 0)
+  {
+     Serial.print("I2C device found at address 31!");
+  }
+  
+  Wire.beginTransmission(0x32);
+  error = Wire.endTransmission();
+  if (error == 0)
+  {
+     Serial.print("I2C device found at address 32!");
+  }
     
-    Wire.beginTransmission(0x31);
-    error = Wire.endTransmission();
-    if (error == 0)
-    {
-       Serial.print("I2C device found at address 31!");
-    }
-    
-    Wire.beginTransmission(0x32);
-    error = Wire.endTransmission();
-    if (error == 0)
-    {
-       Serial.print("I2C device found at address 32!");
-    }
-      
-    #endif
+  #endif
 }
