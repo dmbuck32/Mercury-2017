@@ -60,6 +60,7 @@ namespace Mars_Rover_RCU.Controllers
         private int FrontLeftInit = 1500;
         private int FrontRightInit = 1500;
 
+        // PWM Values for Gripper Open/Closed
         private int GripperOpen = 1500;
         private int GripperClosed = 1100;
 
