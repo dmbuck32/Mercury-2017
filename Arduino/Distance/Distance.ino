@@ -33,6 +33,7 @@ The range readings are in units of mm. */
 #define FRONTTOF 7
 #define LEFTTOF 8
 #define RIGHTTOF 9
+#define HEADLIGHT 4
 
 #define FRONTSHARP A0
 #define LEFTSHARP A1
@@ -58,7 +59,11 @@ SharpIR sharpsensor[3] = {
 
 void setup()
 {
+//*** Headlight initialization ***//
 
+  pinMode(HEADLIGHT, OUTPUT);
+  digitalWrite(HEADLIGHT, HIGH);
+  
 //*** Sensor initialization ***//
 
   //Set the CE pins to output and turn the sensors off
