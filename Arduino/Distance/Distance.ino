@@ -30,15 +30,15 @@ The range readings are in units of mm. */
 
 #define DEBUG 0
 
-#define FRONTTOF 7
-#define LEFTTOF 8
-#define RIGHTTOF 9
+#define FRONTTOF 11
+#define LEFTTOF 12
+#define RIGHTTOF 10
 
-#define FRONTSHARP A0
-#define LEFTSHARP A1
-#define RIGHTSHARP A2
+#define FRONTSHARP A5
+#define LEFTSHARP A4
+#define RIGHTSHARP A3
 
-#define LEDPIN 13
+#define LEDPIN 4
 #define DARK 600
 
 /*
