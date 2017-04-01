@@ -38,6 +38,9 @@ The range readings are in units of mm. */
 #define LEFTSHARP A1
 #define RIGHTSHARP A2
 
+#define LEDPIN 13
+#define DARK 600
+
 /*
 0 = front
 1 = left
@@ -55,6 +58,10 @@ SharpIR sharpsensor[3] = {
   SharpIR(LEFTSHARP,1080),
   SharpIR(RIGHTSHARP,1080)
 };
+
+// 0 = off 1 = on
+char lights = '0';
+boolean dark;
 
 void setup()
 {
@@ -128,7 +135,7 @@ void loop()
   //get the current time in milliseconds
   timeNew=millis();
 
-  //If it's been equal to or longer than the period of the refresh rate of the sensor
+  //If it's been equal to or longer than the period of the refresh rate of the sensor (10MHz)
   if((timeNew-timeOld) >= 100)
   {
     //*** Read sensors ***//
@@ -140,6 +147,12 @@ void loop()
       
       distanceSensors[i][1] = sensor[i].readAmbientContinuous();
       if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
+      else
+      {
+        //All the sensors must agree that it's dark.
+        if(distanceSensors[i][1] < DARK) {lights='1';}
+        else{lights='0';}
+      }
     }
   
     //*** Print sensor readings ***//
@@ -158,8 +171,24 @@ void loop()
   
     timeOld=timeNew;
   }
+
+  //*** Headlight control  ***//
   
-//*** Debug I2C Scanner ***//
+  //override checking
+  if(Serial.available() > 0) //available()returns the number of bytes in the buffer
+  {
+    lights = Serial.read();
+  }
+
+  //updating the current state of the LEDs
+  switch(lights)
+  {
+    case '0': digitalWrite(LEDPIN,LOW);
+    break;
+    case '1': digitalWrite(LEDPIN,HIGH);
+  }
+  
+  //*** Debug I2C Scanner ***//
   #else
   byte error;
 
