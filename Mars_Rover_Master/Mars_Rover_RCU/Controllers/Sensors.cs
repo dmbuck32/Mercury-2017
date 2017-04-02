@@ -34,6 +34,7 @@ namespace Mars_Rover_RCU.Controllers
 
             if (this.Arduino.IsOpen)
             {
+                Logger.WriteLine("Arduino is open.");
                 this.Arduino.DtrEnable = true;
                 this.Arduino.DataReceived += DataReceived;
                 this.Arduino.ErrorReceived += ErrorReceived;

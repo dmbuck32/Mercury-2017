@@ -47,8 +47,6 @@ namespace Mars_Rover_RCU
 
         public static void Main(string[] args)
         {
-            //string desktop = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            //System.IO.StreamReader file = new System.IO.StreamReader(desktop + "\\Mercury-2017\\IP_Port.txt");
             System.IO.StreamReader file = new System.IO.StreamReader("..\\..\\IP_Port.txt");
             IPAddress = file.ReadLine();
             Port = file.ReadLine();
@@ -62,11 +60,8 @@ namespace Mars_Rover_RCU
                 comms = RCUComms.Instance; //Responsible for sending states back to OCU
 
                 #region Maestro
-                if (useMaestro)
-                {
-                    Logger.WriteLine("Creating Maestro");
-                    _Maestro = new Maestro();
-                }
+                Logger.WriteLine("Creating Maestro");
+                _Maestro = new Maestro();
                 #endregion
 
                 //Tests
@@ -74,7 +69,12 @@ namespace Mars_Rover_RCU
                 //_Maestro.resetTrigger();
 
                 #region Sensors
+                Logger.WriteLine("Creating Sensors");
                 _Sensors = new Sensors();
+                if (_Sensors.OpenConnection())
+                {
+                    Logger.WriteLine("Sensors successfully created.");
+                }
                 sensorData = new string[6];
                 #endregion
 
@@ -129,7 +129,7 @@ namespace Mars_Rover_RCU
             {
                 using (MemoryStream ms = new MemoryStream(e.Data))
                 {
-                    Logger.WriteLine("Packet Received");
+                    //Logger.WriteLine("Packet Received");
                     // robot drive state received - enqueue the state so it is processed in the StateProcessorDoWork() below
                     RobotState state = (RobotState)robotStateDeserializer.Deserialize(ms);
                     stateQueue.Enqueue(state);
