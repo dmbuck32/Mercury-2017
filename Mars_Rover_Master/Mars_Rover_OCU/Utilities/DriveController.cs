@@ -107,6 +107,7 @@ namespace Mars_Rover_OCU.Utilities
             rad += MINIMUM_RADIUS;
 
             return Convert.ToInt16(-1 * (Math.Min(2047, rad) * Math.Sign(input)));
+            
         }
     }
 }

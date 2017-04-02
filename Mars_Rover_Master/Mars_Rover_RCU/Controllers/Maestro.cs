@@ -12,7 +12,7 @@ namespace Mars_Rover_RCU.Controllers
 {
     public class Maestro
     {
-        private Usc usc = null;
+        
         /*
         //Claw Controls
         private byte clawChannel = 2;
@@ -45,7 +45,6 @@ namespace Mars_Rover_RCU.Controllers
         private byte FrontRightServo = 4;
         private byte FrontLeftServo = 5;
         private byte LOS_LED = 6;
-        private byte HeadLights = 7;
         private byte ShoulderServo = 8;
         private byte ElbowServo = 9;
         private byte WristServo = 10;
@@ -55,53 +54,88 @@ namespace Mars_Rover_RCU.Controllers
         private byte PWM_Multiplier = 4;
 
         // Initial Values to make wheels straight
-        private int RearLeftInit = 1500;
-        private int RearRightInit = 1500;
-        private int FrontLeftInit = 1500;
-        private int FrontRightInit = 1500;
+        private const int rearLeftInit = 1510;
+        private const int rearRightInit = 1425;
+        private const int frontLeftInit = 1441;
+        private const int frontRightInit = 1588;
 
         // PWM Values for Gripper Open/Closed
-        private int GripperOpen = 1500;
-        private int GripperClosed = 1100;
+        private const int gripperOpen = 1500;
+        private const int gripperClosed = 1100;
+
+        // PWM Values for Drive Channels
+        private int leftMotorPWM = 1500;
+        private int rightMotorPWM = 1500;
+        private const int leftOFF = 1500;
+        private const int rightOFF = 1500;
+
+        // PWM Values for LOS
+        private int LOS = 0;
+
+        // PWM values for ARM Channels
+        private int shoulderInit = 1500;
+        private int elbowInit = 1500;
+        private int wristInit = 1500;
+
+        // Maestro Stuff
+        private const String DriveMaestro = "";
+        private const String ArmMaestro = "";
+   
+        private Usc Drive = null;
+        private Usc Arm = null;
 
         public Maestro()
         {
-            var devicelist = Usc.getConnectedDevices();
-            foreach (DeviceListItem d in Usc.getConnectedDevices())
+
+            Logger.WriteLine("Searching for maestros...");
+            List<DeviceListItem> connectedDevices = Usc.getConnectedDevices();
+
+            foreach (DeviceListItem Device in connectedDevices)
             {
-                if (d.serialNumber == devicelist[0].serialNumber)
+                if (Device.serialNumber == DriveMaestro)
                 {
-                    usc = new Usc(d);
+                    Drive = new Usc(Device);
                     initializeDrive();
-                    /*
-                    usc.setTarget(clawChannel, clawTargetValues[clawTargetIndex]);
-                    usc.setTarget(elbowChannel, elbowTargetValues[elbowTargetIndex]);
-                    usc.setTarget(shoulderChannel, elbowTargetValues[elbowTargetIndex]);
-                    usc.setTarget(triggerChannel, off);
-                    */
+                }
+                if (Device.serialNumber == ArmMaestro)
+                {
+                    Arm = new Usc(Device);
+                    initializeArm();
                 }
             }
         }
 
-        // Initialize turning servos to straight positions
+        // Initialize Drive Channels to stop
         public void initializeDrive()
         {
-            usc.setTarget(RearLeftServo, (ushort)(PWM_Multiplier * RearLeftInit));
-            usc.setTarget(RearRightServo, (ushort)(PWM_Multiplier * RearRightInit));
-            usc.setTarget(FrontLeftServo, (ushort)(PWM_Multiplier * FrontLeftInit));
-            usc.setTarget(FrontRightServo, (ushort)(PWM_Multiplier * FrontRightInit));
+            Drive.setTarget(LeftMotors, (ushort)(PWM_Multiplier * leftOFF));
+            Drive.setTarget(RightMotors, (ushort)(PWM_Multiplier * rightOFF));
+        }
+
+        // Initialize All servos to initial positions
+        public void initializeArm()
+        {
+            Arm.setTarget(RearRightServo, (ushort)(PWM_Multiplier * rearRightInit));
+            Arm.setTarget(RearLeftServo, (ushort)(PWM_Multiplier * rearLeftInit));
+            Arm.setTarget(FrontRightServo, (ushort)(PWM_Multiplier * frontRightInit));
+            Arm.setTarget(FrontLeftServo, (ushort)(PWM_Multiplier * frontLeftInit));
+            Arm.setTarget(LOS_LED, (ushort)(PWM_Multiplier * LOS));
+            Arm.setTarget(ShoulderServo, (ushort)(PWM_Multiplier * shoulderInit));
+            Arm.setTarget(ElbowServo, (ushort)(PWM_Multiplier * elbowInit));
+            Arm.setTarget(WristServo, (ushort)(PWM_Multiplier * wristInit));
+            Arm.setTarget(GripperServo, (ushort)(PWM_Multiplier * gripperOpen));
         }
 
         // Open Gripper
         public void openGripper()
         {
-            usc.setTarget(GripperServo, (ushort)(PWM_Multiplier * GripperOpen));
+            Arm.setTarget(GripperServo, (ushort)(PWM_Multiplier * gripperOpen));
         }
 
         // Close Gripper
         public void closeGripper()
         {
-            usc.setTarget(GripperServo, (ushort)(PWM_Multiplier * GripperClosed));
+            Arm.setTarget(GripperServo, (ushort)(PWM_Multiplier * gripperClosed));
         }
 
 
@@ -166,11 +200,11 @@ namespace Mars_Rover_RCU.Controllers
         */
         public void TryToDisconnect()
         {
-            if (usc != null)
+            if (Arm != null)
             {
                 try
                 {
-                    usc.Dispose();
+                    Arm.Dispose();
                 }
                 #pragma warning disable CS0168 // Variable is declared but never used
                 catch (Exception e)
@@ -180,11 +214,30 @@ namespace Mars_Rover_RCU.Controllers
                 }
                 finally
                 {
-                    usc = null;
-                    Logger.WriteLine("Disconnected from Maestro");
+                    Arm = null;
+                    Logger.WriteLine("Disconnected from Arm Maestro");
                 }
             }
-         }
+
+            if (Drive != null)
+            {
+                try
+                {
+                    Drive.Dispose();
+                }
+                #pragma warning disable CS0168 // Variable is declared but never used
+                catch (Exception e)
+                #pragma warning restore CS0168 // Variable is declared but never used
+                {
+                    Logger.WriteLine("Failed to Disconnect");
+                }
+                finally
+                {
+                    Drive = null;
+                    Logger.WriteLine("Disconnected from Arm Maestro");
+                }
+            }
+        }
         /*
         public void elbowMovementTest()
         {

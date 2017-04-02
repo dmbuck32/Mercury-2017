@@ -29,19 +29,12 @@ namespace Mars_Rover_RCU.Controllers
         {
 
             //Figuring out which port the Arduino is on and connecting
-            try
-            {
-                this.Arduino = new SerialPort("COM4", 9600);
-                this.Arduino.Open();
-            }
-            catch (System.IO.IOException)
-            {
-                this.Arduino = new SerialPort("COM5", 9600);
-                this.Arduino.Open();
-            }
+            this.Arduino = new SerialPort("COM10", 9600);
+            this.Arduino.Open();
 
             if (this.Arduino.IsOpen)
             {
+                Logger.WriteLine("Arduino is open.");
                 this.Arduino.DtrEnable = true;
                 this.Arduino.DataReceived += DataReceived;
                 this.Arduino.ErrorReceived += ErrorReceived;
