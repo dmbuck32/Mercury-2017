@@ -83,24 +83,7 @@ namespace Mars_Rover_RCU.Comms
 
                     returnState.PositionReturnState.rightDistance = Program.sensorData[4];
                     returnState.PositionReturnState.rightAmbient = Program.sensorData[5];
-
-                    /*
-                    if (Program._Roomba != null)
-                    {
-                        Program._Roomba.readSensors();
-                        ushort[] sensors = Program._Roomba.getSensors();
-                        returnState.TemperatureReturnState.LeftIRSensor = (short)sensors[9];
-                        returnState.TemperatureReturnState.RightIRSensor = (short)sensors[6];
-                        returnState.TemperatureReturnState.FrontLeftIRSensor = (short)sensors[8];
-                        returnState.TemperatureReturnState.FrontRightIRSensor = (short)sensors[7];
-                        returnState.TemperatureReturnState.barRightIRSensor = (short)sensors[0];
-                        returnState.TemperatureReturnState.barFrontRightIRSensor = (short)sensors[1];
-                        returnState.TemperatureReturnState.barCenterRightIRSensor = (short)sensors[2];
-                        returnState.TemperatureReturnState.barCenterLeftIRSensor = (short)sensors[3];
-                        returnState.TemperatureReturnState.barFrontLeftIRSensor = (short)sensors[4];
-                        returnState.TemperatureReturnState.barLeftIRSensor = (short)sensors[5];
-                    }
-                    */
+                    
                     // all UI control received, now send to robot clients
                     using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
                     {

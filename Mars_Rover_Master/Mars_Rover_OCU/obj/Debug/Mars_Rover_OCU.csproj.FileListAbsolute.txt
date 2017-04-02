@@ -832,3 +832,4 @@ C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rove
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Debug\Mars_Rover_OCU.g.resources
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Debug\Mars_Rover_OCU.Properties.Resources.resources
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Debug\Mars_Rover_OCU.csproj.GenerateResource.Cache
+C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\Microsoft.Xna.Framework.dll

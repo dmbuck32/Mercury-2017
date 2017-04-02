@@ -58,15 +58,18 @@ namespace Mars_Rover_OCU.Properties {
                 this["ArmPlayer"] = value;
             }
         }
-        
+
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("30")]
-        public int SteeringSensitivity {
-            get {
+        public int SteeringSensitivity
+        {
+            get
+            {
                 return ((int)(this["SteeringSensitivity"]));
             }
-            set {
+            set
+            {
                 this["SteeringSensitivity"] = value;
             }
         }
