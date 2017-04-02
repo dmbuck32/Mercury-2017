@@ -60,12 +60,17 @@ SharpIR sharpsensor[3] = {
 };
 
 // 0 = off 1 = on
-char lights = '0';
+int lightAverage=0;
+boolean lights;
+char lightOverride = '0';
 boolean dark;
 
 void setup()
 {
 
+  //Start with the headlights off
+  digitalWrite(LEDPIN,LOW);
+  
 //*** Sensor initialization ***//
 
   //Set the CE pins to output and turn the sensors off
@@ -147,14 +152,19 @@ void loop()
       
       distanceSensors[i][1] = sensor[i].readAmbientContinuous();
       if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
-      else
+      else if (i>0)
       {
-        //All the sensors must agree that it's dark.
-        if(distanceSensors[i][1] < DARK) {lights='1';}
-        else{lights='0';}
+        //Averaging the side light values
+        lightAverage+=distanceSensors[i][1];
       }
     }
-  
+
+    //Getting the current average light level and turn the lights on if it is below the threshold.
+    if ((lightAverage/2) < dark){
+      lights = true;
+    }
+    lightAverage=0;
+    
     //*** Print sensor readings ***//
     Serial.print(distanceSensors[0][0]);
     Serial.print (",");
@@ -177,15 +187,20 @@ void loop()
   //override checking
   if(Serial.available() > 0) //available()returns the number of bytes in the buffer
   {
-    lights = Serial.read();
+    lightOverride = Serial.read();
   }
 
-  //updating the current state of the LEDs
-  switch(lights)
+  //Overriding the state of the lights
+  if(lightOverride == '1') {lights=true;}
+
+  //Final set of the light state
+  if(lights)
   {
-    case '0': digitalWrite(LEDPIN,LOW);
-    break;
-    case '1': digitalWrite(LEDPIN,HIGH);
+    digitalWrite(LEDPIN,HIGH);
+  }
+  else
+  {
+    digitalWrite(LEDPIN,LOW);
   }
   
   //*** Debug I2C Scanner ***//
