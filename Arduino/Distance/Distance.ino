@@ -143,7 +143,7 @@ void loop()
     {
       //If the VL610X has malfunctioned, read the Sharp sensor (this is in centimeters so multiplied by 1000 to convert.)
       distanceSensors[i][0] = sensor[i].readRangeContinuousMillimeters();
-      if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=(sharpsensor[i].distance()*1000); }
+      if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=(sharpsensor[i].getDistance()*1000); }
       
       distanceSensors[i][1] = sensor[i].readAmbientContinuous();
       if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
