@@ -20,6 +20,9 @@ namespace Mars_Rover_OCU.Utilities
         private static int closed = 0;
         private static int open = 1;
 
+        // Static variables to store current state of Drivestate
+        private static short mode = 0;
+
         public static Mars_Rover_Comms.DriveState getDriveState()
         {
             GamePadState state = GamePad.GetState(ControllerSettings.Default.DrivePlayer);
@@ -49,25 +52,27 @@ namespace Mars_Rover_OCU.Utilities
             // A Button Handler (Translate Mode)
             if (state.Buttons.A == ButtonState.Pressed)
             {
-                driveState.Mode = 2;
+                mode = 2;
             }
 
             // X Button Handler (Rotate Mode)
             else if (state.Buttons.X == ButtonState.Pressed)
             {
-                driveState.Mode = 1;
+                mode = 1;
             }
 
             // Y Button Handler (Normal Mode)
             else if (state.Buttons.Y == ButtonState.Pressed)
             {
-                driveState.Mode = 0;
+                mode = 0;
             }
             // B Button Handler (Tank Mode)
             else if (state.Buttons.B == ButtonState.Pressed)
             {
-                driveState.Mode = 3;
+                mode = 3;
             }
+
+            driveState.Mode = mode;
 
             // D-Pad Down Handler (Shoulder Servo)
             if (state.DPad.Down == ButtonState.Pressed)
