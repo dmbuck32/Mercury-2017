@@ -71,9 +71,16 @@ namespace Mars_Rover_RCU
                 #region Sensors
                 Logger.WriteLine("Creating Sensors");
                 _Sensors = new Sensors();
-                if (_Sensors.OpenConnection())
+                try
                 {
-                    Logger.WriteLine("Sensors successfully created.");
+                    if (_Sensors.OpenConnection())
+                    {
+                        Logger.WriteLine("Sensors successfully created.");
+                    }
+                } catch (Exception ex)
+                {
+                    Logger.WriteLine("Error: " + ex.Message);
+                    Logger.WriteLine("Sensors not created.");
                 }
                 sensorData = new string[6];
                 #endregion

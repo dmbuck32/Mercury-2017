@@ -4,7 +4,7 @@
         xmlns:wf="clr-namespace:GMap.NET.WindowsForms;assembly=GMap.NET.WindowsForms"
         xmlns:rules="clr-namespace:Mars_Rover_OCU.ValidationRules"
         xmlns:p="clr-namespace:Mars_Rover_OCU.Properties"
-        Title="2017 Mountaineer OCU" Height="767.334" Width="1090" Foreground="#FF2B2E2E" WindowStartupLocation="CenterScreen" Icon="Resources/wv.png" Closing="Window_Closing" Loaded="Window_Loaded" ResizeMode="CanResizeWithGrip" MinWidth="900" MinHeight="768">
+        Title="2017 Mountaineer OCU" Height="767.334" Width="1090" Foreground="#FF2B2E2E" WindowStartupLocation="CenterScreen" Icon="Resources/wv.png" Closing="Window_Closing" Loaded="Window_Loaded" ResizeMode="CanMinimize" MinWidth="900" MinHeight="768">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -357,30 +357,21 @@
                     </Grid>
                     <Grid x:Name="RoverSettings"  HorizontalAlignment="Left" Margin="20,0,0,187" Width="356" Height="85" VerticalAlignment="Bottom" RenderTransformOrigin="0.49,0.637">
                         <Canvas x:Name="___No_Name_" Margin="0,-5,-3,18" Height="72" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="359">
+                            <!-- Buttons for toggleable Features -->
                             <Rectangle x:Name="WallFollowingBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="10" Canvas.Left="142" Visibility="Visible"/>
                             <Rectangle x:Name="ResetServo" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="124" Canvas.Top="10" Canvas.Left="220" Visibility="Visible"/>
                             <Rectangle x:Name="FrontAutoStopWithArmUpBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="116" Canvas.Top="45" Canvas.Left="143"/>
-                            <Rectangle x:Name="FrontAutoStopWithArmDownBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="124" Canvas.Top="10" Canvas.Left="220" Visibility="Hidden"/>
-                            <Label Content="Auto Stop (Arm Up)" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="149" Width="107" Canvas.Top="43"/>
-                            <Label Content="Launch" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="155" Canvas.Top="7" Width="40" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
-                            <Label HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Padding="0" FontSize="16" RenderTransformOrigin="0.5,0.5" Canvas.Left="94" Canvas.Top="74">
-                                <Label.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="180"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </Label.RenderTransform>
-                            </Label>
-                            <Label Content="Reset Launch Servo" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="228" Width="104" Canvas.Top="8" Visibility="Visible"/>
-                            <Label Content="F2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="274" Width="13" Canvas.Top="21" RenderTransformOrigin="0.522,0.5" Visibility="Visible"/>
-                            <Label Content="F1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="169" Width="14" Canvas.Top="21" Visibility="Visible"/>
-                            <Label Content="F3" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="196" Width="16" Canvas.Top="56"/>
                             <Rectangle x:Name="ToggleHeadlightsBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="74" Canvas.Left="270" Canvas.Top="45"/>
+                            <!-- Labels for Buttons-->
+                            <Label Content="Launch" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="155" Canvas.Top="7" Width="40" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
+                            <Label Content="Reset Launch Servo" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="228" Width="104" Canvas.Top="8" Visibility="Visible"/>
+                            <Label Content="Auto Stop (Arm Up)" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="149" Width="107" Canvas.Top="43"/>
                             <Label Content="Headlights" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="279" Canvas.Top="43" Width="59"/>
+                            <Label Content="F1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="169" Width="14" Canvas.Top="21"/>
+                            <Label Content="F2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="274" Width="13" Canvas.Top="21"/>
+                            <Label Content="F3" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="196" Width="16" Canvas.Top="56"/>
                             <Label Content="F4" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="301" Width="14" Canvas.Top="56"/>
-                            <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="30" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="54"/>
+                            <Label Content="Actions:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="30" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="54"/>
                         </Canvas>
                     </Grid>
                 </Grid>
@@ -392,7 +383,7 @@
         </TabControl>
 
         <Grid Margin="421,8,6,10">
-            <Image x:Name="image" HorizontalAlignment="Left" Height="896" VerticalAlignment="Top" Width="440" Source="Resources/Robot2.PNG" Margin="104,117,0,-293" RenderTransformOrigin="0.5,0.5">
+            <Image x:Name="image" Height="896" VerticalAlignment="Top" Width="440" Source="Resources/Robot2.PNG" Margin="104,117,112,-293" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -408,12 +399,12 @@
             <Label x:Name="FrontSensor" Content="0000" Margin="0,0,303,628" FontSize="18" Width="51" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
             <Label x:Name="LeftSensor" Content="0000" Margin="0,0,559.8,391" FontSize="18" Width="52" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
             <Label x:Name="RightSensor" Content="0000" Margin="0,0,46.8,385" FontSize="18" Width="52" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
-            <Label Content="Front Sensor:" Margin="0,0,269,663" Width="107" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
+            <Label Content="Front Sensor:" Margin="277,0,289,663" Width="82" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
             <Label Content="Rear Sensor:" Margin="0,0,326,95" Width="76" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom" Visibility="Hidden"/>
-            <Label Content="Left Sensor:" Margin="0,0,547.8,426" Width="72" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
+            <Label Content="Left Sensor:" Margin="0,0,551,426" Width="72" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
             <Label Content="Right Sensor:" Margin="0,0,31,426" Width="82" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
         </Grid>
-        <Image x:Name="wv_png" Margin="40,40,988,646" Stretch="Fill" Source="Resources/wv.png"/>
+        <Image x:Name="wv_png" Margin="40,40,988,646" Source="Resources/wv.png" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
 
 

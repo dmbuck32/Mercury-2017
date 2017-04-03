@@ -156,7 +156,6 @@ namespace Mars_Rover_OCU
                             comms.setF3(true);
                             comms.setF2(false);
                             FrontAutoStopWithArmUpBtn.Fill = keyPressed;
-                            FrontAutoStopWithArmDownBtn.Fill = keyReleased;
                         }
                         else if (comms.getF3() == true && comms.getF2() == false)
                         {
@@ -402,7 +401,7 @@ namespace Mars_Rover_OCU
                     RightSensor.Content = comms.getRightSensor();
                     FrontSensor.Content = comms.getFrontLeftSensor();
 
-                    SpeedSensitivity.Text = ControllerSettings.Default.SpeedSensitivity.ToString();
+                    SpeedSensitivity.Text = ControllerSettings.Default.Speed.ToString();
                 }));
             }
             catch (TaskCanceledException)

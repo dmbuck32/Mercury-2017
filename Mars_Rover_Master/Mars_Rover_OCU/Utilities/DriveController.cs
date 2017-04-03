@@ -17,7 +17,6 @@ namespace Mars_Rover_OCU.Utilities
         //this value will have to be recalculated.
         public static readonly int MINIMUM_RADIUS = 18;
 
-
         public static Mars_Rover_Comms.DriveState getDriveState()
         {
             GamePadState state = GamePad.GetState(ControllerSettings.Default.DrivePlayer);
@@ -27,7 +26,89 @@ namespace Mars_Rover_OCU.Utilities
 
             //process state and build output
             Mars_Rover_Comms.DriveState driveState = new Mars_Rover_Comms.DriveState();
-            
+
+            //-- 2017 Mercury Robot Controls --//
+
+            // Trigger Values
+            double rTrigger = state.Triggers.Right;
+            double lTrigger = state.Triggers.Left;
+
+            // Right Stick Values
+            double rStickX = state.ThumbSticks.Right.X;
+            double rStickY = state.ThumbSticks.Right.Y;
+
+            // Left Stick Values
+            double lStickX = state.ThumbSticks.Left.X;
+            double lStickY = state.ThumbSticks.Left.Y;
+
+            // A Button Handler (Translate Mode)
+            if (state.Buttons.A == ButtonState.Pressed)
+            {
+
+            }
+
+            // B Button Handler (N/A)
+            if (state.Buttons.B == ButtonState.Pressed)
+            {
+
+            }
+
+            // X Button Handler (Rotate Mode)
+            if (state.Buttons.X == ButtonState.Pressed)
+            {
+
+            }
+
+            // Y Button Handler (Normal Mode)
+            if (state.Buttons.Y == ButtonState.Pressed)
+            {
+
+            }
+
+            // D-Pad Down Handler (Shoulder Servo)
+            if (state.DPad.Down == ButtonState.Pressed)
+            {
+
+            }
+
+            // D-Pad Up Handler (N/A)
+            if (state.DPad.Up == ButtonState.Pressed)
+            {
+
+            }
+
+            // D-Pad Left Handler (Elbow Servo)
+            if (state.DPad.Left == ButtonState.Pressed)
+            {
+
+            }
+
+            // D-Pad Right Handler (Wrist Servo)
+            if (state.DPad.Right == ButtonState.Pressed)
+            {
+
+            }
+
+            // Left Bumper Handler (Claw Close)
+            if (state.Buttons.LeftShoulder == ButtonState.Pressed)
+            {
+
+            }
+
+            // Right Bumper Handler (Claw Open)
+            if (state.Buttons.RightShoulder == ButtonState.Pressed)
+            {
+
+            }
+
+            // Start/Back Button Handler (Headlight Toggle)
+            if (state.Buttons.Start == ButtonState.Pressed || state.Buttons.Back == ButtonState.Pressed)
+            {
+
+            }
+
+            //-- 2016 Mercury Robot Controls --//
+            /*
             //speed adjustment upward
             if (state.DPad.Up == ButtonState.Pressed && ControllerSettings.Default.SpeedSensitivity <= 48)
                 ControllerSettings.Default.SpeedSensitivity += 2;
@@ -90,6 +171,7 @@ namespace Mars_Rover_OCU.Utilities
             //Gripper Stuff
             driveState.ScoopIn = state.IsButtonDown(Buttons.RightStick);
             driveState.ScoopOut = state.IsButtonDown(Buttons.LeftStick);
+            */
 
             return driveState;
         }

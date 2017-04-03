@@ -176,9 +176,6 @@
     <Resource Include="Resources\wv.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Rover.png" />
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
       <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
@@ -207,12 +204,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Robot2.PNG" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\Car.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\create2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

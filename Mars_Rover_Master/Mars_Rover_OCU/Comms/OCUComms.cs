@@ -56,7 +56,7 @@ namespace Mars_Rover_OCU.Comms
                 {
                     _driveState = new DriveState();
                     
-
+                    /*
                     _driveState.Radius = 2047;
                     _driveState.Speed = 0;
                     _driveState.ArmSpeed = 0;
@@ -66,6 +66,7 @@ namespace Mars_Rover_OCU.Comms
                     _driveState.FrontStopArmUp = false;
                     _driveState.Headlights = false;
                     _driveState.WallFollow = false;
+                    */
                 }
             }
 
@@ -73,11 +74,13 @@ namespace Mars_Rover_OCU.Comms
             {
                 lock (_keyboardSync)
                 {
+                    /*
                     _driveState.Speed = speed;
                     _driveState.Radius = radius;
                     _driveState.ArmSpeed = armSpeed;
                     _driveState.ScoopIn = scoopIn;//Left Pressed or J
                     _driveState.ScoopOut = scoopOut;//Right Pressed or L
+                    */
                 }
             }
 
@@ -340,6 +343,7 @@ namespace Mars_Rover_OCU.Comms
 
                         try
                         {
+                            /*
                             outputState.DriveState = DriveController.getDriveState();
                             outputState.DriveState.WallFollow = F1_Pressed;
                             outputState.DriveState.FrontStopArmDown = F2_Pressed;
@@ -347,18 +351,20 @@ namespace Mars_Rover_OCU.Comms
                             outputState.DriveState.Headlights = F4_Pressed;
                             outputState.DriveState.Control = 1;
                             outputState.DriveState.controllerControl = true;
+                            */
                         }
                         catch (Exception ex)
                         {
                             Console.WriteLine("Controller not connected!!" + ex.Message);
-                            outputState.DriveState = new DriveState() { Radius = 2047, Speed = 0, ScoopIn = false, ScoopOut = false, FrontStopArmDown = false, FrontStopArmUp = false, Headlights = false, WallFollow = false};
-                            outputState.DriveState.Control = 0;
+                            //outputState.DriveState = new DriveState() { Radius = 2047, Speed = 0, ScoopIn = false, ScoopOut = false, FrontStopArmDown = false, FrontStopArmUp = false, Headlights = false, WallFollow = false};
+                            outputState.DriveState.Control = false;
                         }
                     }
                     else if (_driveMethod == 2) //Keyboard
                     {
                         try
                         {
+                            /*
                             outputState.DriveState = keyboardDrive.getDriveState();
                             outputState.DriveState.WallFollow = F1_Pressed;
                             outputState.DriveState.FrontStopArmDown = F2_Pressed;
@@ -366,18 +372,19 @@ namespace Mars_Rover_OCU.Comms
                             outputState.DriveState.Headlights = F4_Pressed;
                             outputState.DriveState.Control = 1;
                             outputState.DriveState.controllerControl = false;
+                            */
                         }
                         catch (Exception ex)
                         {
-                            outputState.DriveState = new DriveState() { Radius = 2047, Speed = 0, ScoopIn = false, ScoopOut = false, FrontStopArmDown = false, FrontStopArmUp = false, Headlights = false, WallFollow = false};
-                            outputState.DriveState.Control = 0;
+                            //outputState.DriveState = new DriveState() { Radius = 2047, Speed = 0, ScoopIn = false, ScoopOut = false, FrontStopArmDown = false, FrontStopArmUp = false, Headlights = false, WallFollow = false};
+                            outputState.DriveState.Control = false;
                             Console.WriteLine("Output State: " + ex.Message);
                         }
                     }
                     else //No control, give back to RC Contoller
                     {
-                        outputState.DriveState = new DriveState() { Radius = 2047, Speed = 0, ScoopIn = false, ScoopOut = false, FrontStopArmDown = false, FrontStopArmUp = false, Headlights = false, WallFollow = false};
-                        outputState.DriveState.Control = 0;
+                        //outputState.DriveState = new DriveState() { Radius = 2047, Speed = 0, ScoopIn = false, ScoopOut = false, FrontStopArmDown = false, FrontStopArmUp = false, Headlights = false, WallFollow = false};
+                        outputState.DriveState.Control = false;
                     }
 
                     //Send the same arm state regardless of drive method
@@ -680,14 +687,15 @@ namespace Mars_Rover_OCU.Comms
                 //NOTES:
                 //1.) gripper speed is constant for the keyboard and is taken care of in kinematics 
                 //2.) if j or l has been hit then left_pressed/ right_pressed will be true use this for scoopIn/scoopOut values in setDriveState
-
+               
+                /*
                 if (_speed == -1)
                     _speed = keyboardDrive.getDriveState().Speed;
                 if (_direction == -1)
                     _direction = keyboardDrive.getDriveState().Radius;
                 if (_armSpeed == -1)
                     _armSpeed = keyboardDrive.getDriveState().ArmSpeed;
-
+                */
                 keyboardDrive.setDriveState(_speed, _direction, _armSpeed, Left_Pressed, Right_Pressed);
             }
         }
@@ -707,7 +715,7 @@ namespace Mars_Rover_OCU.Comms
             return _Log;
         }
 
-       private void server_PacketReceived(object sender, DataArgs e)
+        private void server_PacketReceived(object sender, DataArgs e)
         {
             try
             {
@@ -723,17 +731,13 @@ namespace Mars_Rover_OCU.Comms
             }
         }
 
-       private void StateProcessorDoWork()
+        private void StateProcessorDoWork()
        {
            while (!tokenSource.Token.IsCancellationRequested)
            {
              try
                {                                              
-                Mars_Rover_Comms.RobotReturnState robotState = stateQueue.Dequeue(tokenSource.Token);
-
-                //_lat = robotState.PositionReturnState.Lat;
-                //_lng = robotState.PositionReturnState.Lon;
-                //_heading = robotState.PositionReturnState.Heading;
+                    Mars_Rover_Comms.RobotReturnState robotState = stateQueue.Dequeue(tokenSource.Token);
 
                     LeftSensor = robotState.PositionReturnState.leftDistance;
                     RightSensor = robotState.PositionReturnState.rightDistance;
