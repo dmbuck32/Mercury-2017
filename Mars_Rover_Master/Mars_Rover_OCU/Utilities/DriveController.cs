@@ -17,11 +17,14 @@ namespace Mars_Rover_OCU.Utilities
         //this value will have to be recalculated.
         public static readonly int MINIMUM_RADIUS = 18;
 
-        private static int closed = 0;
-        private static int open = 1;
+        private static short closed = 0;
+        private static short open = 1;
 
         // Static variables to store current state of Drivestate
         private static short mode = 0;
+        private static short armState = 0;
+        private static short gripper = closed;
+        private static bool headlight = false;
 
         public static Mars_Rover_Comms.DriveState getDriveState()
         {
@@ -72,54 +75,59 @@ namespace Mars_Rover_OCU.Utilities
                 mode = 3;
             }
 
-            driveState.Mode = mode;
+            // Robot Arm State
 
             // D-Pad Down Handler (Shoulder Servo)
             if (state.DPad.Down == ButtonState.Pressed)
             {
-                driveState.ArmState = 0;
+                armState = 0;
             }
 
             // D-Pad Up Handler (N/A)
-            if (state.DPad.Up == ButtonState.Pressed)
+            else if (state.DPad.Up == ButtonState.Pressed)
             {
                 
             }
 
             // D-Pad Left Handler (Elbow Servo)
-            if (state.DPad.Left == ButtonState.Pressed)
+            else if (state.DPad.Left == ButtonState.Pressed)
             {
-                driveState.ArmState = 1;
+                armState = 1;
             }
 
             // D-Pad Right Handler (Wrist Servo)
-            if (state.DPad.Right == ButtonState.Pressed)
+            else if (state.DPad.Right == ButtonState.Pressed)
             {
-                driveState.ArmState = 2;
+                armState = 2;
             }
+
+            // Robot Gripper
 
             // Left Bumper Handler (Gripper Close)
             if (state.Buttons.LeftShoulder == ButtonState.Pressed)
             {
-                driveState.gripperPos = (short)closed;
+                gripper = closed;
             }
 
             // Right Bumper Handler (Gripper Open)
             if (state.Buttons.RightShoulder == ButtonState.Pressed)
             {
-                driveState.gripperPos = (short)open;
+                gripper = open;
             }
 
-            // Start Button Handler (Headlight On)
-            if (state.Buttons.Start == ButtonState.Pressed)
-            {
-                driveState.Headlights = true;
-            }
+            // Headlights
 
-            // Start Button Handler (Headlight Off)
-            if (state.Buttons.Back == ButtonState.Pressed)
+            // Start/Back Button Handler (Headlight Toggle)
+            if (state.Buttons.Start == ButtonState.Pressed || state.Buttons.Back == ButtonState.Pressed)
             {
-                driveState.Headlights = false;
+                if (headlight)
+                {
+                    headlight = false;
+                } else
+                {
+                    headlight = true;
+                }
+                
             }
 
             //-- 2016 Mercury Robot Controls --//
@@ -187,6 +195,11 @@ namespace Mars_Rover_OCU.Utilities
             driveState.ScoopIn = state.IsButtonDown(Buttons.RightStick);
             driveState.ScoopOut = state.IsButtonDown(Buttons.LeftStick);
             */
+
+            driveState.Mode = mode;
+            driveState.ArmState = armState;
+            driveState.gripperPos = gripper;
+            driveState.Headlights = headlight;
 
             return driveState;
         }
