@@ -57,7 +57,7 @@ namespace Mars_Rover_RCU.Controllers
         private const int rearLeftInit = 1510;
         private const int rearRightInit = 1425;
         private const int frontLeftInit = 1441;
-        private const int frontRightInit = 1588;
+        private const int frontRightInit = 1520;
 
         // PWM Values for Gripper Open/Closed
         private const int gripperOpen = 1500;
@@ -73,13 +73,13 @@ namespace Mars_Rover_RCU.Controllers
         private int LOS = 0;
 
         // PWM values for ARM Channels
-        private int shoulderInit = 1500;
-        private int elbowInit = 1500;
-        private int wristInit = 1500;
+        private int shoulderInit = 464;
+        private int elbowInit = 1000;
+        private int wristInit = 2000;
 
         // Maestro Stuff
-        private const String DriveMaestro = "";
-        private const String ArmMaestro = "";
+        private const String DriveMaestro = "00109387";
+        private const String ArmMaestro = "00137085";
    
         private Usc Drive = null;
         private Usc Arm = null;
@@ -96,11 +96,13 @@ namespace Mars_Rover_RCU.Controllers
                 {
                     Drive = new Usc(Device);
                     initializeDrive();
+                    Logger.WriteLine("Found Drive Maestro");
                 }
                 if (Device.serialNumber == ArmMaestro)
                 {
                     Arm = new Usc(Device);
                     initializeArm();
+                    Logger.WriteLine("Found Arm Maestro");
                 }
             }
         }
@@ -136,6 +138,28 @@ namespace Mars_Rover_RCU.Controllers
         public void closeGripper()
         {
             Arm.setTarget(GripperServo, (ushort)(PWM_Multiplier * gripperClosed));
+        }
+
+        public void drive(int channelLeft, int channelRight)
+        {
+            if (channelLeft < 1000)
+            {
+                channelLeft = 1000;
+            }
+            if (channelLeft > 2000)
+            {
+                channelLeft = 2000;
+            }
+            if (channelRight < 1000)
+            {
+                channelRight = 1000;
+            }
+            if (channelRight > 2000)
+            {
+                channelRight = 2000;
+            }
+            Drive.setTarget(LeftMotors, (ushort)(PWM_Multiplier * channelLeft));
+            Drive.setTarget(RightMotors, (ushort)(PWM_Multiplier * channelRight));
         }
 
 
@@ -238,100 +262,5 @@ namespace Mars_Rover_RCU.Controllers
                 }
             }
         }
-        /*
-        public void elbowMovementTest()
-        {
-            do
-            {
-                usc.setTarget(elbowChannel,4250);//up
-                Logger.WriteLine("4250");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(elbowChannel, 4500);
-                Logger.WriteLine("4500");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(elbowChannel, 5000);
-                Logger.WriteLine("5000");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(elbowChannel, 5500);
-                Logger.WriteLine("5500");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(elbowChannel, 6000);
-                Logger.WriteLine("6000");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(elbowChannel, 6500);
-                Logger.WriteLine("6500");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(elbowChannel, 7000);
-                Logger.WriteLine("7000");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(elbowChannel, 7500);
-                Logger.WriteLine("7500");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(elbowChannel, 8000);
-                Logger.WriteLine("8000");
-                System.Threading.Thread.Sleep(1000);//down
-            }
-            while(false);
-        }
-
-        public void shoulderMovementTest()
-        {
-            do
-            {
-                usc.setTarget(shoulderChannel, 4250);//Down
-                Logger.WriteLine("4250");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(shoulderChannel, 4500);
-                Logger.WriteLine("4500");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(shoulderChannel, 5000);
-                Logger.WriteLine("5000");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(shoulderChannel, 5500);
-                Logger.WriteLine("5500");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(shoulderChannel, 6000);
-                Logger.WriteLine("6000");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(shoulderChannel, 6500);
-                Logger.WriteLine("6500");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(shoulderChannel, 7000);
-                Logger.WriteLine("7000");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(shoulderChannel, 7500);
-                Logger.WriteLine("7500");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(shoulderChannel, 8000);//Up
-                Logger.WriteLine("8000");
-                System.Threading.Thread.Sleep(1000);
-            }
-            while (false);
-        }
-        
-        public void gripperMovementTest()
-        {
-            do
-            {
-                usc.setTarget(clawChannel, 7000);//closed
-                Logger.WriteLine("7000");
-                System.Threading.Thread.Sleep(1000);
-                usc.setTarget(clawChannel, 8500);
-                Logger.WriteLine("8500");
-                System.Threading.Thread.Sleep(1000);
-                
-            }
-            while (false);
-        }
-
-        public void resetTrigger()
-        {
-            do
-            {
-                usc.setTarget(triggerChannel, 5045); //off 
-            }
-            while (false);
-        }
-        */
     }
 }
