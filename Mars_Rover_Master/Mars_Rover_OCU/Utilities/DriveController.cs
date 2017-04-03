@@ -44,28 +44,29 @@ namespace Mars_Rover_OCU.Utilities
             double lStickX = state.ThumbSticks.Left.X;
             double lStickY = state.ThumbSticks.Left.Y;
 
+            // Robot Drive State
+
             // A Button Handler (Translate Mode)
             if (state.Buttons.A == ButtonState.Pressed)
             {
                 driveState.Mode = 2;
             }
 
-            // B Button Handler (N/A)
-            if (state.Buttons.B == ButtonState.Pressed)
-            {
-                
-            }
-
             // X Button Handler (Rotate Mode)
-            if (state.Buttons.X == ButtonState.Pressed)
+            else if (state.Buttons.X == ButtonState.Pressed)
             {
                 driveState.Mode = 1;
             }
 
             // Y Button Handler (Normal Mode)
-            if (state.Buttons.Y == ButtonState.Pressed)
+            else if (state.Buttons.Y == ButtonState.Pressed)
             {
                 driveState.Mode = 0;
+            }
+            // B Button Handler (Tank Mode)
+            else if (state.Buttons.B == ButtonState.Pressed)
+            {
+                driveState.Mode = 3;
             }
 
             // D-Pad Down Handler (Shoulder Servo)

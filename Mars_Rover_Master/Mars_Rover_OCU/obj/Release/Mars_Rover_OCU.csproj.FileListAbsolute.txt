@@ -72,3 +72,6 @@ D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_OCU\obj\Release\M
 D:\MARSROVER\Dropbox\Software (2)\Mars_Rover_Master\Mars_Rover_OCU\obj\Release\Mars_Rover_OCU.csproj.GenerateResource.Cache
 E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_OCU\obj\Release\MarkerOptions.g.cs
 E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_OCU\obj\Release\MarkerOptions.baml
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Release\Mars_Rover_OCU.exe.config
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Release\Mars_Rover_OCU.exe
+C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\obj\Release\Mars_Rover_OCU.pdb

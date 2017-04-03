@@ -343,15 +343,13 @@ namespace Mars_Rover_OCU.Comms
 
                         try
                         {
-                            /*
                             outputState.DriveState = DriveController.getDriveState();
-                            outputState.DriveState.WallFollow = F1_Pressed;
-                            outputState.DriveState.FrontStopArmDown = F2_Pressed;
-                            outputState.DriveState.FrontStopArmUp = F3_Pressed;
+                            outputState.DriveState.goToHome = F1_Pressed;
+                            outputState.DriveState.goToSample = F2_Pressed;
+                            outputState.DriveState.goToDeposit = F3_Pressed;
                             outputState.DriveState.Headlights = F4_Pressed;
-                            outputState.DriveState.Control = 1;
+                            outputState.DriveState.Control = true;
                             outputState.DriveState.controllerControl = true;
-                            */
                         }
                         catch (Exception ex)
                         {
