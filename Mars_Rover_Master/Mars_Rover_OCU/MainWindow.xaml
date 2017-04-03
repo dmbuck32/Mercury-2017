@@ -358,14 +358,14 @@
                     <Grid x:Name="RoverSettings"  HorizontalAlignment="Left" Margin="20,0,0,187" Width="356" Height="85" VerticalAlignment="Bottom" RenderTransformOrigin="0.49,0.637">
                         <Canvas x:Name="___No_Name_" Margin="0,-5,-3,18" Height="72" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="359">
                             <!-- Buttons for toggleable Features -->
-                            <Rectangle x:Name="WallFollowingBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="10" Canvas.Left="142" Visibility="Visible"/>
-                            <Rectangle x:Name="ResetServo" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="124" Canvas.Top="10" Canvas.Left="220" Visibility="Visible"/>
-                            <Rectangle x:Name="FrontAutoStopWithArmUpBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="116" Canvas.Top="45" Canvas.Left="143"/>
+                            <Rectangle x:Name="HomeMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="10" Canvas.Left="142" Visibility="Visible"/>
+                            <Rectangle x:Name="SampleCollectionMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="124" Canvas.Top="10" Canvas.Left="220" Visibility="Visible"/>
+                            <Rectangle x:Name="SampleDepositMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="116" Canvas.Top="45" Canvas.Left="143"/>
                             <Rectangle x:Name="ToggleHeadlightsBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="74" Canvas.Left="270" Canvas.Top="45"/>
                             <!-- Labels for Buttons-->
-                            <Label Content="Launch" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="155" Canvas.Top="7" Width="40" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
-                            <Label Content="Reset Launch Servo" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="228" Width="104" Canvas.Top="8" Visibility="Visible"/>
-                            <Label Content="Auto Stop (Arm Up)" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="149" Width="107" Canvas.Top="43"/>
+                            <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="155" Canvas.Top="7" Width="40" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
+                            <Label Content="Sample Collection" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="234" Width="97" Canvas.Top="8" Visibility="Visible"/>
+                            <Label Content="Sample Deposit" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="161" Width="85" Canvas.Top="43"/>
                             <Label Content="Headlights" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="279" Canvas.Top="43" Width="59"/>
                             <Label Content="F1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="169" Width="14" Canvas.Top="21"/>
                             <Label Content="F2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="274" Width="13" Canvas.Top="21"/>
