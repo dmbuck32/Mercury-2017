@@ -100,6 +100,7 @@
     </Compile>
     <Compile Include="Components\TurningServo.cs" />
     <Compile Include="Controllers\Maestro.cs" />
+    <Compile Include="Controllers\PID.cs" />
     <Compile Include="Controllers\Sensors.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Kinematics\Constants.cs" />

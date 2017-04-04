@@ -8,6 +8,8 @@ using Pololu.UsbWrapper;
 using System.Diagnostics;
 using Mars_Rover_RCU.Utilities;
 using System.IO.Ports;
+using System.Management;
+
 namespace Mars_Rover_RCU.Controllers
 {
     public class Sensors
@@ -27,23 +29,37 @@ namespace Mars_Rover_RCU.Controllers
         /// <returns>Returns the status of the connection attempt.</returns>
         public bool OpenConnection()
         {
+            String port = "COM10";
 
-            //Figuring out which port the Arduino is on and connecting
-            this.Arduino = new SerialPort("COM10", 9600);
-            this.Arduino.Open();
+            //Determining the port the Arduino is on 
+            //NOT SURE IF THIS WORKS
+            /*ManagementObjectCollection collection;
+            using (var searcher = new ManagementObjectSearcher(@"Select * From Win32_USBHub"))
+                collection = searcher.Get();
 
-            if (this.Arduino.IsOpen)
+            foreach (var device in collection)
             {
-                Logger.WriteLine("Arduino is open.");
-                this.Arduino.DtrEnable = true;
-                this.Arduino.DataReceived += DataReceived;
-                this.Arduino.ErrorReceived += ErrorReceived;
-                return true;
+
+                if (((string)device.GetPropertyValue("DeviceID")).Equals("Arduino Leonardo")) { port = (string)device.GetPropertyValue("Caption"); }
+            } */
+
+            //attempting to connect to the Arduino
+            try
+            {
+                this.Arduino = new SerialPort(port, 9600);
             }
-            else
+            catch(System.IO.IOException)
             {
+                Logger.WriteLine("Failed to connect to Arduino.");
                 return false;
             }
+
+            this.Arduino.Open();
+            Logger.WriteLine("Successfully connected to Arduino.");
+            this.Arduino.DtrEnable = true;
+            this.Arduino.DataReceived += DataReceived;
+            this.Arduino.ErrorReceived += ErrorReceived;
+            return true;
         }
 
         /// <summary>
