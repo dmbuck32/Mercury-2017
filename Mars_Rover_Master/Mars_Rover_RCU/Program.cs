@@ -166,6 +166,7 @@ namespace Mars_Rover_RCU
                             Logger.WriteLine("Robot Headlight: " + robotState.DriveState.Headlights);
                             Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
                             Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
+                            Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
                             /*
                             if (robotState.DriveState.FrontStopArmUp == true && _Roomba.getAutobrake() == false)
                             {

@@ -56,10 +56,6 @@
     <Reference Include="GMap.NET.Core">
       <HintPath>..\..\Experimental\MissionPlanner-master\MissionPlanner-master\Lib\GMap.NET.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Phidget21.NET, Version=2.1.8.205, Culture=neutral, PublicKeyToken=c2b1f2a3594bce52, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\WINDOWS\assembly\GAC_MSIL\Phidget21.NET\2.1.8.205__c2b1f2a3594bce52\Phidget21.NET.dll</HintPath>
-    </Reference>
     <Reference Include="ProjNet">
       <HintPath>..\..\Experimental\MissionPlanner-master\MissionPlanner-master\Lib\ProjNet.dll</HintPath>
     </Reference>
