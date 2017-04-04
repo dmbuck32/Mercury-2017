@@ -160,8 +160,12 @@ namespace Mars_Rover_RCU
                     {
                         if (robotState.DriveState != null)
                         {
-                            short DriveMode = robotState.DriveState.Mode;
-                            Logger.WriteLine("Robot Drive Mode is: " + DriveMode);
+                            Logger.WriteLine("Robot Drive Mode: " + robotState.DriveState.Mode);
+                            Logger.WriteLine("Robot Arm State: " + robotState.DriveState.ArmState);
+                            Logger.WriteLine("Robot Gripper Pos: " + robotState.DriveState.gripperPos);
+                            Logger.WriteLine("Robot Headlight: " + robotState.DriveState.Headlights);
+                            Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
+                            Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
                             /*
                             if (robotState.DriveState.FrontStopArmUp == true && _Roomba.getAutobrake() == false)
                             {

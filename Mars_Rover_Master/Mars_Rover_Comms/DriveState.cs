@@ -48,6 +48,9 @@ namespace Mars_Rover_Comms
         [XmlAttribute("goToDeposit")]
         public bool goToDeposit; // Macro for positioning arm to deposit sample
 
+        [XmlAttribute("usePID")]
+        public bool usePID;
+
         [XmlAttribute("ControllerControl")]
         public bool controllerControl;  
 

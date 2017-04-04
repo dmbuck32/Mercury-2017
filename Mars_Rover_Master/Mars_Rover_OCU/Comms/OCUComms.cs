@@ -26,12 +26,6 @@ namespace Mars_Rover_OCU.Comms
             private static KeyboardDrive _keyboardInstance;
             private static readonly object _keyboardSync = new object();
             private DriveState _driveState;
-            Key[] pressedKeys = new Key[] { Key.None, Key.None, Key.None, Key.None, Key.None, Key.None, Key.None, Key.None};
-            //[0] = Forward
-            //[1] = Left
-            //[2] = Right
-            //[3] = Reverse
-            //[4] = Rotate 360
 
             public static KeyboardDrive KeyboardInstance
             {
