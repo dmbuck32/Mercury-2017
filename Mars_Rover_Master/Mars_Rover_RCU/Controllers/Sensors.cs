@@ -30,19 +30,6 @@ namespace Mars_Rover_RCU.Controllers
         public bool OpenConnection()
         {
             String port = "COM10";
-
-            //Determining the port the Arduino is on 
-            //NOT SURE IF THIS WORKS
-            /*ManagementObjectCollection collection;
-            using (var searcher = new ManagementObjectSearcher(@"Select * From Win32_USBHub"))
-                collection = searcher.Get();
-
-            foreach (var device in collection)
-            {
-
-                if (((string)device.GetPropertyValue("DeviceID")).Equals("Arduino Leonardo")) { port = (string)device.GetPropertyValue("Caption"); }
-            } */
-
             //attempting to connect to the Arduino
             try
             {
