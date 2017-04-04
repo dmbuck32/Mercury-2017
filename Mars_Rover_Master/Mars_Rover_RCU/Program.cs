@@ -26,6 +26,9 @@ namespace Mars_Rover_RCU
         static Controllers.Sensors _Sensors;
         static public String[] sensorData;
 
+        //PID
+        static Controllers.PID _PID;
+
         static Utility.UpdateQueue<RobotState> stateQueue = new Utility.UpdateQueue<RobotState>(-1);
         static XmlSerializer robotStateDeserializer = new XmlSerializer(typeof(Mars_Rover_Comms.RobotState));
 
@@ -71,11 +74,15 @@ namespace Mars_Rover_RCU
                 #region Sensors
                 Logger.WriteLine("Creating Sensors");
                 _Sensors = new Sensors();
-                if (_Sensors.OpenConnection())
+                if (!_Sensors.OpenConnection())
                 {
-                    Logger.WriteLine("Sensors successfully created.");
+                    Logger.WriteLine("Attempting to connect to Arduino.");
                 }
                 sensorData = new string[6];
+                #endregion
+
+                #region PID
+                _PID = new PID();
                 #endregion
 
 
@@ -153,6 +160,24 @@ namespace Mars_Rover_RCU
                     {
                         if (robotState.DriveState != null)
                         {
+                            if (robotState.DriveState.Headlights == true)
+                            {
+                                _Sensors.enableHeadlights();
+                            }
+                            if(robotState.DriveState.PIDEnable == true)
+                            {
+                                if (!_PID.isEnabled())
+                                {
+                                    _PID.enable();
+                                }
+                            }
+                            else if (robotState.DriveState.PIDEnable == false)
+                            {
+                                if (_PID.isEnabled())
+                                {
+                                    _PID.disable();
+                                }
+                            }
                             /*
                             if (robotState.DriveState.FrontStopArmUp == true && _Roomba.getAutobrake() == false)
                             {

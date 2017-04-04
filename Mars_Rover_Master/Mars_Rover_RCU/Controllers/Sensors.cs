@@ -59,6 +59,14 @@ namespace Mars_Rover_RCU.Controllers
         }
 
         /// <summary>
+        /// Sends the command to the arduino to enable the headlights
+        /// </summary>
+        public void enableHeadlights()
+        {
+            Arduino.Write("1");
+        }
+
+        /// <summary>
         /// Handles the event of a comm error occuring.
         /// </summary>
         /// <param name="sender"></param>

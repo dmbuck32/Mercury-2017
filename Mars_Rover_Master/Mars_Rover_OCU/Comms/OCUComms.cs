@@ -105,6 +105,7 @@ namespace Mars_Rover_OCU.Comms
         private bool F2_Pressed = false;
         private bool F3_Pressed = false;
         private bool F4_Pressed = false;
+        private bool F5_Pressed = false;
         private bool Q_Pressed = false;
         private bool E_Pressed = false;
         //End Mercury
@@ -345,6 +346,7 @@ namespace Mars_Rover_OCU.Comms
                             outputState.DriveState.FrontStopArmDown = F2_Pressed;
                             outputState.DriveState.FrontStopArmUp = F3_Pressed;
                             outputState.DriveState.Headlights = F4_Pressed;
+                            outputState.DriveState.PIDEnable = F5_Pressed;
                             outputState.DriveState.Control = 1;
                             outputState.DriveState.controllerControl = true;
                         }
@@ -364,6 +366,7 @@ namespace Mars_Rover_OCU.Comms
                             outputState.DriveState.FrontStopArmDown = F2_Pressed;
                             outputState.DriveState.FrontStopArmUp = F3_Pressed;
                             outputState.DriveState.Headlights = F4_Pressed;
+                            outputState.DriveState.PIDEnable = F5_Pressed;
                             outputState.DriveState.Control = 1;
                             outputState.DriveState.controllerControl = false;
                         }
@@ -840,6 +843,15 @@ namespace Mars_Rover_OCU.Comms
         public void setF4(bool value)
         {
             F4_Pressed = value;
+        }
+        public bool getF5()
+        {
+            return F5_Pressed;
+        }
+
+        public void setF5(bool value)
+        {
+            F5_Pressed = value;
         }
     }
 }

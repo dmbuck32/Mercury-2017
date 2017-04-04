@@ -380,7 +380,8 @@
                             <Rectangle x:Name="ToggleHeadlightsBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="74" Canvas.Left="270" Canvas.Top="45"/>
                             <Label Content="Headlights" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="279" Canvas.Top="43" Width="59"/>
                             <Label Content="F4" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="301" Width="14" Canvas.Top="56"/>
-                            <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="30" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="54"/>
+                            <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="11" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="10"/>
+                            <Rectangle x:Name="TogglePIDBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="100" Canvas.Left="37" Canvas.Top="45"/>
                         </Canvas>
                     </Grid>
                 </Grid>
@@ -414,6 +415,8 @@
             <Label Content="Right Sensor:" Margin="0,0,31,426" Width="82" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
         </Grid>
         <Image x:Name="wv_png" Margin="40,40,988,646" Stretch="Fill" Source="Resources/wv.png"/>
+        <Label x:Name="label" Content="PID" HorizontalAlignment="Left" Margin="108,476,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="label1" Content="F5" HorizontalAlignment="Left" Margin="110,489,0,0" VerticalAlignment="Top" Width="24" RenderTransformOrigin="0.833,0.423"/>
 
 
 

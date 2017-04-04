@@ -52,7 +52,10 @@ namespace Mars_Rover_Comms
         public bool FrontStopArmDown;
 
         [XmlAttribute("ControllerControl")]
-        public bool controllerControl;  
+        public bool controllerControl;
+
+        [XmlAttribute("PIDEnable")]
+        public bool PIDEnable;
 
         public DriveState()
         {
