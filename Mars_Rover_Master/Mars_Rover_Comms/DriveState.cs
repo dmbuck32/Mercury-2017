@@ -9,53 +9,53 @@ namespace Mars_Rover_Comms
 {
     public class DriveState
     {
-        [XmlAttribute("Control")]
-        public short Control; //1 control; 0 no control
-
-        [XmlAttribute("Radius")]
-        public short Radius;
-
-        [XmlAttribute("Speed")]
-        public short Speed;
-
         [XmlAttribute("LeftSpeed")]
-        public short LeftSpeed;
+        public short LeftSpeed; // 1000 - 2000
 
         [XmlAttribute("RightSpeed")]
-        public short RightSpeed;
+        public short RightSpeed; // 1000 - 2000
 
-        [XmlAttribute("ArmSpeed")]
-        public short ArmSpeed; //arm lift uses a driving motor
-        /*
-        [XmlAttribute("ElbowSpeed")]
-        public short ElbowSpeed;
+        [XmlAttribute("radius")]
+        public short radius;
 
-        [XmlAttribute("ShoulderSpeed")]
-        public short ShoulderSpeed;
-        */
-        [XmlAttribute("ScoopIn")]
-        public bool ScoopIn;
+        [XmlAttribute("Mode")]
+        public short Mode; // 0 -> Normal, 1 -> Rotate, 2 -> Translate, 3 -> Tank
 
-        [XmlAttribute("ScoopOut")]
-        public bool ScoopOut;
-        
+        [XmlAttribute("ArmState")]
+        public short ArmState; // 0 -> Shoulder, 1 -> Elbow, 2 -> wrist
+
+        [XmlAttribute("shoulderPos")]
+        public short shoulderPos; //464 - 2496
+
+        [XmlAttribute("elbowPos")]
+        public short elbowPos; //464 - 2496
+
+        [XmlAttribute("wristPos")]
+        public short wristPos; //800 - 2000
+
+        [XmlAttribute("gripperPos")]
+        public short gripperPos; // 944 - 1504
+
+        [XmlAttribute("Control")]
+        public bool Control; // I don't remember what this is for
+
         [XmlAttribute("Headlights")]
-        public bool Headlights;
+        public bool Headlights; // Headlight On or Off
 
-        [XmlAttribute("WallFollow")]
-        public bool WallFollow;
+        [XmlAttribute("goToHome")]
+        public bool goToHome; // Macro for stowing away arm
 
-        [XmlAttribute("FrontStopArmUp")]
-        public bool FrontStopArmUp;
+        [XmlAttribute("goToSample")]
+        public bool goToSample; // Macro for positioning arm to aquire sample
 
-        [XmlAttribute("FrontStopArmDown")]
-        public bool FrontStopArmDown;
+        [XmlAttribute("goToDeposit")]
+        public bool goToDeposit; // Macro for positioning arm to deposit sample
+
+        [XmlAttribute("usePID")]
+        public bool usePID;
 
         [XmlAttribute("ControllerControl")]
-        public bool controllerControl;
-
-        [XmlAttribute("PIDEnable")]
-        public bool PIDEnable;
+        public bool controllerControl;  
 
         public DriveState()
         {

@@ -1,0 +1,12 @@
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\bin\Debug\SmcExample1.exe
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\bin\Debug\SmcExample1.pdb
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\bin\Debug\Smc.dll
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\bin\Debug\UsbWrapper.dll
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\bin\Debug\Smc.pdb
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\bin\Debug\UsbWrapper.xml
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\obj\Debug\SmcExample1.csprojResolveAssemblyReference.cache
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\obj\Debug\Pololu.SimpleMotorController.SmcExample1.MainWindow.resources
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\obj\Debug\Pololu.SimpleMotorController.SmcExample1.Properties.Resources.resources
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\obj\Debug\SmcExample1.csproj.GenerateResource.Cache
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\obj\Debug\SmcExample1.exe
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcExample1\obj\Debug\SmcExample1.pdb

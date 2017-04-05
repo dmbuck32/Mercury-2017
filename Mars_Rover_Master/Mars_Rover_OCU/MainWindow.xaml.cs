@@ -108,60 +108,95 @@ namespace Mars_Rover_OCU
         {
             if (RoverSettings.IsEnabled == true)
             {
-                if (e.Key == Key.F1) //Launch
+                if (e.Key == Key.F1) // Home Macro
                 {
                     this.Dispatcher.Invoke((Action)(() =>
                     {
-                        if (comms.getF1() == false)
+                        if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == false)
                         {
                             comms.setF1(true);
-                            WallFollowingBtn.Fill = keyPressed;
+                            HomeMacroBtn.Fill = keyPressed;
                         }
-                        else
+                        else if (comms.getF1() == false && comms.getF2() == true && comms.getF3() == false)
+                        {
+                            comms.setF2(false);
+                            SampleCollectionMacroBtn.Fill = keyReleased;
+                            comms.setF1(true);
+                            HomeMacroBtn.Fill = keyPressed;
+                        }
+                        else if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == true)
+                        {
+                            comms.setF3(false);
+                            SampleDepositMacroBtn.Fill = keyReleased;
+                            comms.setF1(true);
+                            HomeMacroBtn.Fill = keyPressed;
+                        }
+                        else if (comms.getF1() == true)
                         {
                             comms.setF1(false);
-                            WallFollowingBtn.Fill = keyReleased;
+                            HomeMacroBtn.Fill = keyReleased;
                         }                    
                     }));
                 }
 
-                if (e.Key == Key.F2) //Reset
+                if (e.Key == Key.F2) // Sample Collection Macro
                 {
                     this.Dispatcher.Invoke((Action)(() =>
                     {
-                        if (comms.getF2() == false)
+                        if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == false)
                         {
                             comms.setF2(true);
-                            ResetServo.Fill = keyPressed;
+                            SampleCollectionMacroBtn.Fill = keyPressed;
+                        }
+                        else if (comms.getF1() == true && comms.getF2() == false && comms.getF3() == false)
+                        {
+                            comms.setF1(false);
+                            HomeMacroBtn.Fill = keyReleased;
+                            comms.setF2(true);
+                            SampleCollectionMacroBtn.Fill = keyPressed;
+                        }
+                        else if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == true)
+                        {
+                            comms.setF3(false);
+                            SampleDepositMacroBtn.Fill = keyReleased;
+                            comms.setF2(true);
+                            SampleCollectionMacroBtn.Fill = keyPressed;
                         }
                         else if (comms.getF2() == true)
                         {
                             comms.setF2(false);
-                            ResetServo.Fill = keyReleased;
+                            SampleCollectionMacroBtn.Fill = keyReleased;
                         }
                     }));
                 }
 
-                if (e.Key == Key.F3) //Front sensor stopping (stops about 3 cm from front wheels)
+                if (e.Key == Key.F3) // Sample Deposit Macro
                 {
                     this.Dispatcher.Invoke((Action)(() =>
                     {
-                        if (comms.getF3() == false && comms.getF2() == false)
+                        if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == false)
                         {
                             comms.setF3(true);
-                            FrontAutoStopWithArmUpBtn.Fill = keyPressed;
+                            SampleDepositMacroBtn.Fill = keyPressed;
                         }
-                        else if (comms.getF3() == false && comms.getF2() == true)
+                        else if (comms.getF1() == true && comms.getF2() == false && comms.getF3() == false)
                         {
+                            comms.setF1(false);
+                            HomeMacroBtn.Fill = keyReleased;
                             comms.setF3(true);
+                            SampleDepositMacroBtn.Fill = keyPressed;
+                        }
+                        else if (comms.getF1() == false && comms.getF2() == true && comms.getF3() == false)
+                        {
                             comms.setF2(false);
-                            FrontAutoStopWithArmUpBtn.Fill = keyPressed;
-                            FrontAutoStopWithArmDownBtn.Fill = keyReleased;
+                            SampleCollectionMacroBtn.Fill = keyReleased;
+                            comms.setF3(true);
+                            SampleDepositMacroBtn.Fill = keyPressed;
                         }
-                        else if (comms.getF3() == true && comms.getF2() == false)
+                        else if (comms.getF3() == true)
                         {
                             comms.setF3(false);
-                            FrontAutoStopWithArmUpBtn.Fill = keyReleased;
+                            SampleDepositMacroBtn.Fill = keyReleased;
                         }
                     }));
                 }
@@ -182,6 +217,7 @@ namespace Mars_Rover_OCU
                         }
                     }));
                 }
+
                 if (e.Key == Key.F5) //Toggle PID
                 {
                     this.Dispatcher.Invoke((Action)(() =>
@@ -418,7 +454,7 @@ namespace Mars_Rover_OCU
                     RightSensor.Content = comms.getRightSensor();
                     FrontSensor.Content = comms.getFrontLeftSensor();
 
-                    SpeedSensitivity.Text = ControllerSettings.Default.SpeedSensitivity.ToString();
+                    SpeedSensitivity.Text = ControllerSettings.Default.Speed.ToString();
                 }));
             }
             catch (TaskCanceledException)

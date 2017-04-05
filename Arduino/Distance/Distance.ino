@@ -30,16 +30,14 @@ The range readings are in units of mm. */
 
 #define DEBUG 0
 
-#define FRONTTOF 11
-#define LEFTTOF 12
-#define RIGHTTOF 10
+#define FRONTTOF 7
+#define LEFTTOF 8
+#define RIGHTTOF 9
+#define HEADLIGHT 4
 
-#define FRONTSHARP A5
-#define LEFTSHARP A4
-#define RIGHTSHARP A3
-
-#define LEDPIN 4
-#define DARK 600
+#define FRONTSHARP A0
+#define LEFTSHARP A1
+#define RIGHTSHARP A2
 
 /*
 0 = front
@@ -59,17 +57,12 @@ SharpIR sharpsensor[3] = {
   SharpIR(RIGHTSHARP,1080)
 };
 
-// 0 = off 1 = on
-int lightAverage=0;
-boolean lights;
-char lightOverride = '0';
-boolean dark;
-
 void setup()
 {
+//*** Headlight initialization ***//
 
-  //Start with the headlights off
-  digitalWrite(LEDPIN,LOW);
+  pinMode(HEADLIGHT, OUTPUT);
+  digitalWrite(HEADLIGHT, HIGH);
   
 //*** Sensor initialization ***//
 
@@ -140,7 +133,7 @@ void loop()
   //get the current time in milliseconds
   timeNew=millis();
 
-  //If it's been equal to or longer than the period of the refresh rate of the sensor (10MHz)
+  //If it's been equal to or longer than the period of the refresh rate of the sensor
   if((timeNew-timeOld) >= 100)
   {
     //*** Read sensors ***//
@@ -152,19 +145,8 @@ void loop()
       
       distanceSensors[i][1] = sensor[i].readAmbientContinuous();
       if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
-      else if (i>0)
-      {
-        //Averaging the side light values
-        lightAverage+=distanceSensors[i][1];
-      }
     }
-
-    //Getting the current average light level and turn the lights on if it is below the threshold.
-    if ((lightAverage/2) < dark){
-      lights = true;
-    }
-    lightAverage=0;
-    
+  
     //*** Print sensor readings ***//
     Serial.print(distanceSensors[0][0]);
     Serial.print (",");
@@ -181,29 +163,8 @@ void loop()
   
     timeOld=timeNew;
   }
-
-  //*** Headlight control  ***//
   
-  //override checking
-  if(Serial.available() > 0) //available()returns the number of bytes in the buffer
-  {
-    lightOverride = Serial.read();
-  }
-
-  //Overriding the state of the lights
-  if(lightOverride == '1') {lights=true;}
-
-  //Final set of the light state
-  if(lights)
-  {
-    digitalWrite(LEDPIN,HIGH);
-  }
-  else
-  {
-    digitalWrite(LEDPIN,LOW);
-  }
-  
-  //*** Debug I2C Scanner ***//
+//*** Debug I2C Scanner ***//
   #else
   byte error;
 

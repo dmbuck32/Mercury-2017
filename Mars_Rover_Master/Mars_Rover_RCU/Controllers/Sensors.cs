@@ -6,43 +6,67 @@ using System.Threading.Tasks;
 using Pololu.Usc;
 using Pololu.UsbWrapper;
 using System.Diagnostics;
+using System.Management;
 using Mars_Rover_RCU.Utilities;
 using System.IO.Ports;
-using System.Management;
-
 namespace Mars_Rover_RCU.Controllers
 {
     public class Sensors
     {
         private SerialPort Arduino;
         private String[] sensorData;
-
+        private Boolean HeadlightsEnabled = false;
 
         public Sensors()
         {
             sensorData = new String[6];
         }
 
+        // Method to find arduino port (haven't tested yet)
+        private string AutodetectArduinoPort()
+        {
+            ManagementScope connectionScope = new ManagementScope();
+            SelectQuery serialQuery = new SelectQuery("SELECT * FROM Win32_SerialPort");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(connectionScope, serialQuery);
+
+            try
+            {
+                foreach (ManagementObject item in searcher.Get())
+                {
+                    string desc = item["Description"].ToString();
+                    string deviceId = item["DeviceID"].ToString();
+
+                    if (desc.Contains("Arduino"))
+                    {
+                        return deviceId;
+                    }
+                }
+            }
+            catch (ManagementException e)
+            {
+                /* Do Nothing */
+            }
+
+            return null;
+        }
+
         /// <summary>
         /// Opens the serial connection to the Arduino
         /// </summary>
         /// <returns>Returns the status of the connection attempt.</returns>
-        public bool OpenConnection()
+        public bool OpenConnection(string port)
         {
-            String port = "COM10";
-            //attempting to connect to the Arduino
             try
             {
                 this.Arduino = new SerialPort(port, 9600);
             }
-            catch(System.IO.IOException)
+            catch (System.IO.IOException)
             {
                 Logger.WriteLine("Failed to connect to Arduino.");
                 return false;
             }
-
             this.Arduino.Open();
-            Logger.WriteLine("Successfully connected to Arduino.");
+            Logger.WriteLine("Arduino is open.");
             this.Arduino.DtrEnable = true;
             this.Arduino.DataReceived += DataReceived;
             this.Arduino.ErrorReceived += ErrorReceived;
@@ -59,11 +83,29 @@ namespace Mars_Rover_RCU.Controllers
         }
 
         /// <summary>
+        /// Returns the state of the headlights
+        /// </summary>
+        public bool headlightsEnabled()
+        {
+            return HeadlightsEnabled;
+        }
+
+        /// <summary>
         /// Sends the command to the arduino to enable the headlights
         /// </summary>
         public void enableHeadlights()
         {
+            HeadlightsEnabled = true;
             Arduino.Write("1");
+        }
+
+        /// <summary>
+        /// Sends the command to the arduino to disable the headlights
+        /// </summary>
+        public void disableHeadlights()
+        {
+            HeadlightsEnabled = false;
+            Arduino.Write("0");
         }
 
         /// <summary>
