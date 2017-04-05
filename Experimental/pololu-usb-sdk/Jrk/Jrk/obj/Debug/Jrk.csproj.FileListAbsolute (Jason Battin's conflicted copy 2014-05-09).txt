@@ -1,7 +1,0 @@
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Debug\Jrk.dll
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Debug\Jrk.pdb
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Debug\UsbWrapper.dll
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Debug\UsbWrapper.xml
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.csprojResolveAssemblyReference.cache
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.dll
-E:\Dropbox\My Documents\WVU\Robotics_2014\Software\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.pdb

@@ -340,11 +340,12 @@ namespace Mars_Rover_OCU.Comms
                         {
                             outputState.DriveState = DriveController.getDriveState();
                             bool headlights = outputState.DriveState.Headlights;
+                            bool usePID = outputState.DriveState.usePID;
                             outputState.DriveState.goToHome = F1_Pressed;
                             outputState.DriveState.goToSample = F2_Pressed;
                             outputState.DriveState.goToDeposit = F3_Pressed;
                             outputState.DriveState.Headlights = F4_Pressed || headlights;
-                            outputState.DriveState.usePID = F5_Pressed;
+                            outputState.DriveState.usePID = F5_Pressed || usePID;
                             outputState.DriveState.Control = true;
                             outputState.DriveState.controllerControl = true;
                         }

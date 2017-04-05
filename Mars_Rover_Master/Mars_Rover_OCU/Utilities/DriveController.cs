@@ -108,22 +108,27 @@ namespace Mars_Rover_OCU.Utilities
                 if (headlight)
                 {
                     headlight = false;
+                    System.Threading.Thread.Sleep(500);
                 } else
                 {
                     headlight = true;
+                    System.Threading.Thread.Sleep(500);
                 }
                 
             }
 
+            // Use PID
             if (state.Buttons.Back == ButtonState.Pressed)
             {
                 if (usePID)
                 {
                     usePID = false;
+                    System.Threading.Thread.Sleep(500);
                 }
                 else
                 {
                     usePID = true;
+                    System.Threading.Thread.Sleep(500);
                 }
             }
 

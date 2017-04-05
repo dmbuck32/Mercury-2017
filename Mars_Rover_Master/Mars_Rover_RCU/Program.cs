@@ -87,12 +87,19 @@ namespace Mars_Rover_RCU
                 #region Sensors
                 Logger.WriteLine("Creating Sensors");
                 _Sensors = new Sensors();
-                
-                if (!_Sensors.OpenConnection(COM))
+
+                try
                 {
-                    Logger.WriteLine("Attempting to connect to Arduino.");
+                    if (_Sensors.OpenConnection(COM))
+                    {
+                        Logger.WriteLine("Sensors successfully created.");
+                    }
                 }
-                
+                catch (Exception ex)
+                {
+                    Logger.WriteLine("Error: " + ex.Message);
+                    Logger.WriteLine("Sensors not created.");
+                }                
                 sensorData = new string[6];
                 #endregion
 
@@ -172,10 +179,7 @@ namespace Mars_Rover_RCU
                     Mars_Rover_Comms.RobotState robotState = stateQueue.Dequeue(tokenSource.Token);
 
                     if (client.IsConnected())
-                    {
-
-                        // Set LOS to false
-                        _Maestro.setLOS(false);
+                    { 
 
                         if (robotState.DriveState != null)
                         {
@@ -186,7 +190,10 @@ namespace Mars_Rover_RCU
                             Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
                             Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
                             Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
-                            
+
+                            // Set LOS to false
+                            _Maestro.setLOS(false);
+
                             // Headlight Function
                             if (robotState.DriveState.Headlights == true)
                             {

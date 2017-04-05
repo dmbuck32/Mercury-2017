@@ -1,9 +1,0 @@
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\bin\Debug\SmcCmd.exe
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\bin\Debug\SmcCmd.pdb
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\bin\Debug\Smc.dll
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\bin\Debug\UsbWrapper.dll
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\bin\Debug\Smc.pdb
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\bin\Debug\UsbWrapper.xml
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\obj\Debug\SmcCmd.csprojResolveAssemblyReference.cache
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\obj\Debug\SmcCmd.exe
-C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\SimpleMotorController\SmcCmd\obj\Debug\SmcCmd.pdb
