@@ -15,6 +15,9 @@ namespace Mars_Rover_Comms
         [XmlAttribute("RightSpeed")]
         public short RightSpeed; // 1000 - 2000
 
+        [XmlAttribute("radius")]
+        public short radius;
+
         [XmlAttribute("Mode")]
         public short Mode; // 0 -> Normal, 1 -> Rotate, 2 -> Translate, 3 -> Tank
 

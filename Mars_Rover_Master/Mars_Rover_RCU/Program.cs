@@ -172,6 +172,10 @@ namespace Mars_Rover_RCU
 
                     if (client.IsConnected())
                     {
+
+                        // Set LOS to false
+                        _Maestro.setLOS(false);
+
                         if (robotState.DriveState != null)
                         {
                             Logger.WriteLine("Robot Drive Mode: " + robotState.DriveState.Mode);
@@ -206,8 +210,7 @@ namespace Mars_Rover_RCU
                                 _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
                                 
                             }
-                            // Set LOS to false
-                            _Maestro.setLOS(false);
+                            
 
                             /*
                             if (robotState.DriveState.FrontStopArmUp == true && _Roomba.getAutobrake() == false)
@@ -221,14 +224,6 @@ namespace Mars_Rover_RCU
                                 _Roomba.setAutobrake(false);
                                 Logger.WriteLine("Autobrake is " + _Roomba.getAutobrake());
                                 
-                            }
-                            if (robotState.DriveState.Headlights == true)
-                            {
-                                _Roomba.powerHeadlights(1);
-                            }
-                            else if (robotState.DriveState.Headlights == false)
-                            {
-                                _Roomba.powerHeadlights(0);
                             }
                             if (robotState.DriveState.Radius >= 0 && robotState.DriveState.Radius <= 7)
                             {
@@ -252,14 +247,6 @@ namespace Mars_Rover_RCU
                                 _MiniMaestro.moveClaw(3);
                                 System.Threading.Thread.Sleep(1500);
                                 _MiniMaestro.pauseClaw();
-                            }
-                            if (robotState.DriveState.WallFollow == true)
-                            {
-                                _MiniMaestro.launch();//F1
-                            }
-                            if (robotState.DriveState.FrontStopArmDown == true)
-                            {
-                                _MiniMaestro.resetLaunch();//F2
                             }
                             */
                         }

@@ -64,8 +64,6 @@ namespace Mars_Rover_RCU.Controllers
         private const short gripperClosed = 1100;
 
         // PWM Values for Drive Channels
-        private short leftMotorPWM = 1500;
-        private short rightMotorPWM = 1500;
         private const short leftOFF = 1500;
         private const short rightOFF = 1500;
 
