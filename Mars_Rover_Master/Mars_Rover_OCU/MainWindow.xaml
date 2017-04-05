@@ -362,16 +362,20 @@
                             <Rectangle x:Name="SampleCollectionMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="124" Canvas.Top="10" Canvas.Left="220" Visibility="Visible"/>
                             <Rectangle x:Name="SampleDepositMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="116" Canvas.Top="45" Canvas.Left="143"/>
                             <Rectangle x:Name="ToggleHeadlightsBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="74" Canvas.Left="270" Canvas.Top="45"/>
+                            <Rectangle x:Name="TogglePIDBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="45" Canvas.Left="65" Visibility="Visible"/>
                             <!-- Labels for Buttons-->
-                            <Label Content="Home" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="155" Canvas.Top="7" Width="40" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
+                            <Label Content="Home" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="158" Canvas.Top="7" Width="34" Visibility="Visible" RenderTransformOrigin="-0.15,0.235" HorizontalAlignment="Center"/>
                             <Label Content="Sample Collection" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="234" Width="97" Canvas.Top="8" Visibility="Visible"/>
                             <Label Content="Sample Deposit" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="161" Width="85" Canvas.Top="43"/>
                             <Label Content="Headlights" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="279" Canvas.Top="43" Width="59"/>
-                            <Label Content="F1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="169" Width="14" Canvas.Top="21"/>
+                            <Label Content="PID" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="89" Canvas.Top="43" Width="19" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
+                            <Label Content="PID" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="89" Canvas.Top="43" Width="19" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
+                            <Label Content="F1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="170" Width="14" Canvas.Top="21" RenderTransformOrigin="0.5,0.5"/>
                             <Label Content="F2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="274" Width="13" Canvas.Top="21"/>
                             <Label Content="F3" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="196" Width="16" Canvas.Top="56"/>
                             <Label Content="F4" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="301" Width="14" Canvas.Top="56"/>
-                            <Label Content="Actions:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="30" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="54"/>
+                            <Label Content="F5" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="92" Width="14" Canvas.Top="56" RenderTransformOrigin="0.5,0.5"/>
+                            <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="11" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="65"/>
                         </Canvas>
                     </Grid>
                 </Grid>

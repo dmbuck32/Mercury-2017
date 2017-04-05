@@ -15,6 +15,7 @@ namespace Mars_Rover_RCU.Controllers
     {
         private SerialPort Arduino;
         private String[] sensorData;
+        private Boolean HeadlightsEnabled = false;
 
         public Sensors()
         {
@@ -79,6 +80,32 @@ namespace Mars_Rover_RCU.Controllers
         public String[] getData()
         {
             return sensorData;
+        }
+
+        /// <summary>
+        /// Returns the state of the headlights
+        /// </summary>
+        public bool headlightsEnabled()
+        {
+            return HeadlightsEnabled;
+        }
+
+        /// <summary>
+        /// Sends the command to the arduino to enable the headlights
+        /// </summary>
+        public void enableHeadlights()
+        {
+            HeadlightsEnabled = true;
+            Arduino.Write("1");
+        }
+
+        /// <summary>
+        /// Sends the command to the arduino to disable the headlights
+        /// </summary>
+        public void disableHeadlights()
+        {
+            HeadlightsEnabled = false;
+            Arduino.Write("0");
         }
 
         /// <summary>

@@ -38,6 +38,8 @@ namespace Mars_Rover_RCU
         static Controllers.Sensors _Sensors;
         static public String[] sensorData;
 
+        static Controllers.PID _PID;
+
         static Utility.UpdateQueue<RobotState> stateQueue = new Utility.UpdateQueue<RobotState>(-1);
         static XmlSerializer robotStateDeserializer = new XmlSerializer(typeof(Mars_Rover_Comms.RobotState));
 
@@ -85,18 +87,17 @@ namespace Mars_Rover_RCU
                 #region Sensors
                 Logger.WriteLine("Creating Sensors");
                 _Sensors = new Sensors();
-                try
+                
+                if (!_Sensors.OpenConnection(COM))
                 {
-                    if (_Sensors.OpenConnection(COM))
-                    {
-                        Logger.WriteLine("Sensors successfully created.");
-                    }
-                } catch (Exception ex)
-                {
-                    Logger.WriteLine("Error: " + ex.Message);
-                    Logger.WriteLine("Sensors not created.");
+                    Logger.WriteLine("Attempting to connect to Arduino.");
                 }
+                
                 sensorData = new string[6];
+                #endregion
+
+                #region PID
+                _PID = new PID();
                 #endregion
 
 
@@ -185,6 +186,37 @@ namespace Mars_Rover_RCU
                             Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
                             Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
                             Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
+                            
+                            // Headlight Function
+                            if (robotState.DriveState.Headlights == true)
+                            {
+                                if (!_Sensors.headlightsEnabled())
+                                {
+                                    _Sensors.enableHeadlights();
+                                }
+                            }
+                            else if (robotState.DriveState.Headlights == false)
+                            {
+                                if (_Sensors.headlightsEnabled())
+                                {
+                                    _Sensors.disableHeadlights();
+                                }
+                            }
+
+                            if (robotState.DriveState.usePID == true)
+                            {
+                                if (!_PID.isEnabled())
+                                {
+                                    _PID.enable();
+                                }
+                            }
+                            else if (robotState.DriveState.usePID == false)
+                            {
+                                if (_PID.isEnabled())
+                                {
+                                    _PID.disable();
+                                }
+                            }
                             
                             //Decode Robot Mode
                             if (robotState.DriveState.Mode == normal)
