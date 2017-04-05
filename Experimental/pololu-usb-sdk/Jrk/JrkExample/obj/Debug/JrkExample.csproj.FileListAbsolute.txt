@@ -1,0 +1,12 @@
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\bin\Debug\MaestroExample.exe
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\bin\Debug\MaestroExample.pdb
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\bin\Debug\Jrk.dll
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\bin\Debug\UsbWrapper.dll
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\bin\Debug\Jrk.pdb
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\bin\Debug\UsbWrapper.xml
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\obj\Debug\JrkExample.csprojResolveAssemblyReference.cache
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\obj\Debug\Pololu.Jrk.JrkExample.MainWindow.resources
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\obj\Debug\Pololu.Usc.MaestroExample.Properties.Resources.resources
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\obj\Debug\JrkExample.csproj.GenerateResource.Cache
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\obj\Debug\MaestroExample.exe
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\JrkExample\obj\Debug\MaestroExample.pdb

@@ -9,10 +9,22 @@ using Mars_Rover_RCU.Controllers;
 using Mars_Rover_RCU.Utilities;
 
 namespace Mars_Rover_RCU
-{
+{ 
     //Main Program Entry PoC:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\Program.csint
     public class Program
     {
+
+        private static readonly short closed = 0;
+        private static readonly short open = 1;
+        private static readonly short tank = 3;
+        private static readonly short translate = 2;
+        private static readonly short rotate = 1;
+        private static readonly short normal = 0;
+        private static readonly short STOP = 1500;
+        private static readonly short shoulder = 0;
+        private static readonly short elbow = 1;
+        private static readonly short wrist = 2;
+
         private static RCUComms comms;
 
         static bool debug = true;
@@ -44,12 +56,14 @@ namespace Mars_Rover_RCU
 
         static public String IPAddress;
         static public String Port;
+        static public String COM;
 
         public static void Main(string[] args)
         {
             System.IO.StreamReader file = new System.IO.StreamReader("..\\..\\IP_Port.txt");
             IPAddress = file.ReadLine();
             Port = file.ReadLine();
+            COM = file.ReadLine();
             //setup primary comms
             client = new Mars_Rover_Comms.TCP.ZClient(IPAddress, Convert.ToInt32(Port));
             client.PacketReceived += new EventHandler<DataArgs>(client_PacketReceived);
@@ -73,7 +87,7 @@ namespace Mars_Rover_RCU
                 _Sensors = new Sensors();
                 try
                 {
-                    if (_Sensors.OpenConnection())
+                    if (_Sensors.OpenConnection(COM))
                     {
                         Logger.WriteLine("Sensors successfully created.");
                     }
@@ -167,6 +181,34 @@ namespace Mars_Rover_RCU
                             Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
                             Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
                             Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
+                            
+                            //Decode Robot Mode
+                            if (robotState.DriveState.Mode == normal)
+                            {
+                               short temp = robotState.DriveState.LeftSpeed;
+                                // TODO: Implement turning based on radius
+                                _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+                            }
+                            else if (robotState.DriveState.Mode == rotate)
+                            {
+                                _Maestro.setRotateMode();
+                                _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+                            }
+                            else if (robotState.DriveState.Mode == translate)
+                            {
+                                _Maestro.setTranslateMode();
+                                _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+                                
+                            }
+                            else if (robotState.DriveState.Mode == tank)
+                            {
+                                _Maestro.setTankMode();
+                                _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+                                
+                            }
+                            // Set LOS to false
+                            _Maestro.setLOS(false);
+
                             /*
                             if (robotState.DriveState.FrontStopArmUp == true && _Roomba.getAutobrake() == false)
                             {
@@ -224,14 +266,8 @@ namespace Mars_Rover_RCU
                     }
                     else
                     {
-                        //_Roomba.LOS();
-
-                        if (useMaestro)
-                        {
-                            /*Dictionary<Devices, int> driveState = kinematics.GetWheelStates(2047, 0, 0, false, false, false, false, false);
-                            driveState[Devices.ControlSignal] = 0;
-                            _Maestro.EnqueueState(driveState);*/
-                        }
+                        _Maestro.setLOS(true);
+                        _Maestro.setDriveServos(STOP, STOP);
                     }
                 }
                 catch (OperationCanceledException ex)

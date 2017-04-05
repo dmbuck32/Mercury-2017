@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Pololu.Usc;
 using Pololu.UsbWrapper;
 using System.Diagnostics;
+using System.Management;
 using Mars_Rover_RCU.Utilities;
 using System.IO.Ports;
 namespace Mars_Rover_RCU.Controllers
@@ -15,35 +16,60 @@ namespace Mars_Rover_RCU.Controllers
         private SerialPort Arduino;
         private String[] sensorData;
 
-
         public Sensors()
         {
             sensorData = new String[6];
+        }
+
+        // Method to find arduino port (haven't tested yet)
+        private string AutodetectArduinoPort()
+        {
+            ManagementScope connectionScope = new ManagementScope();
+            SelectQuery serialQuery = new SelectQuery("SELECT * FROM Win32_SerialPort");
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher(connectionScope, serialQuery);
+
+            try
+            {
+                foreach (ManagementObject item in searcher.Get())
+                {
+                    string desc = item["Description"].ToString();
+                    string deviceId = item["DeviceID"].ToString();
+
+                    if (desc.Contains("Arduino"))
+                    {
+                        return deviceId;
+                    }
+                }
+            }
+            catch (ManagementException e)
+            {
+                /* Do Nothing */
+            }
+
+            return null;
         }
 
         /// <summary>
         /// Opens the serial connection to the Arduino
         /// </summary>
         /// <returns>Returns the status of the connection attempt.</returns>
-        public bool OpenConnection()
+        public bool OpenConnection(string port)
         {
-
-            //Figuring out which port the Arduino is on and connecting
-            this.Arduino = new SerialPort("COM10", 9600);
-            this.Arduino.Open();
-
-            if (this.Arduino.IsOpen)
+            try
             {
-                Logger.WriteLine("Arduino is open.");
-                this.Arduino.DtrEnable = true;
-                this.Arduino.DataReceived += DataReceived;
-                this.Arduino.ErrorReceived += ErrorReceived;
-                return true;
+                this.Arduino = new SerialPort(port, 9600);
             }
-            else
+            catch (System.IO.IOException)
             {
+                Logger.WriteLine("Failed to connect to Arduino.");
                 return false;
             }
+            this.Arduino.Open();
+            Logger.WriteLine("Arduino is open.");
+            this.Arduino.DtrEnable = true;
+            this.Arduino.DataReceived += DataReceived;
+            this.Arduino.ErrorReceived += ErrorReceived;
+            return true;
         }
 
         /// <summary>

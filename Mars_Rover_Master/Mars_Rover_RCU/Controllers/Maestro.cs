@@ -51,36 +51,39 @@ namespace Mars_Rover_RCU.Controllers
         private byte GripperServo = 11;
 
         // PWM multiplier for Pololu Maestro
-        private byte PWM_Multiplier = 4;
+        private readonly short PWM_Multiplier = 4;
 
         // Initial Values to make wheels straight
-        private const int rearLeftInit = 1510;
-        private const int rearRightInit = 1425;
-        private const int frontLeftInit = 1441;
-        private const int frontRightInit = 1520;
+        private readonly short rearLeftInit = 1510;
+        private readonly short rearRightInit = 1425;
+        private readonly short frontLeftInit = 1441;
+        private readonly short frontRightInit = 1520;
 
         // PWM Values for Gripper Open/Closed
-        private const int gripperOpen = 1500;
-        private const int gripperClosed = 1100;
+        private const short gripperOpen = 1500;
+        private const short gripperClosed = 1100;
 
         // PWM Values for Drive Channels
-        private int leftMotorPWM = 1500;
-        private int rightMotorPWM = 1500;
-        private const int leftOFF = 1500;
-        private const int rightOFF = 1500;
+        private short leftMotorPWM = 1500;
+        private short rightMotorPWM = 1500;
+        private const short leftOFF = 1500;
+        private const short rightOFF = 1500;
 
         // PWM Values for LOS
-        private int LOS = 0;
+        private short LOS_ON = 4000;
+        private short LOS_OFF = 0;
 
         // PWM values for ARM Channels
-        private int shoulderInit = 464;
-        private int elbowInit = 1000;
-        private int wristInit = 2000;
+        private short shoulderInit = 464;
+        private short elbowInit = 1000;
+        private short wristInit = 2000;
 
         // Maestro Stuff
         private const String DriveMaestro = "00109387";
-        private const String ArmMaestro = "00137085";
-   
+        //private const String ArmMaestro = "00137085";
+        //private const String DriveMaestro = "00159606"; // Testing board
+        private const String ArmMaestro = "00159606"; // Testing board
+
         private Usc Drive = null;
         private Usc Arm = null;
 
@@ -117,50 +120,76 @@ namespace Mars_Rover_RCU.Controllers
         // Initialize All servos to initial positions
         public void initializeArm()
         {
-            Arm.setTarget(RearRightServo, (ushort)(PWM_Multiplier * rearRightInit));
-            Arm.setTarget(RearLeftServo, (ushort)(PWM_Multiplier * rearLeftInit));
-            Arm.setTarget(FrontRightServo, (ushort)(PWM_Multiplier * frontRightInit));
-            Arm.setTarget(FrontLeftServo, (ushort)(PWM_Multiplier * frontLeftInit));
-            Arm.setTarget(LOS_LED, (ushort)(PWM_Multiplier * LOS));
-            Arm.setTarget(ShoulderServo, (ushort)(PWM_Multiplier * shoulderInit));
-            Arm.setTarget(ElbowServo, (ushort)(PWM_Multiplier * elbowInit));
-            Arm.setTarget(WristServo, (ushort)(PWM_Multiplier * wristInit));
-            Arm.setTarget(GripperServo, (ushort)(PWM_Multiplier * gripperOpen));
+            Arm.setTarget(RearRightServo, MaestroMultiplier(rearRightInit));
+            Arm.setTarget(RearLeftServo, MaestroMultiplier(rearLeftInit));
+            Arm.setTarget(FrontRightServo, MaestroMultiplier(frontRightInit));
+            Arm.setTarget(FrontLeftServo, MaestroMultiplier(frontLeftInit));
+            Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
+            Arm.setTarget(ShoulderServo, MaestroMultiplier(shoulderInit));
+            Arm.setTarget(ElbowServo, MaestroMultiplier(elbowInit));
+            Arm.setTarget(WristServo, MaestroMultiplier(wristInit));
+            Arm.setTarget(GripperServo, MaestroMultiplier(gripperClosed));
         }
 
         // Open Gripper
         public void openGripper()
         {
-            Arm.setTarget(GripperServo, (ushort)(PWM_Multiplier * gripperOpen));
+            Arm.setTarget(GripperServo, MaestroMultiplier(gripperOpen));
         }
 
         // Close Gripper
         public void closeGripper()
         {
-            Arm.setTarget(GripperServo, (ushort)(PWM_Multiplier * gripperClosed));
+            Arm.setTarget(GripperServo, MaestroMultiplier(gripperClosed));
         }
 
-        public void drive(int channelLeft, int channelRight)
+        public void setDriveServos(short channelLeft, short channelRight)
         {
-            if (channelLeft < 1000)
-            {
-                channelLeft = 1000;
-            }
-            if (channelLeft > 2000)
-            {
-                channelLeft = 2000;
-            }
-            if (channelRight < 1000)
-            {
-                channelRight = 1000;
-            }
-            if (channelRight > 2000)
-            {
-                channelRight = 2000;
-            }
-            Drive.setTarget(LeftMotors, (ushort)(PWM_Multiplier * channelLeft));
-            Drive.setTarget(RightMotors, (ushort)(PWM_Multiplier * channelRight));
+            Drive.setTarget(LeftMotors, MaestroMultiplier(channelLeft));
+            Drive.setTarget(RightMotors, MaestroMultiplier(channelRight));
         }
+
+        public void setTankMode()
+        {
+            setTurningServos(frontLeftInit, frontRightInit, rearLeftInit, rearRightInit);
+        }
+
+        public void setTranslateMode()
+        {
+            setTurningServos(500, 2000, 2000, 500);
+        }
+
+        public void setRotateMode()
+        {
+            setTurningServos(1500, 1500, 1500, 1500);
+        }
+
+        public void setTurningServos(short frontLeft, short frontRight, short rearLeft, short rearRight)
+        {
+            Arm.setTarget(FrontLeftServo, MaestroMultiplier(frontLeft));
+            Arm.setTarget(FrontRightServo, MaestroMultiplier(frontRight));
+            Arm.setTarget(RearLeftServo, MaestroMultiplier(rearLeft));
+            Arm.setTarget(RearRightServo, MaestroMultiplier(rearRight));
+        }
+
+        public void setLOS(bool LOS)
+        {
+            if (LOS)
+            {
+                Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_ON));
+            }
+            else
+            {
+                Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
+            }
+        }
+
+        private ushort MaestroMultiplier(short input)
+        {
+            return (ushort)(PWM_Multiplier * input);
+        }
+
+        
 
 
         /*
