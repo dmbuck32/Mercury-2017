@@ -707,7 +707,6 @@ C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Configuration.pdb
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.pdb
-C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\GMap.NET.Core.xml
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.pdb
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Sequencer.xml
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Core.xml

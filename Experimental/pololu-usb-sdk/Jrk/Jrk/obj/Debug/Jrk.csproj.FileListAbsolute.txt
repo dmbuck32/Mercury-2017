@@ -54,3 +54,10 @@ C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Experimental\pololu-usb-sdk\
 C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.dll
 C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.pdb
 C:\Users\David-Michael\Desktop\MMR16 Roomba Control\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.csprojResolveAssemblyReference.cache
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Debug\Jrk.dll
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Debug\Jrk.pdb
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Debug\UsbWrapper.dll
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\Jrk\bin\Debug\UsbWrapper.xml
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.csprojResolveAssemblyReference.cache
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.dll
+C:\Users\David-Michael\Desktop\Mercury-2017\Experimental\pololu-usb-sdk\Jrk\Jrk\obj\Debug\Jrk.pdb

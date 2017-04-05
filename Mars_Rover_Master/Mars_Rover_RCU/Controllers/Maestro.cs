@@ -77,10 +77,10 @@ namespace Mars_Rover_RCU.Controllers
         private short wristInit = 2000;
 
         // Maestro Stuff
-        private const String DriveMaestro = "00109387";
-        //private const String ArmMaestro = "00137085";
-        //private const String DriveMaestro = "00159606"; // Testing board
-        private const String ArmMaestro = "00159606"; // Testing board
+        //private const String DriveMaestro = "00109387";
+        private const String ArmMaestro = "00137085";
+        private const String DriveMaestro = "00159606"; // Testing board
+        //private const String ArmMaestro = "00159606"; // Testing board
 
         private Usc Drive = null;
         private Usc Arm = null;
