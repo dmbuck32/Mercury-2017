@@ -78,9 +78,9 @@ namespace Mars_Rover_RCU.Controllers
 
         // Maestro Stuff
         //private const String DriveMaestro = "00109387";
-        private const String ArmMaestro = "00137085";
-        private const String DriveMaestro = "00159606"; // Testing board
-        //private const String ArmMaestro = "00159606"; // Testing board
+        //private const String ArmMaestro = "00137085";
+        private const String ArmMaestro = "00159606"; // Large Testing board
+        private const String DriveMaestro = "00135614"; // Small Testing board
 
         private Usc Drive = null;
         private Usc Arm = null;
@@ -98,6 +98,7 @@ namespace Mars_Rover_RCU.Controllers
                     Drive = new Usc(Device);
                     initializeDrive();
                     Logger.WriteLine("Found Drive Maestro");
+                    continue;
                 }
                 if (Device.serialNumber == ArmMaestro)
                 {

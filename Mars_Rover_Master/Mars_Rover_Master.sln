@@ -16,8 +16,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mars_Rover_RCU", "Mars_Rove
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jrk", "..\Experimental\pololu-usb-sdk\Jrk\Jrk\Jrk.csproj", "{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,10 +42,6 @@ Global
 		{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A16B61D-C2B8-48C5-95F4-5BD873E9F77C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3D47FA7D-926D-45E5-B8B2-CEDC29FEC034}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

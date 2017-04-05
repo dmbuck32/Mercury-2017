@@ -29,6 +29,8 @@ namespace Mars_Rover_RCU
 
         static bool debug = true;
 
+        static bool arduinoReady = false;
+
         static ConfigureRCU rcuConfig; //Responsible for sending states back to OCU
         static StreamWriter log;
 
@@ -56,9 +58,9 @@ namespace Mars_Rover_RCU
 
         static DateTime APMconnectTime = DateTime.Now;
 
-        static public String IPAddress;
-        static public String Port;
-        static public String COM;
+        static public string IPAddress;
+        static public string Port;
+        static public string COM;
 
         public static void Main(string[] args)
         {
@@ -93,12 +95,14 @@ namespace Mars_Rover_RCU
                     if (_Sensors.OpenConnection(COM))
                     {
                         Logger.WriteLine("Sensors successfully created.");
+                        arduinoReady = true;
                     }
                 }
                 catch (Exception ex)
                 {
                     Logger.WriteLine("Error: " + ex.Message);
                     Logger.WriteLine("Sensors not created.");
+                    arduinoReady = false;
                 }                
                 sensorData = new string[6];
                 #endregion
@@ -195,14 +199,14 @@ namespace Mars_Rover_RCU
                             _Maestro.setLOS(false);
 
                             // Headlight Function
-                            if (robotState.DriveState.Headlights == true)
+                            if (robotState.DriveState.Headlights == true && arduinoReady)
                             {
                                 if (!_Sensors.headlightsEnabled())
                                 {
                                     _Sensors.enableHeadlights();
                                 }
                             }
-                            else if (robotState.DriveState.Headlights == false)
+                            else if (robotState.DriveState.Headlights == false & arduinoReady)
                             {
                                 if (_Sensors.headlightsEnabled())
                                 {
