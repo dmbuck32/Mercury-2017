@@ -117,9 +117,13 @@ namespace Mars_Rover_OCU.Comms
         private String _lng = "null";
         private String _heading = "null";
 
-        private string LeftSensor; // global sensors-- info from rcu
-        private string RightSensor;
-        private string FrontSensor;
+        private static string LeftSensor; // global sensors-- info from rcu
+        private static string RightSensor;
+        private static string FrontSensor;
+
+        private static short shoulderPos;
+        private static short elbowPos;
+        private static short wristPos;
 
         private ZServer server;
         private XmlSerializer serializer;
@@ -338,12 +342,14 @@ namespace Mars_Rover_OCU.Comms
 
                         try
                         {
+                            DriveController.setFunctions(F1_Pressed, F2_Pressed, F3_Pressed);
+                            if (F1_Pressed || F2_Pressed || F3_Pressed)
+                            {
+                                DriveController.updateArm(shoulderPos, elbowPos, wristPos);
+                            }
                             outputState.DriveState = DriveController.getDriveState();
                             bool headlights = outputState.DriveState.Headlights;
                             bool usePID = outputState.DriveState.usePID;
-                            outputState.DriveState.goToHome = F1_Pressed;
-                            outputState.DriveState.goToSample = F2_Pressed;
-                            outputState.DriveState.goToDeposit = F3_Pressed;
                             outputState.DriveState.Headlights = F4_Pressed || headlights;
                             outputState.DriveState.usePID = F5_Pressed || usePID;
                             outputState.DriveState.Control = true;
@@ -738,6 +744,10 @@ namespace Mars_Rover_OCU.Comms
                     LeftSensor = robotState.PositionReturnState.leftDistance;
                     RightSensor = robotState.PositionReturnState.rightDistance;
                     FrontSensor = robotState.PositionReturnState.frontDistance;
+
+                    shoulderPos = robotState.ArmReturnState.shoulderPos;
+                    elbowPos = robotState.ArmReturnState.elbowPos;
+                    wristPos = robotState.ArmReturnState.wristPos;
 
                     updateLogString(robotState.LogState.Data);
 

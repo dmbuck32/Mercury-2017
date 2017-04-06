@@ -16,7 +16,7 @@ namespace Mars_Rover_Comms
         public short RightSpeed; // 1000 - 2000
 
         [XmlAttribute("radius")]
-        public short radius;
+        public double radius; // -1 to 1
 
         [XmlAttribute("Mode")]
         public short Mode; // 0 -> Normal, 1 -> Rotate, 2 -> Translate, 3 -> Tank
@@ -37,7 +37,7 @@ namespace Mars_Rover_Comms
         public short gripperPos; // 944 - 1504
 
         [XmlAttribute("Control")]
-        public bool Control; // I don't remember what this is for
+        public bool Control; //Tells if the OCU has taken control
 
         [XmlAttribute("Headlights")]
         public bool Headlights; // Headlight On or Off

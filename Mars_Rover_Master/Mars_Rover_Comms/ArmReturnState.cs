@@ -12,6 +12,15 @@ namespace Mars_Rover_Comms
         [XmlAttribute("ArmFeedback")]
         public short ArmFeedback;
 
+        [XmlAttribute("shoulderPos")]
+        public short shoulderPos; //464 - 2496
+
+        [XmlAttribute("elbowPos")]
+        public short elbowPos; //464 - 2496
+
+        [XmlAttribute("wristPos")]
+        public short wristPos; //800 - 2000
+
         public ArmReturnState()
         {
         }

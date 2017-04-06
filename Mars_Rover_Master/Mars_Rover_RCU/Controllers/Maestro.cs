@@ -12,31 +12,6 @@ namespace Mars_Rover_RCU.Controllers
 {
     public class Maestro
     {
-        
-        /*
-        //Claw Controls
-        private byte clawChannel = 2;
-        private ushort[] clawTargetValues = {7000, 8500}; //Closed to open
-        private int clawTargetIndex = 0;
-
-        //Elbow Controls
-        private byte elbowChannel = 1;
-        //private ushort[] elbowTargetValues = { 8000, 7750, 7500, 7250, 7000, 6750, 6500, 6250, 6000, 5750, 5500, 5250, 5000, 4750, 4500, 4250 }; //down to up
-        private ushort[] elbowTargetValues = { 8100, 7000, 6000, 5000, 4400 };
-        private int elbowTargetIndex = 0;
-        
-        //Shoulder Controls
-        private byte shoulderChannel = 0;
-        //private ushort[] shoulderTargetValues = { 4250, 4500, 4750, 5000, 5250, 5500, 5750, 6000, 6250, 6500, 6750, 7000, 7250, 7500, 7750, 8000 }; //down to up
-        private ushort[] shoulderTargetValues = { 4300, 5000, 6000, 7000, 7700 };
-        private int shoulderTargetIndex = 0;
-        
-        //Trigger Controls
-        private byte triggerChannel = 3;
-        private ushort off = 5045;
-        private ushort on = 6000;
-        */
-
         // PWM Channels for Maestro
         private byte LeftMotors = 0;
         private byte RightMotors = 1;
@@ -64,8 +39,7 @@ namespace Mars_Rover_RCU.Controllers
         private const short gripperClosed = 1100;
 
         // PWM Values for Drive Channels
-        private const short leftOFF = 1500;
-        private const short rightOFF = 1500;
+        private readonly short OFF = 1500;
 
         // PWM Values for LOS
         private short LOS_ON = 4000;
@@ -77,10 +51,10 @@ namespace Mars_Rover_RCU.Controllers
         private short wristInit = 2000;
 
         // Maestro Stuff
-        //private const String DriveMaestro = "00109387";
-        //private const String ArmMaestro = "00137085";
-        private const String ArmMaestro = "00159606"; // Large Testing board
-        private const String DriveMaestro = "00135614"; // Small Testing board
+        private const String DriveMaestro = "00109387";
+        private const String ArmMaestro = "00137085";
+        //private const String ArmMaestro = "00159606"; // Large Testing board
+        //private const String DriveMaestro = "00135614"; // Small Testing board
 
         private Usc Drive = null;
         private Usc Arm = null;
@@ -96,38 +70,32 @@ namespace Mars_Rover_RCU.Controllers
                 if (Device.serialNumber == DriveMaestro)
                 {
                     Drive = new Usc(Device);
-                    initializeDrive();
+                    initializeDriveMaestro();
                     Logger.WriteLine("Found Drive Maestro");
                     continue;
                 }
                 if (Device.serialNumber == ArmMaestro)
                 {
                     Arm = new Usc(Device);
-                    initializeArm();
+                    initializeArmMaestro();
                     Logger.WriteLine("Found Arm Maestro");
                 }
             }
         }
 
         // Initialize Drive Channels to stop
-        public void initializeDrive()
+        public void initializeDriveMaestro()
         {
-            Drive.setTarget(LeftMotors, (ushort)(PWM_Multiplier * leftOFF));
-            Drive.setTarget(RightMotors, (ushort)(PWM_Multiplier * rightOFF));
+            setDriveServos(OFF, OFF);
         }
 
         // Initialize All servos to initial positions
-        public void initializeArm()
+        public void initializeArmMaestro()
         {
-            Arm.setTarget(RearRightServo, MaestroMultiplier(rearRightInit));
-            Arm.setTarget(RearLeftServo, MaestroMultiplier(rearLeftInit));
-            Arm.setTarget(FrontRightServo, MaestroMultiplier(frontRightInit));
-            Arm.setTarget(FrontLeftServo, MaestroMultiplier(frontLeftInit));
+            setTankMode();
             Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
-            Arm.setTarget(ShoulderServo, MaestroMultiplier(shoulderInit));
-            Arm.setTarget(ElbowServo, MaestroMultiplier(elbowInit));
-            Arm.setTarget(WristServo, MaestroMultiplier(wristInit));
-            Arm.setTarget(GripperServo, MaestroMultiplier(gripperClosed));
+            armHomePos();
+            closeGripper();
         }
 
         // Open Gripper
@@ -155,12 +123,24 @@ namespace Mars_Rover_RCU.Controllers
 
         public void setTranslateMode()
         {
-            setTurningServos(500, 2000, 2000, 500);
+            setTurningServos(2416, 542, 533, 2400);
         }
 
         public void setRotateMode()
         {
-            setTurningServos(1500, 1500, 1500, 1500);
+            setTurningServos(1876, 1065, 1026, 1900);
+        }
+
+        public void armHomePos()
+        {
+            setArmServos(shoulderInit, elbowInit, wristInit);
+        }
+
+        public void setArmServos(short shoulder, short elbow, short wrist)
+        {
+            Arm.setTarget(ShoulderServo, MaestroMultiplier(shoulder));
+            Arm.setTarget(ElbowServo, MaestroMultiplier(elbow));
+            Arm.setTarget(WristServo, MaestroMultiplier(wrist));
         }
 
         public void setTurningServos(short frontLeft, short frontRight, short rearLeft, short rearRight)
@@ -188,68 +168,6 @@ namespace Mars_Rover_RCU.Controllers
             return (ushort)(PWM_Multiplier * input);
         }
 
-        
-
-
-        /*
-        public void moveClaw(int direction)
-        {
-            if (direction == 0 && clawTargetIndex != (clawTargetValues.Length - 1))
-            {
-                usc.setTarget(clawChannel, clawTargetValues[clawTargetIndex + 1]);
-                clawTargetIndex++;
-            }
-            else if (direction == 3 && clawTargetIndex != 0)
-            {
-                usc.setTarget(clawChannel, clawTargetValues[clawTargetIndex - 1]);
-                clawTargetIndex--;
-            }
-        }
-
-        public void pauseClaw()
-        {
-            usc.setTarget(clawChannel, 7645);
-        }
-
-        public void moveElbow(int direction)
-        {
-            if (direction == 0 && elbowTargetIndex != (elbowTargetValues.Length - 1))
-            {
-                usc.setTarget(elbowChannel, elbowTargetValues[elbowTargetIndex + 1]);
-                elbowTargetIndex++;
-            }
-            else if (direction == 3 && elbowTargetIndex != 0)
-            {
-                usc.setTarget(elbowChannel, elbowTargetValues[elbowTargetIndex - 1]);
-                elbowTargetIndex--;
-            }
-        }
-
-        public void moveShoulder(int direction)
-        {
-            if (direction == 0 && shoulderTargetIndex != (shoulderTargetValues.Length - 1))
-            {
-                usc.setTarget(shoulderChannel, shoulderTargetValues[shoulderTargetIndex + 1]);
-                shoulderTargetIndex++;
-            }
-            else if (direction == 3 && shoulderTargetIndex != 0)
-            {
-                usc.setTarget(shoulderChannel, shoulderTargetValues[shoulderTargetIndex - 1]);
-                shoulderTargetIndex--;
-            }
-        }
-        
-        public void launch()
-        {
-            usc.setTarget(triggerChannel, on);
-
-        }
-
-        public void resetLaunch()
-        {
-            usc.setTarget(triggerChannel, off);
-        }
-        */
         public void TryToDisconnect()
         {
             if (Arm != null)

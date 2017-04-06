@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Mars_Rover_OCU.Properties" GeneratedClassName="ControllerSettings">
   <Profiles />
   <Settings>
-    <Setting Name="Speed" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">250</Value>
+    <Setting Name="MaxSpeed" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
     </Setting>
     <Setting Name="DrivePlayer" Type="Microsoft.Xna.Framework.PlayerIndex" Scope="User">
       <Value Profile="(Default)">One</Value>
@@ -12,7 +12,10 @@
       <Value Profile="(Default)">Two</Value>
     </Setting>
     <Setting Name="SteeringSensitivity" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">30</Value>
+      <Value Profile="(Default)">500</Value>
+    </Setting>
+    <Setting Name="ArmSensitivity" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">20</Value>
     </Setting>
   </Settings>
 </SettingsFile>

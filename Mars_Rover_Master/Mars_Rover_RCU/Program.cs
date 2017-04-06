@@ -25,6 +25,10 @@ namespace Mars_Rover_RCU
         private static readonly short elbow = 1;
         private static readonly short wrist = 2;
 
+        public static short shoulderPos = 464;
+        public static short elbowPos = 1000;
+        public static short wristPos = 2000;
+
         private static RCUComms comms;
 
         static bool debug = true;
@@ -194,6 +198,13 @@ namespace Mars_Rover_RCU
                             Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
                             Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
                             Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
+                            Logger.WriteLine("Shoulder POS: " + robotState.DriveState.shoulderPos);
+                            Logger.WriteLine("Elbow POS: " + robotState.DriveState.elbowPos);
+                            Logger.WriteLine("Wrist POS: " + robotState.DriveState.wristPos);
+                            Logger.WriteLine("Robot Radius: " + robotState.DriveState.radius);
+                            Logger.WriteLine("Go to Home: " + robotState.DriveState.goToHome);
+                            Logger.WriteLine("Go to Sample: " + robotState.DriveState.goToSample);
+                            Logger.WriteLine("Go to Deposit: " + robotState.DriveState.goToDeposit);
 
                             // Set LOS to false
                             _Maestro.setLOS(false);
@@ -253,38 +264,52 @@ namespace Mars_Rover_RCU
                                 _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
                                 
                             }
+
+                            if (robotState.DriveState.goToHome)
+                            {
+                                // Enter servo macro here
+
+                                // End position of the arm should go here
+                                shoulderPos = 1500;
+                                elbowPos = 1500;
+                                wristPos = 1500;
+                            }
+                            else if (robotState.DriveState.goToSample)
+                            {
+                                // Enter servo macro here
+
+                                // End position of the arm should go here
+                                shoulderPos = 1500;
+                                elbowPos = 1500;
+                                wristPos = 1500;
+                            }
+                            else if (robotState.DriveState.goToDeposit)
+                            {
+                                // Enter servo macro here
+
+                                // End position of the arm should go here
+                                shoulderPos = 1500;
+                                elbowPos = 1500;
+                                wristPos = 1500;
+                            } 
+                            else
+                            {
+                                shoulderPos = robotState.DriveState.shoulderPos;
+                                elbowPos = robotState.DriveState.elbowPos;
+                                wristPos = robotState.DriveState.wristPos;
+                                _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                            }
+
+                            if (robotState.DriveState.gripperPos == closed)
+                            {
+                                _Maestro.closeGripper();
+                            } else if(robotState.DriveState.gripperPos == open)
+                            {
+                                _Maestro.openGripper();
+                            }
                             
 
                             /*
-                            if (robotState.DriveState.FrontStopArmUp == true && _Roomba.getAutobrake() == false)
-                            {
-                                _Roomba.setAutobrake(true);
-                                Logger.WriteLine("Autobrake is " + _Roomba.getAutobrake());
-                                
-                            }
-                            else if (robotState.DriveState.FrontStopArmUp == false && _Roomba.getAutobrake() == true)
-                            {
-                                _Roomba.setAutobrake(false);
-                                Logger.WriteLine("Autobrake is " + _Roomba.getAutobrake());
-                                
-                            }
-                            if (robotState.DriveState.Radius >= 0 && robotState.DriveState.Radius <= 7)
-                            {
-                                _Roomba.drive(robotState.DriveState.Radius, robotState.DriveState.Speed);
-                            }
-                            if (robotState.DriveState.LeftSpeed != 0 && robotState.DriveState.RightSpeed != 0 && robotState.DriveState.controllerControl)
-                            {
-                                _Roomba.directDrive(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-                            }
-                            if (robotState.DriveState.ArmSpeed == 0 || robotState.DriveState.ArmSpeed == 3 || robotState.DriveState.ArmSpeed == -1)
-                            {
-                                _MiniMaestro.moveElbow(robotState.DriveState.ArmSpeed);
-                                _MiniMaestro.moveShoulder(robotState.DriveState.ArmSpeed);
-                            }
-                            if (robotState.DriveState.ScoopIn == true)
-                            {
-                                _MiniMaestro.moveClaw(0);
-                            }
                             if (robotState.DriveState.ScoopOut == true)
                             {
                                 _MiniMaestro.moveClaw(3);

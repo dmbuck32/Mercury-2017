@@ -24,18 +24,25 @@ namespace Mars_Rover_OCU.Utilities
         private static readonly short rotate = 1;
         private static readonly short normal = 0;
         private static readonly short STOP = 1500;
-        private static readonly short shoulder = 0;
         private static readonly short elbow = 1;
         private static readonly short wrist = 2;
 
         // Static variables to store current state of Drivestate
         private static short mode = 0;
-        private static short armState = shoulder;
+        private static short armState = elbow;
         private static short gripper = closed;
         private static bool headlight = false;
         private static short RightSpeed = 1500;
         private static short LeftSpeed = 1500;
         private static bool usePID = false;
+        private static short shoulderPos = 464;
+        private static short elbowPos = 1000;
+        private static short wristPos = 2000;
+        private static double radius = 0;
+        private static bool goToHome; // Macro for stowing away arm
+        private static bool goToSample; // Macro for positioning arm to aquire sample
+        private static bool goToDeposit; // Macro for positioning arm to deposit sample
+        private static bool functionEnabled = false;
 
         private static double rTrigger;
         private static double lTrigger;
@@ -75,13 +82,21 @@ namespace Mars_Rover_OCU.Utilities
             }
 
             // Robot Arm State
-            if (state.DPad.Down == ButtonState.Pressed) // D-Pad Down Handler (Shoulder Servo)
+            if (state.DPad.Down == ButtonState.Pressed) // D-Pad Down Handler ()
             {
-                armState = shoulder;
+                ControllerSettings.Default.ArmSensitivity -= 5;
+                if (ControllerSettings.Default.ArmSensitivity < 5)
+                {
+                    ControllerSettings.Default.ArmSensitivity = 5;
+                }
             }
-            else if (state.DPad.Up == ButtonState.Pressed) // D-Pad Up Handler (N/A)
+            else if (state.DPad.Up == ButtonState.Pressed) // D-Pad Up Handler ()
             {
-
+                ControllerSettings.Default.ArmSensitivity += 5;
+                if (ControllerSettings.Default.ArmSensitivity > 50)
+                {
+                    ControllerSettings.Default.ArmSensitivity = 50;
+                }
             }
             else if (state.DPad.Left == ButtonState.Pressed) // D-Pad Left Handler (Elbow Servo)
             {
@@ -148,17 +163,23 @@ namespace Mars_Rover_OCU.Utilities
 
             if (mode == normal)
             {
+                // Handle Triggers and Right Stick
                 if (rTrigger == 0 && lTrigger == 0 && rStickY == 0) // No Movement
                 {
                     RightSpeed = STOP;
                     LeftSpeed = STOP;
                 }
-                else if (rTrigger != 0 && lTrigger == 0) // Forewards
+                if (rTrigger != 0 && lTrigger != 0) // Ratio between L & R
+                {
+                    RightSpeed = GetSpeed(rTrigger - lTrigger);
+                    LeftSpeed = GetSpeed(rTrigger - lTrigger);
+                }
+                else if (rTrigger != 0) // Foreward
                 {
                     RightSpeed = GetSpeed(rTrigger);
                     LeftSpeed = GetSpeed(rTrigger);
                 }
-                else if (lTrigger != 0 && rTrigger == 0) // Backwards
+                else if (lTrigger != 0) // Backward
                 {
                     RightSpeed = GetSpeed(-lTrigger);
                     LeftSpeed = GetSpeed(-lTrigger);
@@ -168,11 +189,8 @@ namespace Mars_Rover_OCU.Utilities
                     RightSpeed = GetSpeed(rStickY);
                     LeftSpeed = GetSpeed(rStickY);
                 }
-                else if (lTrigger != 0 && rTrigger == 0) // Both down = stop
-                {
-                    RightSpeed = STOP;
-                    LeftSpeed = STOP;
-                }
+                // Handle Turning
+                radius = rStickX;
 
             } else if (mode == rotate)
             {
@@ -191,7 +209,7 @@ namespace Mars_Rover_OCU.Utilities
                     RightSpeed = GetSpeed(lTrigger);
                     LeftSpeed = GetSpeed(-lTrigger);
                 }
-                else if (rTrigger == 0 && lTrigger == 0 && rStickX == 0) // Rotate with Right Stick
+                else if (rTrigger == 0 && lTrigger == 0 && rStickX != 0) // Rotate with Right Stick
                 {
                     RightSpeed = GetSpeed(-rStickX);
                     LeftSpeed = GetSpeed(rStickX);
@@ -204,17 +222,17 @@ namespace Mars_Rover_OCU.Utilities
                     RightSpeed = STOP;
                     LeftSpeed = STOP;
                 }
-                else if (rTrigger != 0 && lTrigger == 0) // Rotate Right
+                else if (rTrigger != 0 && lTrigger == 0) // Move Right
                 {
                     RightSpeed = GetSpeed(-rTrigger);
                     LeftSpeed = GetSpeed(rTrigger);
                 }
-                else if (lTrigger != 0 && rTrigger == 0) // Rotate Left
+                else if (lTrigger != 0 && rTrigger == 0) // Move Left
                 {
                     RightSpeed = GetSpeed(lTrigger);
                     LeftSpeed = GetSpeed(-lTrigger);
                 }
-                else if (rTrigger == 0 && lTrigger == 0 && rStickX == 0) // Rotate with Right Stick
+                else if (rTrigger == 0 && lTrigger == 0 && rStickX != 0) // Move with Right Stick
                 {
                     RightSpeed = GetSpeed(-rStickX);
                     LeftSpeed = GetSpeed(rStickX);
@@ -228,14 +246,51 @@ namespace Mars_Rover_OCU.Utilities
                 LeftSpeed = (short)(Math.Max(Math.Min(Math.Round(((V - W) / 2) * 500) + 1500, 2000), 1000)); //Bounded between 1000 - 2000
             }
 
-            //TODO: Figure out Arm movement
+            functionEnabled = goToDeposit || goToHome || goToSample;
 
-
-            /*
-            //Arm Stuff
-            if (RStick != 0) //arm up or down
-                driveState.ArmSpeed = Convert.ToInt16(Math.Round(50 * (4 * Math.Pow(Math.Abs(RStick) - 0.5, 3) + 0.5)) * Math.Sign(RStick));
-                */
+            // Arm Movement
+            if ((lStickX != 0 || lStickY != 0) && !functionEnabled)
+            {
+                short shoulderMin = 464;
+                short shoulderMax = 2496;
+                short elbowMin = 464;
+                short elbowMax = 2496;
+                short wristMin = 800;
+                short wristMax = 2000;
+                shoulderPos += (short)Math.Round(ControllerSettings.Default.ArmSensitivity * lStickX);
+                if (shoulderPos < shoulderMin)
+                {
+                    shoulderPos = shoulderMin;
+                }
+                if (shoulderPos > shoulderMax)
+                {
+                    shoulderPos = shoulderMax;
+                }
+                if (armState == elbow)
+                {
+                    elbowPos += (short)Math.Round(ControllerSettings.Default.ArmSensitivity * lStickY);
+                    if (elbowPos < elbowMin)
+                    {
+                        elbowPos = elbowMin;
+                    }
+                    if (elbowPos > elbowMax)
+                    {
+                        elbowPos = elbowMax;
+                    }
+                }
+                else if (armState == wrist)
+                {
+                    wristPos += (short)Math.Round(ControllerSettings.Default.ArmSensitivity * lStickY);
+                    if (wristPos < wristMin)
+                    {
+                        wristPos = wristMin;
+                    }
+                    if (wristPos > wristMax)
+                    {
+                        wristPos = wristMax;
+                    }
+                }
+            }
 
             // Drive State variable seting
             driveState.Mode = mode;
@@ -245,6 +300,13 @@ namespace Mars_Rover_OCU.Utilities
             driveState.usePID = usePID;
             driveState.RightSpeed = RightSpeed;
             driveState.LeftSpeed = LeftSpeed;
+            driveState.shoulderPos = shoulderPos;
+            driveState.elbowPos = elbowPos;
+            driveState.wristPos = wristPos;
+            driveState.radius = radius;
+            driveState.goToHome = goToHome;
+            driveState.goToSample = goToSample;
+            driveState.goToDeposit = goToDeposit;
 
             return driveState;
         }
@@ -268,6 +330,29 @@ namespace Mars_Rover_OCU.Utilities
         internal static short GetSpeed(double input)
         {
             return (short)Math.Round(500 * input + 1500);
+        }
+
+        public static void setFunctions(bool goToHome, bool goToSample, bool goToDeposit)
+        {
+            DriveController.goToHome = goToHome;
+            DriveController.goToSample = goToSample;
+            DriveController.goToDeposit = goToDeposit;
+        }
+
+        public static void updateArm(short shoulderPos, short elbowPos, short wristPos)
+        {
+            if (DriveController.shoulderPos != shoulderPos)
+            {
+                DriveController.shoulderPos = shoulderPos;
+            }
+            if (DriveController.elbowPos != elbowPos)
+            {
+                DriveController.elbowPos = elbowPos;
+            }
+            if (DriveController.wristPos != wristPos)
+            {
+                DriveController.wristPos = wristPos;
+            }
         }
     }
 }

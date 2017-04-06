@@ -236,7 +236,7 @@ namespace Mars_Rover_OCU
                 }
             }
 
-                comms.setKeyboardDriveState(e.Key, "down", (short)keyboardSpeedSlider.Value, (short)keyboardSpeedSlider1.Value);
+                //comms.setKeyboardDriveState(e.Key, "down", (short)keyboardSpeedSlider.Value, (short)keyboardSpeedSlider1.Value);
 
                 if (e.Key == Key.W) //Forward
                 {
@@ -306,7 +306,7 @@ namespace Mars_Rover_OCU
         //Todo create a key parse to consolidate into one function
         private void HandleKeyRelease(object sender, System.Windows.Input.KeyEventArgs e)
         {
-                comms.setKeyboardDriveState(e.Key, "up", (short)keyboardSpeedSlider.Value, (short)keyboardSpeedSlider1.Value);
+                //comms.setKeyboardDriveState(e.Key, "up", (short)keyboardSpeedSlider.Value, (short)keyboardSpeedSlider1.Value);
 
                 if (e.Key == Key.W) //Forward
                 {
@@ -454,7 +454,7 @@ namespace Mars_Rover_OCU
                     RightSensor.Content = comms.getRightSensor();
                     FrontSensor.Content = comms.getFrontLeftSensor();
 
-                    SpeedSensitivity.Text = ControllerSettings.Default.Speed.ToString();
+                    SpeedSensitivity.Text = ControllerSettings.Default.MaxSpeed.ToString();
                 }));
             }
             catch (TaskCanceledException)
@@ -500,6 +500,9 @@ namespace Mars_Rover_OCU
 
                                connectionStatusLbl.Content = "Connected - XBox Control";
                                connectionStatusLbl.Foreground = myGoodBrush;
+
+                               keyboard.IsEnabled = true;
+                               keyboard_Copy.IsEnabled = true;
 
                                startTime = DateTime.Now;
                                stopWatch.Start();
@@ -579,8 +582,8 @@ namespace Mars_Rover_OCU
                     connectionStatusLbl.Content = "Connected - XBox Control";
                     connectionStatusLbl.Foreground = myGoodBrush;
 
-                    keyboard.IsEnabled = false;
-                    keyboard_Copy.IsEnabled = false;
+                    keyboard.IsEnabled = true;
+                    keyboard_Copy.IsEnabled = true;
                 }));
             }
 

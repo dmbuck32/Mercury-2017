@@ -25,13 +25,13 @@ namespace Mars_Rover_OCU.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("250")]
-        public int Speed {
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public int MaxSpeed {
             get {
-                return ((int)(this["Speed"]));
+                return ((int)(this["MaxSpeed"]));
             }
             set {
-                this["Speed"] = value;
+                this["MaxSpeed"] = value;
             }
         }
         
@@ -61,13 +61,25 @@ namespace Mars_Rover_OCU.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("30")]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
         public int SteeringSensitivity {
             get {
                 return ((int)(this["SteeringSensitivity"]));
             }
             set {
                 this["SteeringSensitivity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        public int ArmSensitivity {
+            get {
+                return ((int)(this["ArmSensitivity"]));
+            }
+            set {
+                this["ArmSensitivity"] = value;
             }
         }
     }

@@ -198,10 +198,14 @@
                             </Label>
                         </Canvas>
                         <Canvas Margin="0,0,144,26" Height="41" VerticalAlignment="Bottom">
-                            <Slider x:Name="keyboardSpeedSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="500" Minimum="0" SmallChange="1" TickFrequency="9" Value="200" Canvas.Left="45" Canvas.Top="14" LargeChange="10"/>
-                            <Label Content="Motors" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="14" Width="52" Canvas.Left="-4"/>
-                            <Label Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="175"/>
-                            <Label Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="41"/>
+                            <Slider x:Name="MaxSpeedSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="500" Minimum="0" SmallChange="1" TickFrequency="25" Value="200" Canvas.Left="45" Canvas.Top="14" LargeChange="10"/>
+                            <Label Content="Max&#xD;&#xA;Speed" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="-1" Width="45" Canvas.Left="-15" RenderTransformOrigin="-0.038,0.5"/>
+                            <Label Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="175" Height="16" Padding="5,0"/>
+                            <Label Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="41" Padding="5,0"/>
+                            <Slider x:Name="ArmSensitivitySlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="50" Minimum="0" SmallChange="1" TickFrequency="10" Value="20" Canvas.Left="45" Canvas.Top="56" LargeChange="10"/>
+                            <Label Content="Arm&#xD;&#xA;Sensitivity" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="45" Width="67" Canvas.Left="-19"/>
+                            <Label Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="175" Height="16" Padding="5,0" Canvas.Top="40"/>
+                            <Label Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="41" Padding="5,0" Canvas.Top="40"/>
                         </Canvas>
                     </Grid>
                     <Expander Header="Control Settings" ExpandDirection="Right" Panel.ZIndex="5" Height="54" Canvas.Left="25" Canvas.Top="219" Width="334" Margin="24,0,0,0" VerticalAlignment="Bottom" HorizontalAlignment="Left" Visibility="Hidden">

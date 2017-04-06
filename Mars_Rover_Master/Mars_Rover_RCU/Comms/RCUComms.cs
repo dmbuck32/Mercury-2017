@@ -83,6 +83,10 @@ namespace Mars_Rover_RCU.Comms
 
                     returnState.PositionReturnState.rightDistance = Program.sensorData[4];
                     returnState.PositionReturnState.rightAmbient = Program.sensorData[5];
+
+                    returnState.ArmReturnState.shoulderPos = Program.shoulderPos;
+                    returnState.ArmReturnState.elbowPos = Program.elbowPos;
+                    returnState.ArmReturnState.wristPos = Program.wristPos;
                     
                     // all UI control received, now send to robot clients
                     using (System.IO.MemoryStream ms = new System.IO.MemoryStream())
