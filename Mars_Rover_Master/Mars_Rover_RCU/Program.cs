@@ -41,10 +41,10 @@ namespace Mars_Rover_RCU
         static public Controllers.Maestro _Maestro;
 
         //Sensors
-        static Controllers.Sensors _Sensors;
+        static public Controllers.Sensors _Sensors;
         static public String[] sensorData;
 
-        static Controllers.PID _PID;
+        static public Controllers.PID _PID;
 
         static Utility.UpdateQueue<RobotState> stateQueue = new Utility.UpdateQueue<RobotState>(-1);
         static XmlSerializer robotStateDeserializer = new XmlSerializer(typeof(Mars_Rover_Comms.RobotState));
@@ -227,16 +227,16 @@ namespace Mars_Rover_RCU
 
                             if (robotState.DriveState.usePID == true)
                             {
-                                if (!_PID.isEnabled())
+                                if (!_PID.enabled)
                                 {
-                                    _PID.enable();
+                                    _PID.enabled = true;
                                 }
                             }
                             else if (robotState.DriveState.usePID == false)
                             {
-                                if (_PID.isEnabled())
+                                if (_PID.enabled)
                                 {
-                                    _PID.disable();
+                                    _PID.enabled = false;
                                 }
                             }
                             

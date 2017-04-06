@@ -22,35 +22,16 @@ namespace Mars_Rover_RCU.Controllers
         float Ki = 0;
         float Kd = 0;
         float correction = 0;
-
-        private System.Timers.Timer worker;
+        public Boolean enabled = false;
 
 
         public PID()
         {
             SensorData = new String[6];
             error = new int[10];
-            worker = new System.Timers.Timer(200);
-            worker.Elapsed += new ElapsedEventHandler(update);
-            worker.Stop();
         }
 
-        public void enable()
-        {
-            worker.Start();
-        }
-
-        public void disable()
-        {
-            worker.Stop();
-        }
-
-        public Boolean isEnabled()
-        {
-            return worker.Enabled;
-        }
-
-        void update(object sender, ElapsedEventArgs e)
+        public void update()
         {
             //distance[1] = left sensor distance in mm
             //distance[2] = right sensor distance in mm

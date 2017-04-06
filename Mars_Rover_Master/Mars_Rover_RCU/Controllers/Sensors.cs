@@ -131,6 +131,12 @@ namespace Mars_Rover_RCU.Controllers
 
             //This will take the data string 
             sensorData = input.Split(',');
+            
+            //Calling the PID to update
+            if(Program._PID.enabled)
+            {
+                Program._PID.update();
+            }
         }
     }
     }
