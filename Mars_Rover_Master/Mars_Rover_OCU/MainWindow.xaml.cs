@@ -114,9 +114,12 @@ namespace Mars_Rover_OCU
                     {
                         if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == false)
                         {
-                            comms.setF3(true);
-                            System.Threading.Thread.Sleep(500);
-                            comms.setF3(false);
+                            if (comms.getShoulderPos() < 1500 && comms.getElbowPos() < 800)
+                            {
+                                comms.setF3(true);
+                                System.Threading.Thread.Sleep(500);
+                                comms.setF3(false);
+                            }
                             comms.setF1(true);
                             HomeMacroBtn.Fill = keyPressed;
                         }
@@ -151,9 +154,12 @@ namespace Mars_Rover_OCU
                     {
                         if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == false)
                         {
-                            comms.setF3(true);
-                            System.Threading.Thread.Sleep(500);
-                            comms.setF3(false);
+                            if (comms.getShoulderPos() < 1000)
+                            {
+                                comms.setF3(true);
+                                System.Threading.Thread.Sleep(500);
+                                comms.setF3(false);
+                            }
                             comms.setF2(true);
                             SampleCollectionMacroBtn.Fill = keyPressed;
                         }

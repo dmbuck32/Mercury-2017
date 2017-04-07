@@ -812,6 +812,20 @@ namespace Mars_Rover_OCU.Comms
             return FrontSensor;
         }
 
+        public short getShoulderPos()
+        {
+            return shoulderPos;
+        }
+
+        public short getElbowPos()
+        {
+            return elbowPos;
+        }
+
+        public short getWristPos()
+        {
+            return wristPos;
+        }
         public bool getF1()
         {
             return F1_Pressed;
