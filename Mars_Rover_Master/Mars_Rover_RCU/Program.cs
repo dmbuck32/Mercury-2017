@@ -193,22 +193,24 @@ namespace Mars_Rover_RCU
 
                         if (robotState.DriveState != null)
                         {
+                            /* Debug Statements for each of the drivestates
                             Logger.WriteLine("Robot Drive Mode: " + robotState.DriveState.Mode);
-                            Logger.WriteLine("Robot Arm State: " + robotState.DriveState.ArmState);
-                            Logger.WriteLine("Robot Gripper Pos: " + robotState.DriveState.gripperPos);
                             Logger.WriteLine("Robot Headlight: " + robotState.DriveState.Headlights);
                             Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
                             Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
                             Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
+                            Logger.WriteLine("Robot Radius: " + robotState.DriveState.radius);
+                            Logger.WriteLine("Control State: " + robotState.DriveState.Control);
+                            Logger.WriteLine("Controller State: " + robotState.DriveState.controllerControl);
+                            Logger.WriteLine("Robot Arm State: " + robotState.DriveState.ArmState);
+                            Logger.WriteLine("Robot Gripper Pos: " + robotState.DriveState.gripperPos);
                             Logger.WriteLine("Shoulder POS: " + robotState.DriveState.shoulderPos);
                             Logger.WriteLine("Elbow POS: " + robotState.DriveState.elbowPos);
                             Logger.WriteLine("Wrist POS: " + robotState.DriveState.wristPos);
-                            Logger.WriteLine("Robot Radius: " + robotState.DriveState.radius);
                             Logger.WriteLine("Go to Home: " + robotState.DriveState.goToHome);
                             Logger.WriteLine("Go to Sample: " + robotState.DriveState.goToSample);
                             Logger.WriteLine("Go to Deposit: " + robotState.DriveState.goToDeposit);
-                            Logger.WriteLine("Control State: " + robotState.DriveState.Control);
-                            Logger.WriteLine("Controller State: " + robotState.DriveState.controllerControl);
+                            */
 
                             if (!robotState.DriveState.Control) //Connected but no control
                             {
@@ -253,36 +255,10 @@ namespace Mars_Rover_RCU
                                 }
 
                                 //Decode Robot Mode
-                                if (robotState.DriveState.Mode == normal)
-                                {
-                                    short temp = robotState.DriveState.LeftSpeed;
-                                    // TODO: Implement turning based on radius
-                                    _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-                                }
-                                else if (robotState.DriveState.Mode == rotate)
-                                {
-                                    _Maestro.setRotateMode();
-                                    _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-                                }
-                                else if (robotState.DriveState.Mode == translate)
-                                {
-                                    _Maestro.setTranslateMode();
-                                    _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-
-                                }
-                                else if (robotState.DriveState.Mode == tank)
-                                {
-                                    _Maestro.setTankMode();
-                                    _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-
-                                }
+                                Drive(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
 
                                 if (robotState.DriveState.goToHome)
                                 {
-                                    shoulderPos = 2000;
-                                    elbowPos = 1500;
-                                    wristPos = 1400;
-                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
                                     shoulderPos = 464;
                                     elbowPos = 1000;
                                     wristPos = 2000;
@@ -290,10 +266,6 @@ namespace Mars_Rover_RCU
                                 }
                                 else if (robotState.DriveState.goToSample)
                                 {
-                                    shoulderPos = 2000;
-                                    elbowPos = 1500;
-                                    wristPos = 1400;
-                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
                                     shoulderPos = 2000;
                                     elbowPos = 600;
                                     wristPos = 1350;
@@ -347,6 +319,39 @@ namespace Mars_Rover_RCU
             Logger.WriteLine("StateProcessor exiting...");
 
 
+        }
+
+        private static void Drive(short driveMode, double radius, short leftSpeed, short rightSpeed)
+        {
+            if (driveMode == normal)
+            {
+                Turn(radius);
+                _Maestro.setDriveServos(leftSpeed, rightSpeed);
+            }
+            else if (driveMode == rotate)
+            {
+                _Maestro.setRotateMode();
+                _Maestro.setDriveServos(leftSpeed, rightSpeed);
+            }
+            else if (driveMode == translate)
+            {
+                _Maestro.setTranslateMode();
+                _Maestro.setDriveServos(leftSpeed, rightSpeed);
+
+            }
+            else if (driveMode == tank)
+            {
+                _Maestro.setTankMode();
+                _Maestro.setDriveServos(leftSpeed, rightSpeed);
+
+            }
+        }
+
+        private static void Turn(double radius)
+        {
+            int offset = 220;
+            short turn = (short)Math.Round(radius * offset);
+            _Maestro.setTurningServos((short)(1441 - turn), (short)(1520 - turn), (short)(1510 + turn), (short)(1425 + turn));
         }
 
     }

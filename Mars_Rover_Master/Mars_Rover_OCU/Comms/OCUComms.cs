@@ -126,6 +126,10 @@ namespace Mars_Rover_OCU.Comms
         private static short wristPos;
         private static short gripperPos;
 
+        private static short shoulderOCU;
+        private static short elbowOCU;
+        private static short wristOCU;
+
         private static short DriveMode;
         private static short ArmMode;
 
@@ -363,6 +367,9 @@ namespace Mars_Rover_OCU.Comms
                             outputState.DriveState.controllerControl = true;
                             DriveMode = outputState.DriveState.Mode;
                             ArmMode = outputState.DriveState.ArmState;
+                            shoulderOCU = outputState.DriveState.shoulderPos;
+                            elbowOCU = outputState.DriveState.elbowPos;
+                            wristOCU = outputState.DriveState.wristPos;
                         }
                         catch (Exception ex)
                         {
@@ -835,6 +842,21 @@ namespace Mars_Rover_OCU.Comms
         public short getWristPos()
         {
             return wristPos;
+        }
+
+        public short getShoulderOCU()
+        {
+            return shoulderOCU;
+        }
+
+        public short getElbowOCU()
+        {
+            return elbowOCU;
+        }
+
+        public short getWristOCU()
+        {
+            return wristOCU;
         }
 
         public short getGripperPos()
