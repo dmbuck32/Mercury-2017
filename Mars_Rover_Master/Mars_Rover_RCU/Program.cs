@@ -21,9 +21,6 @@ namespace Mars_Rover_RCU
         private static readonly short rotate = 1;
         private static readonly short normal = 0;
         private static readonly short STOP = 1500;
-        private static readonly short shoulder = 0;
-        private static readonly short elbow = 1;
-        private static readonly short wrist = 2;
 
         public static short shoulderPos = 464;
         public static short elbowPos = 1000;
@@ -161,6 +158,10 @@ namespace Mars_Rover_RCU
             else
             {
                 //LOS
+                //Logger.WriteLine("LOS");
+                _Maestro.setLOS(true);
+                _Maestro.setDriveServos(STOP, STOP);
+                _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
             }
             try
             {
@@ -205,124 +206,129 @@ namespace Mars_Rover_RCU
                             Logger.WriteLine("Go to Home: " + robotState.DriveState.goToHome);
                             Logger.WriteLine("Go to Sample: " + robotState.DriveState.goToSample);
                             Logger.WriteLine("Go to Deposit: " + robotState.DriveState.goToDeposit);
+                            Logger.WriteLine("Control State: " + robotState.DriveState.Control);
+                            Logger.WriteLine("Controller State: " + robotState.DriveState.controllerControl);
 
-                            // Set LOS to false
-                            _Maestro.setLOS(false);
-
-                            // Headlight Function
-                            if (robotState.DriveState.Headlights == true && arduinoReady)
+                            if (!robotState.DriveState.Control) //Connected but no control
                             {
-                                if (!_Sensors.headlightsEnabled())
-                                {
-                                    _Sensors.enableHeadlights();
-                                }
+                                _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                _Maestro.setDriveServos(STOP, STOP);
+                                _Maestro.noControl();
                             }
-                            else if (robotState.DriveState.Headlights == false & arduinoReady)
-                            {
-                                if (_Sensors.headlightsEnabled())
-                                {
-                                    _Sensors.disableHeadlights();
-                                }
-                            }
-
-                            if (robotState.DriveState.usePID == true)
-                            {
-                                if (!_PID.enabled)
-                                {
-                                    _PID.enabled = true;
-                                }
-                            }
-                            else if (robotState.DriveState.usePID == false)
-                            {
-                                if (_PID.enabled)
-                                {
-                                    _PID.enabled = false;
-                                }
-                            }
-                            
-                            //Decode Robot Mode
-                            if (robotState.DriveState.Mode == normal)
-                            {
-                               short temp = robotState.DriveState.LeftSpeed;
-                                // TODO: Implement turning based on radius
-                                _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-                            }
-                            else if (robotState.DriveState.Mode == rotate)
-                            {
-                                _Maestro.setRotateMode();
-                                _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-                            }
-                            else if (robotState.DriveState.Mode == translate)
-                            {
-                                _Maestro.setTranslateMode();
-                                _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-                                
-                            }
-                            else if (robotState.DriveState.Mode == tank)
-                            {
-                                _Maestro.setTankMode();
-                                _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-                                
-                            }
-
-                            if (robotState.DriveState.goToHome)
-                            {
-                                // Enter servo macro here
-
-                                // End position of the arm should go here
-                                shoulderPos = 1500;
-                                elbowPos = 1500;
-                                wristPos = 1500;
-                            }
-                            else if (robotState.DriveState.goToSample)
-                            {
-                                // Enter servo macro here
-
-                                // End position of the arm should go here
-                                shoulderPos = 1500;
-                                elbowPos = 1500;
-                                wristPos = 1500;
-                            }
-                            else if (robotState.DriveState.goToDeposit)
-                            {
-                                // Enter servo macro here
-
-                                // End position of the arm should go here
-                                shoulderPos = 1500;
-                                elbowPos = 1500;
-                                wristPos = 1500;
-                            } 
                             else
                             {
-                                shoulderPos = robotState.DriveState.shoulderPos;
-                                elbowPos = robotState.DriveState.elbowPos;
-                                wristPos = robotState.DriveState.wristPos;
-                                _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
-                            }
+                                // Set LOS to false
+                                _Maestro.setLOS(false);
 
-                            if (robotState.DriveState.gripperPos == closed)
-                            {
-                                _Maestro.closeGripper();
-                            } else if(robotState.DriveState.gripperPos == open)
-                            {
-                                _Maestro.openGripper();
-                            }
-                            
+                                // Headlight Function
+                                if (robotState.DriveState.Headlights == true && arduinoReady)
+                                {
+                                    if (!_Sensors.headlightsEnabled())
+                                    {
+                                        _Sensors.enableHeadlights();
+                                    }
+                                }
+                                else if (robotState.DriveState.Headlights == false & arduinoReady)
+                                {
+                                    if (_Sensors.headlightsEnabled())
+                                    {
+                                        _Sensors.disableHeadlights();
+                                    }
+                                }
 
-                            /*
-                            if (robotState.DriveState.ScoopOut == true)
-                            {
-                                _MiniMaestro.moveClaw(3);
-                                System.Threading.Thread.Sleep(1500);
-                                _MiniMaestro.pauseClaw();
+                                if (robotState.DriveState.usePID == true)
+                                {
+                                    if (!_PID.enabled)
+                                    {
+                                        _PID.enabled = true;
+                                    }
+                                }
+                                else if (robotState.DriveState.usePID == false)
+                                {
+                                    if (_PID.enabled)
+                                    {
+                                        _PID.enabled = false;
+                                    }
+                                }
+
+                                //Decode Robot Mode
+                                if (robotState.DriveState.Mode == normal)
+                                {
+                                    short temp = robotState.DriveState.LeftSpeed;
+                                    // TODO: Implement turning based on radius
+                                    _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+                                }
+                                else if (robotState.DriveState.Mode == rotate)
+                                {
+                                    _Maestro.setRotateMode();
+                                    _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+                                }
+                                else if (robotState.DriveState.Mode == translate)
+                                {
+                                    _Maestro.setTranslateMode();
+                                    _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+
+                                }
+                                else if (robotState.DriveState.Mode == tank)
+                                {
+                                    _Maestro.setTankMode();
+                                    _Maestro.setDriveServos(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+
+                                }
+
+                                if (robotState.DriveState.goToHome)
+                                {
+                                    shoulderPos = 2000;
+                                    elbowPos = 1500;
+                                    wristPos = 1400;
+                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    shoulderPos = 464;
+                                    elbowPos = 1000;
+                                    wristPos = 2000;
+                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                }
+                                else if (robotState.DriveState.goToSample)
+                                {
+                                    shoulderPos = 2000;
+                                    elbowPos = 1500;
+                                    wristPos = 1400;
+                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    shoulderPos = 2000;
+                                    elbowPos = 600;
+                                    wristPos = 1350;
+                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                }
+                                else if (robotState.DriveState.goToDeposit)
+                                {
+                                    shoulderPos = 2000;
+                                    elbowPos = 1500;
+                                    wristPos = 1400;
+                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                }
+                                else
+                                {
+                                    shoulderPos = robotState.DriveState.shoulderPos;
+                                    elbowPos = robotState.DriveState.elbowPos;
+                                    wristPos = robotState.DriveState.wristPos;
+                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                }
+
+                                if (robotState.DriveState.gripperPos == closed)
+                                {
+                                    _Maestro.closeGripper();
+                                }
+                                else if (robotState.DriveState.gripperPos == open)
+                                {
+                                    _Maestro.openGripper();
+                                }
                             }
-                            */
                         }
                     }
                     else
                     {
                         _Maestro.setLOS(true);
                         _Maestro.setDriveServos(STOP, STOP);
+                        _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
                     }
                 }
                 catch (OperationCanceledException ex)

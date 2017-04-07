@@ -36,7 +36,7 @@ namespace Mars_Rover_RCU.Controllers
 
         // PWM Values for Gripper Open/Closed
         private const short gripperOpen = 1500;
-        private const short gripperClosed = 1100;
+        private const short gripperClosed = 1000;
 
         // PWM Values for Drive Channels
         private readonly short OFF = 1500;
@@ -81,6 +81,7 @@ namespace Mars_Rover_RCU.Controllers
                     Logger.WriteLine("Found Arm Maestro");
                 }
             }
+            setArmSpeed(100, 100, 100);
         }
 
         // Initialize Drive Channels to stop
@@ -151,6 +152,13 @@ namespace Mars_Rover_RCU.Controllers
             Arm.setTarget(RearRightServo, MaestroMultiplier(rearRight));
         }
 
+        public void noControl()
+        {
+            Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_ON));
+            System.Threading.Thread.Sleep(10);
+            Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
+        }
+
         public void setLOS(bool LOS)
         {
             if (LOS)
@@ -161,6 +169,20 @@ namespace Mars_Rover_RCU.Controllers
             {
                 Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
             }
+        }
+
+        public void setArmAcceleration(short shoulderAcceleraton, short elbowAcceleration, short wristAcceleration)
+        {
+            Arm.setAcceleration(ShoulderServo, (ushort)shoulderAcceleraton);
+            Arm.setAcceleration(ElbowServo, (ushort)elbowAcceleration);
+            Arm.setAcceleration(WristServo, (ushort)wristAcceleration);
+        }
+
+        public void setArmSpeed(short shoulderSpeed, short elbowSpeed, short wristSpeed)
+        {
+            Arm.setSpeed(ShoulderServo, (ushort)shoulderSpeed);
+            Arm.setSpeed(ElbowServo, (ushort)elbowSpeed);
+            Arm.setSpeed(WristServo, (ushort)wristSpeed);
         }
 
         private ushort MaestroMultiplier(short input)

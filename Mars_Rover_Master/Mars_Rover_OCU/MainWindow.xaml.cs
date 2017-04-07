@@ -114,6 +114,9 @@ namespace Mars_Rover_OCU
                     {
                         if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == false)
                         {
+                            comms.setF3(true);
+                            System.Threading.Thread.Sleep(500);
+                            comms.setF3(false);
                             comms.setF1(true);
                             HomeMacroBtn.Fill = keyPressed;
                         }
@@ -121,6 +124,9 @@ namespace Mars_Rover_OCU
                         {
                             comms.setF2(false);
                             SampleCollectionMacroBtn.Fill = keyReleased;
+                            comms.setF3(true);
+                            System.Threading.Thread.Sleep(500);
+                            comms.setF3(false);
                             comms.setF1(true);
                             HomeMacroBtn.Fill = keyPressed;
                         }
@@ -145,6 +151,9 @@ namespace Mars_Rover_OCU
                     {
                         if (comms.getF1() == false && comms.getF2() == false && comms.getF3() == false)
                         {
+                            comms.setF3(true);
+                            System.Threading.Thread.Sleep(500);
+                            comms.setF3(false);
                             comms.setF2(true);
                             SampleCollectionMacroBtn.Fill = keyPressed;
                         }
@@ -152,6 +161,9 @@ namespace Mars_Rover_OCU
                         {
                             comms.setF1(false);
                             HomeMacroBtn.Fill = keyReleased;
+                            comms.setF3(true);
+                            System.Threading.Thread.Sleep(500);
+                            comms.setF3(false);
                             comms.setF2(true);
                             SampleCollectionMacroBtn.Fill = keyPressed;
                         }
@@ -501,8 +513,8 @@ namespace Mars_Rover_OCU
                                connectionStatusLbl.Content = "Connected - XBox Control";
                                connectionStatusLbl.Foreground = myGoodBrush;
 
-                               keyboard.IsEnabled = true;
-                               keyboard_Copy.IsEnabled = true;
+                               keyboard.IsEnabled = false;
+                               keyboard_Copy.IsEnabled = false;
 
                                startTime = DateTime.Now;
                                stopWatch.Start();
@@ -582,8 +594,8 @@ namespace Mars_Rover_OCU
                     connectionStatusLbl.Content = "Connected - XBox Control";
                     connectionStatusLbl.Foreground = myGoodBrush;
 
-                    keyboard.IsEnabled = true;
-                    keyboard_Copy.IsEnabled = true;
+                    keyboard.IsEnabled = false;
+                    keyboard_Copy.IsEnabled = false;
                 }));
             }
 

@@ -44,6 +44,10 @@ namespace Mars_Rover_OCU.Utilities
         private static bool goToDeposit; // Macro for positioning arm to deposit sample
         private static bool functionEnabled = false;
 
+        private static int minArmSensitivity = 5;
+        private static int maxArmSensitivity = 100;
+        private static int armSensitivityincrement = 5;
+
         private static double rTrigger;
         private static double lTrigger;
         private static double lStickX;
@@ -84,18 +88,18 @@ namespace Mars_Rover_OCU.Utilities
             // Robot Arm State
             if (state.DPad.Down == ButtonState.Pressed) // D-Pad Down Handler ()
             {
-                ControllerSettings.Default.ArmSensitivity -= 5;
-                if (ControllerSettings.Default.ArmSensitivity < 5)
+                ControllerSettings.Default.ArmSensitivity -= armSensitivityincrement;
+                if (ControllerSettings.Default.ArmSensitivity < minArmSensitivity)
                 {
-                    ControllerSettings.Default.ArmSensitivity = 5;
+                    ControllerSettings.Default.ArmSensitivity = minArmSensitivity;
                 }
             }
             else if (state.DPad.Up == ButtonState.Pressed) // D-Pad Up Handler ()
             {
-                ControllerSettings.Default.ArmSensitivity += 5;
-                if (ControllerSettings.Default.ArmSensitivity > 50)
+                ControllerSettings.Default.ArmSensitivity += armSensitivityincrement;
+                if (ControllerSettings.Default.ArmSensitivity > maxArmSensitivity)
                 {
-                    ControllerSettings.Default.ArmSensitivity = 50;
+                    ControllerSettings.Default.ArmSensitivity = maxArmSensitivity;
                 }
             }
             else if (state.DPad.Left == ButtonState.Pressed) // D-Pad Left Handler (Elbow Servo)
