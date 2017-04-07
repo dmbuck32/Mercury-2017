@@ -25,6 +25,7 @@ namespace Mars_Rover_RCU
         public static short shoulderPos = 464;
         public static short elbowPos = 1000;
         public static short wristPos = 2000;
+        public static short gripperPos = 1000;
 
         private static RCUComms comms;
 
@@ -315,10 +316,12 @@ namespace Mars_Rover_RCU
 
                                 if (robotState.DriveState.gripperPos == closed)
                                 {
+                                    gripperPos = closed;
                                     _Maestro.closeGripper();
                                 }
                                 else if (robotState.DriveState.gripperPos == open)
                                 {
+                                    gripperPos = open;
                                     _Maestro.openGripper();
                                 }
                             }

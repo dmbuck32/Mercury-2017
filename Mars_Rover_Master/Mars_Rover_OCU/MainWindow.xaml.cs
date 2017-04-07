@@ -471,6 +471,63 @@ namespace Mars_Rover_OCU
                     LeftSensor.Content = comms.getLeftSensor();
                     RightSensor.Content = comms.getRightSensor();
                     FrontSensor.Content = comms.getFrontLeftSensor();
+                    if (comms.getHeadlights())
+                    {
+                        HeadlightBool.Text = "ON";
+                    }
+                    else
+                    {
+                        HeadlightBool.Text = "OFF";
+                    }
+                    if (comms.getPID())
+                    {
+                        PidBool.Text = "ON";
+                    }
+                    else
+                    {
+                        PidBool.Text = "OFF";
+                    }
+                    ArmSensitivity.Text = ControllerSettings.Default.ArmSensitivity.ToString();
+                    if (comms.getGripperPos() == 0)
+                    {
+                        GripperState.Text = "Closed";
+                    }
+                    else
+                    {
+                        GripperState.Text = "Open";
+                    }
+                    if (comms.getDriveMode() == 0)
+                    {
+                        DriveMode.Text = "Normal";
+                    }
+                    else if (comms.getDriveMode() == 1)
+                    {
+                        DriveMode.Text = "Rotate";
+                    }
+                    else if (comms.getDriveMode() == 2)
+                    {
+                        DriveMode.Text = "Translate";
+                    }
+                    else if (comms.getDriveMode() == 3)
+                    {
+                        DriveMode.Text = "Tank";
+                    }
+                    else
+                    {
+                        DriveMode.Text = "Error";
+                    }
+                    if (comms.getArmMode() == 1)
+                    {
+                        ArmMode.Text = "Elbow";
+                    }
+                    else if (comms.getArmMode() == 2)
+                    {
+                        ArmMode.Text = "Wrist";
+                    } 
+                    else
+                    {
+                        ArmMode.Text = "Disconnected";
+                    }
 
                     SpeedSensitivity.Text = ControllerSettings.Default.MaxSpeed.ToString();
                 }));

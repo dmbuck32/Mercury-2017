@@ -21,6 +21,9 @@ namespace Mars_Rover_Comms
         [XmlAttribute("wristPos")]
         public short wristPos; //800 - 2000
 
+        [XmlAttribute("gripperPos")]
+        public short gripperPos; // 0 or 1
+
         public ArmReturnState()
         {
         }

@@ -34,7 +34,7 @@ namespace Mars_Rover_Comms
         public short wristPos; //800 - 2000
 
         [XmlAttribute("gripperPos")]
-        public short gripperPos; // 944 - 1504
+        public short gripperPos; // 0 or 1
 
         [XmlAttribute("Control")]
         public bool Control; //Tells if the OCU has taken control

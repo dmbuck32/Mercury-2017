@@ -73,7 +73,7 @@ namespace Mars_Rover_OCU.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("20")]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
         public int ArmSensitivity {
             get {
                 return ((int)(this["ArmSensitivity"]));

@@ -12,7 +12,6 @@ namespace Mars_Rover_Comms
         public CmdLineState CmdLineState;
         public LogState LogState;
         public ArmState ArmState;
-        //public APMState APMState;
 
         public RobotState()
         {       
@@ -20,7 +19,6 @@ namespace Mars_Rover_Comms
             CmdLineState = new CmdLineState();
             LogState = new LogState();
             ArmState = new ArmState();
-            //APMState = new APMState();
         }
     }
 }

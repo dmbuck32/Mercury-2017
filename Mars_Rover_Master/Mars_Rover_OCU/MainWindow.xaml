@@ -14,7 +14,7 @@
             <TabItem Header="Rover">
                 <Grid x:Name="roverGrid" HorizontalAlignment="Left" Width="386" Margin="0,-10,-4,7">
                     <Border BorderBrush="Black" BorderThickness="1" Margin="10,10,10,0" IsHitTestVisible="False"/>
-                    <Rectangle Fill="#FFEEEEEE" Margin="5,10,10,0"/>
+                    <Rectangle Fill="#FFEEEEEE" Margin="-4,10,19,0"/>
                     <Grid Margin="10,10,10,0">
                         <Grid Height="495" VerticalAlignment="Top" Background="#FF302D27" Width="366" Margin="0,0,0.4,0"/>
                         <Grid Background="#FF302D27" Margin="214,0,-6,0">
@@ -48,6 +48,7 @@
                                     </TransformGroup>
                                 </Label.RenderTransform>
                             </Label>
+                            <TextBlock HorizontalAlignment="Left" Margin="-137,507,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
                         </Grid>
                     </Grid>
                     <TextBlock Margin="88,20,0,0" TextWrapping="Wrap" Text="Mountaineer Mercury Rover" VerticalAlignment="Top" HorizontalAlignment="Left" FontFamily="Trajan Pro 3" FontSize="18.667" Foreground="Gold" Height="43" Width="175"/>
@@ -61,13 +62,13 @@
                                 <DropShadowEffect BlurRadius="3" ShadowDepth="1"/>
                             </Rectangle.Effect>
                         </Rectangle>
-                        <TextBox x:Name="portTxtBox" Text="{Binding ListeningPort, Mode=TwoWay, Source={x:Static p:Settings.Default}}" HorizontalAlignment="Left" Margin="276,11,0,0" TextWrapping="Wrap" Width="52" TextAlignment="Center" FontSize="11" IsEnabled="False" Height="23" VerticalAlignment="Top" IsReadOnly="True" Visibility="Hidden"/>
+                        <TextBox x:Name="portTxtBox" Text="{Binding ListeningPort, Mode=TwoWay, Source={x:Static p:Settings.Default}}" HorizontalAlignment="Left" Margin="276,11,0,0" TextWrapping="Wrap" Width="52" TextAlignment="Center" FontSize="11" IsEnabled="False" Height="23" VerticalAlignment="Top"/>
                         <Canvas Margin="-16,-14,323,13">
                             <Ellipse HorizontalAlignment="Left" Height="36" Stroke="White" VerticalAlignment="Top" Width="36" Canvas.Top="3" Fill="#FF2A99F5"/>
                             <Label Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="SWItalt" FontSize="24" Canvas.Left="4"/>
                         </Canvas>
                         <Button x:Name="roverListenBtn" Content="Listen" HorizontalAlignment="Left" Margin="34,9,0,0" Width="74" ToolTip="Listen for the robot over net." VerticalAlignment="Top" FontSize="11" Height="29" FontFamily="Courier New" Click="roverListenBtn_Click"/>
-                        <Label Content="Port:" HorizontalAlignment="Left" Margin="230,12,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Courier New" FontSize="11" Visibility="Hidden"/>
+                        <Label Content="Port:" HorizontalAlignment="Left" Margin="230,12,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Courier New" FontSize="11"/>
                         <Canvas Margin="-16,0,0,269.2" Height="72" VerticalAlignment="Bottom" Grid.RowSpan="2">
                             <Rectangle HorizontalAlignment="Left" Height="54" VerticalAlignment="Top" Width="343" Fill="#FFFAC313" Canvas.Left="16" Canvas.Top="12">
                                 <Rectangle.Effect>
@@ -104,7 +105,7 @@
                                 </GroupBox.RenderTransform>
                                 <Grid HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="78" Margin="-3,-15,-2,-2">
                                     <RadioButton x:Name="xboxControlRB" Content="XBox" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True" FontFamily="Courier New" Foreground="White" FontSize="11" IsEnabled="False" Margin="10,8,0,0" Checked="xbox_Checked"/>
-                                    <RadioButton x:Name="keyControlRB" Content="Keyboard" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.494,1.111" IsChecked="False" FontFamily="Courier New" Foreground="White" FontSize="11" IsEnabled="False" Margin="10,25,-8,0" Checked="keyboard_Checked" Width="76"/>
+                                    <RadioButton x:Name="keyControlRB" Content="Keyboard" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.494,1.111" IsChecked="False" FontFamily="Courier New" Foreground="White" FontSize="11" IsEnabled="False" Margin="10,25,-8,0" Checked="keyboard_Checked" Width="76" Visibility="Hidden"/>
                                 </Grid>
                             </GroupBox>
 
@@ -126,8 +127,8 @@
                     </Grid>
                     <Label x:Name="connectionStatusLbl" Content="Not Connected" Margin="231,15,8,0" Background="{x:Null}" Foreground="#FFFF0014" FontSize="11" Height="51" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
                     <Button x:Name="disconnectRoverBtn" Content="Disconnect" HorizontalAlignment="Left" Margin="268,40,0,0" Width="76" IsEnabled="False" Height="26" VerticalAlignment="Top" Click="disconnectBtn_Click"/>
-                    <Grid x:Name="keyboard"  HorizontalAlignment="Left" Margin="22,0,0,120" Width="356" Height="67" VerticalAlignment="Bottom">
-                        <Canvas Margin="200,0,0,0" Height="67" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="133">
+                    <Grid x:Name="keyboard"  HorizontalAlignment="Left" Margin="22,0,0,120" Width="356" Height="67" VerticalAlignment="Bottom" Visibility="Hidden">
+                        <Canvas Margin="200,0,0,0" Height="67" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="133" Visibility="Hidden">
                             <Rectangle x:Name="forwardBtn" Fill="#CCFFFFFF" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="47"/>
                             <Rectangle x:Name="reverseBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="64" Canvas.Top="32"/>
                             <Rectangle x:Name="leftBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="32" Canvas.Top="32"/>
@@ -197,12 +198,12 @@
                                 </Label.RenderTransform>
                             </Label>
                         </Canvas>
-                        <Canvas Margin="0,0,144,26" Height="41" VerticalAlignment="Bottom">
+                        <Canvas Margin="0,0,144,26" Height="41" VerticalAlignment="Bottom" Visibility="Hidden">
                             <Slider x:Name="MaxSpeedSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="500" Minimum="0" SmallChange="1" TickFrequency="25" Value="200" Canvas.Left="45" Canvas.Top="14" LargeChange="10"/>
-                            <Label Content="Max&#xD;&#xA;Speed" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="-1" Width="45" Canvas.Left="-15" RenderTransformOrigin="-0.038,0.5"/>
+                            <Label Content="Max&#xD;&#xA;Speed" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="-1" Width="45" Canvas.Left="-15" RenderTransformOrigin="-0.038,0.5" Visibility="Hidden"/>
                             <Label Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="175" Height="16" Padding="5,0"/>
                             <Label Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="41" Padding="5,0"/>
-                            <Slider x:Name="ArmSensitivitySlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="50" Minimum="0" SmallChange="1" TickFrequency="10" Value="20" Canvas.Left="45" Canvas.Top="56" LargeChange="10"/>
+                            <Slider x:Name="ArmSensitivitySlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="50" Minimum="0" SmallChange="1" TickFrequency="10" Value="20" Canvas.Left="45" Canvas.Top="56" LargeChange="10" Visibility="Hidden"/>
                             <Label Content="Arm&#xD;&#xA;Sensitivity" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Top="45" Width="67" Canvas.Left="-19"/>
                             <Label Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="175" Height="16" Padding="5,0" Canvas.Top="40"/>
                             <Label Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="41" Padding="5,0" Canvas.Top="40"/>
@@ -225,8 +226,8 @@
                             <Label Content="Output Interval:" HorizontalAlignment="Left" Margin="13,155,0,0" VerticalAlignment="Top"/>
                         </Grid>
                     </Expander>
-                    <Grid x:Name="keyboard_Copy"  HorizontalAlignment="Left" Margin="20,0,0,59" Width="347" Height="61" VerticalAlignment="Bottom">
-                        <Canvas Margin="223,0,-9,-7" Height="67" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="133">
+                    <Grid x:Name="keyboard_Copy"  HorizontalAlignment="Left" Margin="20,0,0,59" Width="347" Height="61" VerticalAlignment="Bottom" Visibility="Hidden">
+                        <Canvas Margin="223,0,-9,-7" Height="67" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="133" Visibility="Hidden">
                             <Rectangle x:Name="ArmUpBtn" Fill="#CCFFFFFF" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="27"/>
                             <Rectangle x:Name="ArmDownBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="45" Canvas.Top="32"/>
                             <Rectangle x:Name="ScoopInBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="35" Canvas.Left="5" Canvas.Top="32"/>
@@ -382,6 +383,18 @@
                             <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="11" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="65"/>
                         </Canvas>
                     </Grid>
+                    <Label Content="Headlights:" HorizontalAlignment="Left" Margin="10,512,0,0" VerticalAlignment="Top"/>
+                    <Label Content="PID:" HorizontalAlignment="Left" Margin="10,538,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="HeadlightBool" HorizontalAlignment="Left" Margin="101,517,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="PidBool" HorizontalAlignment="Left" Margin="101,543,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <Label Content="Arm Sensitivity:" HorizontalAlignment="Left" Margin="10,564,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="ArmSensitivity" HorizontalAlignment="Left" Margin="101,569,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <Label Content="Gripper:" HorizontalAlignment="Left" Margin="10,590,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="GripperState" HorizontalAlignment="Left" Margin="101,595,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <Label Content="Drive Mode:" HorizontalAlignment="Left" Margin="10,616,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Arm Mode:" HorizontalAlignment="Left" Margin="10,640,0,0" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="DriveMode" HorizontalAlignment="Left" Margin="101,621,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                    <TextBlock x:Name="ArmMode" HorizontalAlignment="Left" Margin="101,645,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
                 </Grid>
 
             </TabItem>

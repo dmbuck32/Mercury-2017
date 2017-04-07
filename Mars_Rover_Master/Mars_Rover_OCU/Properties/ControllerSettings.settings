@@ -15,7 +15,7 @@
       <Value Profile="(Default)">500</Value>
     </Setting>
     <Setting Name="ArmSensitivity" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">20</Value>
+      <Value Profile="(Default)">50</Value>
     </Setting>
   </Settings>
 </SettingsFile>

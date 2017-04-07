@@ -124,6 +124,13 @@ namespace Mars_Rover_OCU.Comms
         private static short shoulderPos;
         private static short elbowPos;
         private static short wristPos;
+        private static short gripperPos;
+
+        private static short DriveMode;
+        private static short ArmMode;
+
+        private bool headlights = false;
+        private bool usePID = false;
 
         private ZServer server;
         private XmlSerializer serializer;
@@ -348,12 +355,14 @@ namespace Mars_Rover_OCU.Comms
                                 DriveController.updateArm(shoulderPos, elbowPos, wristPos);
                             }
                             outputState.DriveState = DriveController.getDriveState();
-                            bool headlights = outputState.DriveState.Headlights;
-                            bool usePID = outputState.DriveState.usePID;
-                            outputState.DriveState.Headlights = F4_Pressed || headlights;
-                            outputState.DriveState.usePID = F5_Pressed || usePID;
+                            headlights = outputState.DriveState.Headlights || F4_Pressed;
+                            usePID = outputState.DriveState.usePID || F5_Pressed;
+                            outputState.DriveState.Headlights = headlights;
+                            outputState.DriveState.usePID = usePID;
                             outputState.DriveState.Control = true;
                             outputState.DriveState.controllerControl = true;
+                            DriveMode = outputState.DriveState.Mode;
+                            ArmMode = outputState.DriveState.ArmState;
                         }
                         catch (Exception ex)
                         {
@@ -748,6 +757,7 @@ namespace Mars_Rover_OCU.Comms
                     shoulderPos = robotState.ArmReturnState.shoulderPos;
                     elbowPos = robotState.ArmReturnState.elbowPos;
                     wristPos = robotState.ArmReturnState.wristPos;
+                    gripperPos = robotState.ArmReturnState.gripperPos;
 
                     updateLogString(robotState.LogState.Data);
 
@@ -826,6 +836,32 @@ namespace Mars_Rover_OCU.Comms
         {
             return wristPos;
         }
+
+        public short getGripperPos()
+        {
+            return gripperPos;
+        }
+
+        public bool getHeadlights()
+        {
+            return headlights;
+        }
+
+        public bool getPID()
+        {
+            return usePID;
+        }
+
+        public short getDriveMode()
+        {
+            return DriveMode;
+        }
+
+        public short getArmMode()
+        {
+            return ArmMode;
+        }
+        
         public bool getF1()
         {
             return F1_Pressed;
