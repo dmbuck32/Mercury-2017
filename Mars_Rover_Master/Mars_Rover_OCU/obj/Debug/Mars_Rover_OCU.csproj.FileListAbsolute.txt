@@ -816,8 +816,6 @@ C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rove
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\Mars_Rover_Comms.pdb
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\Utility.pdb
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\GeoUtility.pdb
-C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\GMap.NET.Core.xml
-C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\GMap.NET.WindowsForms.xml
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\Microsoft.Xna.Framework.xml
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\System.Reactive.Core.xml
 C:\Users\senior_design\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_OCU\bin\Debug\System.Reactive.Interfaces.xml

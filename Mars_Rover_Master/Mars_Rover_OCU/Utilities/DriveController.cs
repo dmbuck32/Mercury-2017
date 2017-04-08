@@ -258,7 +258,7 @@ namespace Mars_Rover_OCU.Utilities
                 short shoulderMin = 464;
                 short shoulderMax = 2496;
                 short elbowMin = 464;
-                short elbowMax = 2496;
+                short elbowMax = 2000;
                 short wristMin = 800;
                 short wristMax = 2000;
                 shoulderPos += (short)Math.Round(ControllerSettings.Default.ArmSensitivity * lStickX);
