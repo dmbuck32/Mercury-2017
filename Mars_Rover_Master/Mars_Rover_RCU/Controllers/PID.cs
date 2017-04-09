@@ -16,13 +16,12 @@ namespace Mars_Rover_RCU.Controllers
     public class PID
     {
         String[] SensorData;
+        //Max error range: -159 to 159
         int[] error;
         int errorIndex = 0;
         float Kp = 1;
         float Ki = 0;
         float Kd = 0;
-        //Max range using just P: 0 to 158
-        //Max range using 0-1753.8
         float correction = 0;
         public Boolean enabled = false;
 
@@ -75,9 +74,9 @@ namespace Mars_Rover_RCU.Controllers
             P = Kp * error[errorIndex];
 
             //Generating correction
-            correction = (P + I + D);
+            correction = P/159;
 
-            //correction = (P + I + D) + 1500;
+           
 
             if (errorIndex < 10)
             {
