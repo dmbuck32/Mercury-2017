@@ -33,7 +33,9 @@ The range readings are in units of mm. */
 #define FRONTTOF 7
 #define LEFTTOF 8
 #define RIGHTTOF 9
+
 #define HEADLIGHT 4
+#define DARK 90
 
 #define FRONTSHARP A0
 #define LEFTSHARP A1
@@ -56,6 +58,10 @@ SharpIR sharpsensor[3] = {
   SharpIR(LEFTSHARP,1080),
   SharpIR(RIGHTSHARP,1080)
 };
+
+char headlightOverride;
+boolean headlights;
+long lightAverage;
 
 void setup()
 {
@@ -145,6 +151,19 @@ void loop()
       
       distanceSensors[i][1] = sensor[i].readAmbientContinuous();
       if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
+      else if (i>0)
+      {
+        lightAverage+=distanceSensors[i][1];
+      }
+    }
+
+    if((lightAverage/2) < DARK)
+    {
+      headlights = true;
+    }
+    else
+    {
+      headlights = false;
     }
   
     //*** Print sensor readings ***//
@@ -163,7 +182,26 @@ void loop()
   
     timeOld=timeNew;
   }
+
+  //** Headlight Control **//
+  if (Serial.available() > 0)
+  {
+    headlightOverride = Serial.read();
+    if (headlightOverride = '1')
+    {
+      headlights = true;
+    }
+  }
   
+  if(headlights)
+  {
+    digitalWrite(HEADLIGHT,HIGH);
+  }
+  else
+  {
+    digitalWrite(HEADLIGHT,LOW);
+  }
+
 //*** Debug I2C Scanner ***//
   #else
   byte error;
