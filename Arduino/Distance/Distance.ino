@@ -30,12 +30,12 @@ The range readings are in units of mm. */
 
 #define DEBUG 0
 
-#define FRONTTOF 7
-#define LEFTTOF 8
-#define RIGHTTOF 9
+#define FRONTTOF 11
+#define LEFTTOF 12
+#define RIGHTTOF 10
 
 #define HEADLIGHT 4
-#define DARK 90
+#define DARK 30
 
 #define FRONTSHARP A0
 #define LEFTSHARP A1
@@ -165,6 +165,9 @@ void loop()
     {
       headlights = false;
     }
+
+    //reset the lightAverage value
+    lightAverage=0;
   
     //*** Print sensor readings ***//
     Serial.print(distanceSensors[0][0]);
