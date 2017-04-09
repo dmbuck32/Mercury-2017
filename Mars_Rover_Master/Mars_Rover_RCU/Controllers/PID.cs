@@ -74,7 +74,7 @@ namespace Mars_Rover_RCU.Controllers
             P = Kp * error[errorIndex];
 
             //Generating correction
-            correction = P/159;
+            correction = (P+I+D)/(159*(Ki+Kp+Kd));
 
            
 
