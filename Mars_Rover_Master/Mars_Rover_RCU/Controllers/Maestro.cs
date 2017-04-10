@@ -51,13 +51,12 @@ namespace Mars_Rover_RCU.Controllers
         private short wristInit = 2000;
 
         // Maestro Stuff
-        private const String DriveMaestro = "00109387";
+       // private const String DriveMaestro = "00109387";
         private const String ArmMaestro = "00137085";
         //private const String ArmMaestro = "00159606"; // Large Testing board
         //private const String DriveMaestro = "00135614"; // Small Testing board
 
-        private Usc Drive = null;
-        private Usc Arm = null;
+        private Usc maestro = null;
 
         public Maestro()
         {
@@ -66,17 +65,10 @@ namespace Mars_Rover_RCU.Controllers
             List<DeviceListItem> connectedDevices = Usc.getConnectedDevices();
 
             foreach (DeviceListItem Device in connectedDevices)
-            {
-                if (Device.serialNumber == DriveMaestro)
-                {
-                    Drive = new Usc(Device);
-                    initializeDriveMaestro();
-                    Logger.WriteLine("Found Drive Maestro");
-                    continue;
-                }
+            { 
                 if (Device.serialNumber == ArmMaestro)
                 {
-                    Arm = new Usc(Device);
+                    maestro = new Usc(Device);
                     initializeArmMaestro();
                     Logger.WriteLine("Found Arm Maestro");
                 }
@@ -94,7 +86,7 @@ namespace Mars_Rover_RCU.Controllers
         public void initializeArmMaestro()
         {
             setTankMode();
-            Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
+            maestro.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
             armHomePos();
             closeGripper();
         }
@@ -102,19 +94,19 @@ namespace Mars_Rover_RCU.Controllers
         // Open Gripper
         public void openGripper()
         {
-            Arm.setTarget(GripperServo, MaestroMultiplier(gripperOpen));
+            maestro.setTarget(GripperServo, MaestroMultiplier(gripperOpen));
         }
 
         // Close Gripper
         public void closeGripper()
         {
-            Arm.setTarget(GripperServo, MaestroMultiplier(gripperClosed));
+            maestro.setTarget(GripperServo, MaestroMultiplier(gripperClosed));
         }
 
         public void setDriveServos(short channelLeft, short channelRight)
         {
-            Drive.setTarget(LeftMotors, MaestroMultiplier(channelLeft));
-            Drive.setTarget(RightMotors, MaestroMultiplier(channelRight));
+            maestro.setTarget(LeftMotors, MaestroMultiplier(channelLeft));
+            maestro.setTarget(RightMotors, MaestroMultiplier(channelRight));
         }
 
         public void setTankMode()
@@ -139,50 +131,50 @@ namespace Mars_Rover_RCU.Controllers
 
         public void setArmServos(short shoulder, short elbow, short wrist)
         {
-            Arm.setTarget(ShoulderServo, MaestroMultiplier(shoulder));
-            Arm.setTarget(ElbowServo, MaestroMultiplier(elbow));
-            Arm.setTarget(WristServo, MaestroMultiplier(wrist));
+            maestro.setTarget(ShoulderServo, MaestroMultiplier(shoulder));
+            maestro.setTarget(ElbowServo, MaestroMultiplier(elbow));
+            maestro.setTarget(WristServo, MaestroMultiplier(wrist));
         }
 
         public void setTurningServos(short frontLeft, short frontRight, short rearLeft, short rearRight)
         {
-            Arm.setTarget(FrontLeftServo, MaestroMultiplier(frontLeft));
-            Arm.setTarget(FrontRightServo, MaestroMultiplier(frontRight));
-            Arm.setTarget(RearLeftServo, MaestroMultiplier(rearLeft));
-            Arm.setTarget(RearRightServo, MaestroMultiplier(rearRight));
+            maestro.setTarget(FrontLeftServo, MaestroMultiplier(frontLeft));
+            maestro.setTarget(FrontRightServo, MaestroMultiplier(frontRight));
+            maestro.setTarget(RearLeftServo, MaestroMultiplier(rearLeft));
+            maestro.setTarget(RearRightServo, MaestroMultiplier(rearRight));
         }
 
         public void noControl()
         {
-            Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_ON));
+            maestro.setTarget(LOS_LED, MaestroMultiplier(LOS_ON));
             System.Threading.Thread.Sleep(10);
-            Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
+            maestro.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
         }
 
         public void setLOS(bool LOS)
         {
             if (LOS)
             {
-                Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_ON));
+                maestro.setTarget(LOS_LED, MaestroMultiplier(LOS_ON));
             }
             else
             {
-                Arm.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
+                maestro.setTarget(LOS_LED, MaestroMultiplier(LOS_OFF));
             }
         }
 
         public void setArmAcceleration(short shoulderAcceleraton, short elbowAcceleration, short wristAcceleration)
         {
-            Arm.setAcceleration(ShoulderServo, (ushort)shoulderAcceleraton);
-            Arm.setAcceleration(ElbowServo, (ushort)elbowAcceleration);
-            Arm.setAcceleration(WristServo, (ushort)wristAcceleration);
+            maestro.setAcceleration(ShoulderServo, (ushort)shoulderAcceleraton);
+            maestro.setAcceleration(ElbowServo, (ushort)elbowAcceleration);
+            maestro.setAcceleration(WristServo, (ushort)wristAcceleration);
         }
 
         public void setArmSpeed(short shoulderSpeed, short elbowSpeed, short wristSpeed)
         {
-            Arm.setSpeed(ShoulderServo, (ushort)shoulderSpeed);
-            Arm.setSpeed(ElbowServo, (ushort)elbowSpeed);
-            Arm.setSpeed(WristServo, (ushort)wristSpeed);
+            maestro.setSpeed(ShoulderServo, (ushort)shoulderSpeed);
+            maestro.setSpeed(ElbowServo, (ushort)elbowSpeed);
+            maestro.setSpeed(WristServo, (ushort)wristSpeed);
         }
 
         private ushort MaestroMultiplier(short input)
@@ -192,11 +184,11 @@ namespace Mars_Rover_RCU.Controllers
 
         public void TryToDisconnect()
         {
-            if (Arm != null)
+            if (maestro != null)
             {
                 try
                 {
-                    Arm.Dispose();
+                    maestro.Dispose();
                 }
                 #pragma warning disable CS0168 // Variable is declared but never used
                 catch (Exception e)
@@ -206,27 +198,8 @@ namespace Mars_Rover_RCU.Controllers
                 }
                 finally
                 {
-                    Arm = null;
-                    Logger.WriteLine("Disconnected from Arm Maestro");
-                }
-            }
-
-            if (Drive != null)
-            {
-                try
-                {
-                    Drive.Dispose();
-                }
-                #pragma warning disable CS0168 // Variable is declared but never used
-                catch (Exception e)
-                #pragma warning restore CS0168 // Variable is declared but never used
-                {
-                    Logger.WriteLine("Failed to Disconnect");
-                }
-                finally
-                {
-                    Drive = null;
-                    Logger.WriteLine("Disconnected from Arm Maestro");
+                    maestro = null;
+                    Logger.WriteLine("Disconnected from Maestro");
                 }
             }
         }

@@ -347,7 +347,7 @@ namespace Mars_Rover_RCU
             }
         }
 
-        private static void Turn(double radius)
+        public static void Turn(double radius)
         {
             int offset = 220;
             short turn = (short)Math.Round(radius * offset);

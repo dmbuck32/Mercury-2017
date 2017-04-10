@@ -75,7 +75,7 @@ namespace Mars_Rover_RCU.Controllers
 
             //Generating correction
             correction = (P+I+D)/(159*(Ki+Kp+Kd));
-
+            Program.Turn(correction);
            
 
             if (errorIndex < 10)
