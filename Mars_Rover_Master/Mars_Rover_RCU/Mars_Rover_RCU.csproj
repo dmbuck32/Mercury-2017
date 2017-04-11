@@ -95,6 +95,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Components\TurningServo.cs" />
+    <Compile Include="Controllers\Arduino.cs" />
     <Compile Include="Controllers\Maestro.cs" />
     <Compile Include="Controllers\PID.cs" />
     <Compile Include="Controllers\Sensors.cs" />

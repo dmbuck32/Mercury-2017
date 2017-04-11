@@ -111,11 +111,14 @@ namespace Mars_Rover_RCU
                 #region PID
                 Logger.WriteLine("Creating PID.");
                 _PID = new PID();
+                Logger.WriteLine("Pid Successfully Created");
                 #endregion
 
                 #region Arduino
+                Logger.WriteLine("Creating Drive Controller.");
                 DriveController = new Arduino(DriveCOM);
                 DriveController.digitalWrite(1, Arduino.LOW);
+                Logger.WriteLine("Drive Controller Created.");
                 #endregion
 
 
@@ -331,22 +334,26 @@ namespace Mars_Rover_RCU
             if (driveMode == normal)
             {
                 Turn(radius);
+                Drive(leftSpeed, rightSpeed);
                 //_Maestro.setDriveServos(leftSpeed, rightSpeed);
             }
             else if (driveMode == rotate)
             {
                 _Maestro.setRotateMode();
+                Drive(leftSpeed, (short)(-rightSpeed));
                 //_Maestro.setDriveServos(leftSpeed, rightSpeed);
             }
             else if (driveMode == translate)
             {
                 _Maestro.setTranslateMode();
+                Drive(leftSpeed, (short)(-rightSpeed));
                 //_Maestro.setDriveServos(leftSpeed, rightSpeed);
 
             }
             else if (driveMode == tank)
             {
                 _Maestro.setTankMode();
+                Drive(leftSpeed, rightSpeed);
                 //_Maestro.setDriveServos(leftSpeed, rightSpeed);
 
             }
@@ -397,7 +404,7 @@ namespace Mars_Rover_RCU
             DriveController.analogWrite(rightPWMPin, rightPWM);
         }
 
-        public static decimal Map(this decimal value, decimal fromSource, decimal toSource, decimal fromTarget, decimal toTarget)
+        public static decimal Map(decimal value, decimal fromSource, decimal toSource, decimal fromTarget, decimal toTarget)
         {
             return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
         }
