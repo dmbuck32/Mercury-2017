@@ -37,6 +37,7 @@ namespace Mars_Rover_RCU
         static StreamWriter log;
 
         static public Controllers.Maestro _Maestro;
+        static public Controllers.Arduino DriveController;
 
         //Sensors
         static public Controllers.Sensors _Sensors;
@@ -62,14 +63,16 @@ namespace Mars_Rover_RCU
 
         static public string IPAddress;
         static public string Port;
-        static public string COM;
+        static public string SensorCOM;
+        static public string DriveCOM;
 
         public static void Main(string[] args)
         {
             System.IO.StreamReader file = new System.IO.StreamReader("..\\..\\IP_Port.txt");
             IPAddress = file.ReadLine();
             Port = file.ReadLine();
-            COM = file.ReadLine();
+            SensorCOM = file.ReadLine();
+            DriveCOM = file.ReadLine();
             //setup primary comms
             client = new Mars_Rover_Comms.TCP.ZClient(IPAddress, Convert.ToInt32(Port));
             client.PacketReceived += new EventHandler<DataArgs>(client_PacketReceived);
@@ -84,17 +87,13 @@ namespace Mars_Rover_RCU
                 _Maestro = new Maestro();
                 #endregion
 
-                //Tests
-                //_Maestro.pauseClaw();
-                //_Maestro.resetTrigger();
-
                 #region Sensors
                 Logger.WriteLine("Creating Sensors");
                 _Sensors = new Sensors();
 
                 try
                 {
-                    if (_Sensors.OpenConnection(COM))
+                    if (_Sensors.OpenConnection(SensorCOM))
                     {
                         Logger.WriteLine("Sensors successfully created.");
                         arduinoReady = true;
@@ -110,7 +109,13 @@ namespace Mars_Rover_RCU
                 #endregion
 
                 #region PID
+                Logger.WriteLine("Creating PID.");
                 _PID = new PID();
+                #endregion
+
+                #region Arduino
+                DriveController = new Arduino(DriveCOM);
+                DriveController.digitalWrite(1, Arduino.LOW);
                 #endregion
 
 
@@ -326,23 +331,23 @@ namespace Mars_Rover_RCU
             if (driveMode == normal)
             {
                 Turn(radius);
-                _Maestro.setDriveServos(leftSpeed, rightSpeed);
+                //_Maestro.setDriveServos(leftSpeed, rightSpeed);
             }
             else if (driveMode == rotate)
             {
                 _Maestro.setRotateMode();
-                _Maestro.setDriveServos(leftSpeed, rightSpeed);
+                //_Maestro.setDriveServos(leftSpeed, rightSpeed);
             }
             else if (driveMode == translate)
             {
                 _Maestro.setTranslateMode();
-                _Maestro.setDriveServos(leftSpeed, rightSpeed);
+                //_Maestro.setDriveServos(leftSpeed, rightSpeed);
 
             }
             else if (driveMode == tank)
             {
                 _Maestro.setTankMode();
-                _Maestro.setDriveServos(leftSpeed, rightSpeed);
+                //_Maestro.setDriveServos(leftSpeed, rightSpeed);
 
             }
         }
@@ -352,6 +357,49 @@ namespace Mars_Rover_RCU
             int offset = 220;
             short turn = (short)Math.Round(radius * offset);
             _Maestro.setTurningServos((short)(1441 - turn), (short)(1520 - turn), (short)(1510 + turn), (short)(1425 + turn));
+        }
+
+        public static void Drive(short leftSpeed, short rightSpeed)
+        {
+            int leftDirPin = 3;
+            int rightDirPin = 4;
+            int leftPWMPin = 5;
+            int rightPWMPin = 6;
+            byte leftDir = 0;
+            byte rightDir = 0;
+            int leftPWM = 0;
+            int rightPWM = 0;
+
+            if (leftSpeed > 1500)
+            {
+                leftPWM = (int)Map(leftSpeed, 1500, 2000, 0, 255);
+                leftDir = 1;
+            } else if (leftSpeed < 1500)
+            {
+                leftPWM = (int)Map(leftSpeed, 1000, 1500, 0, 255);
+                leftDir = 0;
+            }
+
+            if (rightSpeed > 1500)
+            {
+                rightPWM = (int)Map(rightSpeed, 1500, 2000, 0, 255);
+                rightDir = 1;
+            }
+            else if (leftSpeed < 1500)
+            {
+                rightPWM = (int)Map(rightSpeed, 1000, 1500, 0, 255);
+                rightDir = 0;
+            }
+
+            DriveController.digitalWrite(leftDirPin, leftDir);
+            DriveController.digitalWrite(rightDirPin, rightDir);
+            DriveController.analogWrite(leftPWMPin, leftPWM);
+            DriveController.analogWrite(rightPWMPin, rightPWM);
+        }
+
+        public static decimal Map(this decimal value, decimal fromSource, decimal toSource, decimal fromTarget, decimal toTarget)
+        {
+            return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
         }
 
     }
