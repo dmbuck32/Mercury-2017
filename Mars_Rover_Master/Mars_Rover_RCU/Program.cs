@@ -29,7 +29,7 @@ namespace Mars_Rover_RCU
 
         private static RCUComms comms;
 
-        static bool debug = true;
+        static bool debug = false;
 
         static bool arduinoReady = false;
 
@@ -51,7 +51,6 @@ namespace Mars_Rover_RCU
         //tcp/ip client for communicating with the ocu
         static public Mars_Rover_Comms.TCP.ZClient client;
 
-        static Boolean useMaestro = true;
         //static public bool connected;
 
         static Thread stateProcessor;
@@ -66,8 +65,14 @@ namespace Mars_Rover_RCU
         static public string SensorCOM;
         static public string DriveCOM;
 
+        static private bool useMaestro = false;
+        static private bool useSensors = false;
+        static private bool usePID = false;
+        static private bool useArduino = true;
+
         public static void Main(string[] args)
         {
+            
             System.IO.StreamReader file = new System.IO.StreamReader("..\\..\\IP_Port.txt");
             IPAddress = file.ReadLine();
             Port = file.ReadLine();
@@ -83,42 +88,55 @@ namespace Mars_Rover_RCU
                 comms = RCUComms.Instance; //Responsible for sending states back to OCU
 
                 #region Maestro
-                Logger.WriteLine("Creating Maestro");
-                _Maestro = new Maestro();
+                if (useMaestro)
+                {
+                    Logger.WriteLine("Creating Maestro");
+                    _Maestro = new Maestro();
+                }
                 #endregion
 
                 #region Sensors
-                Logger.WriteLine("Creating Sensors");
-                _Sensors = new Sensors();
-
-                try
+                if (useSensors)
                 {
-                    if (_Sensors.OpenConnection(SensorCOM))
+                    Logger.WriteLine("Creating Sensors");
+                    _Sensors = new Sensors();
+
+                    try
                     {
-                        Logger.WriteLine("Sensors successfully created.");
-                        arduinoReady = true;
+                        if (_Sensors.OpenConnection(SensorCOM))
+                        {
+                            Logger.WriteLine("Sensors successfully created.");
+                            arduinoReady = true;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.WriteLine("Error: " + ex.Message);
+                        Logger.WriteLine("Sensors not created.");
+                        arduinoReady = false;
                     }
                 }
-                catch (Exception ex)
-                {
-                    Logger.WriteLine("Error: " + ex.Message);
-                    Logger.WriteLine("Sensors not created.");
-                    arduinoReady = false;
-                }                
                 sensorData = new string[6];
                 #endregion
 
                 #region PID
-                Logger.WriteLine("Creating PID.");
-                _PID = new PID();
-                Logger.WriteLine("Pid Successfully Created");
+                if (usePID)
+                {
+                    Logger.WriteLine("Creating PID.");
+                    _PID = new PID();
+                    Logger.WriteLine("Pid Successfully Created");
+                }
                 #endregion
 
                 #region Arduino
-                Logger.WriteLine("Creating Drive Controller.");
-                DriveController = new Arduino(DriveCOM);
-                DriveController.digitalWrite(1, Arduino.LOW);
-                Logger.WriteLine("Drive Controller Created.");
+                if (useArduino)
+                {
+                    Logger.WriteLine("Creating Drive Controller.");
+                    //DriveController = new Arduino(DriveCOM);
+                    DriveController = new Arduino("COM14");
+                    DriveController.digitalWrite(1, Arduino.LOW);
+                    Logger.WriteLine("Drive Controller Created.");
+                }
                 #endregion
 
 
@@ -169,8 +187,9 @@ namespace Mars_Rover_RCU
                 //LOS
                 //Logger.WriteLine("LOS");
                 _Maestro.setLOS(true);
-                _Maestro.setDriveServos(STOP, STOP);
-                _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                DriveInterface(STOP, STOP);
+                //_Maestro.setDriveServos(STOP, STOP);
+                //_Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
             }
             try
             {
@@ -201,24 +220,26 @@ namespace Mars_Rover_RCU
 
                         if (robotState.DriveState != null)
                         {
-                            /* Debug Statements for each of the drivestates
-                            Logger.WriteLine("Robot Drive Mode: " + robotState.DriveState.Mode);
-                            Logger.WriteLine("Robot Headlight: " + robotState.DriveState.Headlights);
-                            Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
-                            Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
-                            Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
-                            Logger.WriteLine("Robot Radius: " + robotState.DriveState.radius);
-                            Logger.WriteLine("Control State: " + robotState.DriveState.Control);
-                            Logger.WriteLine("Controller State: " + robotState.DriveState.controllerControl);
-                            Logger.WriteLine("Robot Arm State: " + robotState.DriveState.ArmState);
-                            Logger.WriteLine("Robot Gripper Pos: " + robotState.DriveState.gripperPos);
-                            Logger.WriteLine("Shoulder POS: " + robotState.DriveState.shoulderPos);
-                            Logger.WriteLine("Elbow POS: " + robotState.DriveState.elbowPos);
-                            Logger.WriteLine("Wrist POS: " + robotState.DriveState.wristPos);
-                            Logger.WriteLine("Go to Home: " + robotState.DriveState.goToHome);
-                            Logger.WriteLine("Go to Sample: " + robotState.DriveState.goToSample);
-                            Logger.WriteLine("Go to Deposit: " + robotState.DriveState.goToDeposit);
-                            */
+                            if (debug)
+                            {
+                                // Debug Statements for each of the drivestates
+                                Logger.WriteLine("Robot Drive Mode: " + robotState.DriveState.Mode);
+                                Logger.WriteLine("Robot Headlight: " + robotState.DriveState.Headlights);
+                                Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
+                                Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
+                                Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
+                                Logger.WriteLine("Robot Radius: " + robotState.DriveState.radius);
+                                Logger.WriteLine("Control State: " + robotState.DriveState.Control);
+                                Logger.WriteLine("Controller State: " + robotState.DriveState.controllerControl);
+                                Logger.WriteLine("Robot Arm State: " + robotState.DriveState.ArmState);
+                                Logger.WriteLine("Robot Gripper Pos: " + robotState.DriveState.gripperPos);
+                                Logger.WriteLine("Shoulder POS: " + robotState.DriveState.shoulderPos);
+                                Logger.WriteLine("Elbow POS: " + robotState.DriveState.elbowPos);
+                                Logger.WriteLine("Wrist POS: " + robotState.DriveState.wristPos);
+                                Logger.WriteLine("Go to Home: " + robotState.DriveState.goToHome);
+                                Logger.WriteLine("Go to Sample: " + robotState.DriveState.goToSample);
+                                Logger.WriteLine("Go to Deposit: " + robotState.DriveState.goToDeposit);
+                            }
 
                             if (!robotState.DriveState.Control) //Connected but no control
                             {
@@ -228,90 +249,109 @@ namespace Mars_Rover_RCU
                             }
                             else
                             {
-                                // Set LOS to false
-                                _Maestro.setLOS(false);
+                                if (useMaestro) {
+                                    // Set LOS to false
+                                    _Maestro.setLOS(false);
 
-                                // Headlight Function
-                                if (robotState.DriveState.Headlights == true && arduinoReady)
-                                {
-                                    if (!_Sensors.headlightsEnabled())
+                                    if (robotState.DriveState.goToHome)
                                     {
-                                        _Sensors.enableHeadlights();
+                                        shoulderPos = 464;
+                                        elbowPos = 1000;
+                                        wristPos = 2000;
+                                        _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    }
+                                    else if (robotState.DriveState.goToSample)
+                                    {
+                                        shoulderPos = 2000;
+                                        elbowPos = 600;
+                                        wristPos = 1350;
+                                        _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    }
+                                    else if (robotState.DriveState.goToDeposit)
+                                    {
+                                        shoulderPos = 2000;
+                                        elbowPos = 1500;
+                                        wristPos = 1400;
+                                        _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    }
+                                    else
+                                    {
+                                        shoulderPos = robotState.DriveState.shoulderPos;
+                                        elbowPos = robotState.DriveState.elbowPos;
+                                        wristPos = robotState.DriveState.wristPos;
+                                        _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    }
+
+                                    if (robotState.DriveState.gripperPos == closed)
+                                    {
+                                        gripperPos = closed;
+                                        _Maestro.closeGripper();
+                                    }
+                                    else if (robotState.DriveState.gripperPos == open)
+                                    {
+                                        gripperPos = open;
+                                        _Maestro.openGripper();
                                     }
                                 }
-                                else if (robotState.DriveState.Headlights == false & arduinoReady)
+                                
+                                if (useSensors)
                                 {
-                                    if (_Sensors.headlightsEnabled())
+                                    // Headlight Function
+                                    if (robotState.DriveState.Headlights == true && arduinoReady)
                                     {
-                                        _Sensors.disableHeadlights();
+                                        if (!_Sensors.headlightsEnabled())
+                                        {
+                                            _Sensors.enableHeadlights();
+                                        }
+                                    }
+                                    else if (robotState.DriveState.Headlights == false & arduinoReady)
+                                    {
+                                        if (_Sensors.headlightsEnabled())
+                                        {
+                                            _Sensors.disableHeadlights();
+                                        }
                                     }
                                 }
 
-                                if (robotState.DriveState.usePID == true)
+                                if (usePID)
                                 {
-                                    if (!_PID.enabled)
+                                    if (robotState.DriveState.usePID == true)
                                     {
-                                        _PID.enabled = true;
+                                        if (!_PID.enabled)
+                                        {
+                                            _PID.enabled = true;
+                                        }
+                                    }
+                                    else if (robotState.DriveState.usePID == false)
+                                    {
+                                        if (_PID.enabled)
+                                        {
+                                            _PID.enabled = false;
+                                        }
                                     }
                                 }
-                                else if (robotState.DriveState.usePID == false)
+
+                                if (useArduino && useMaestro)
                                 {
-                                    if (_PID.enabled)
-                                    {
-                                        _PID.enabled = false;
-                                    }
+                                    //Decode Robot Mode
+                                    Drive(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
                                 }
 
-                                //Decode Robot Mode
-                                Drive(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-
-                                if (robotState.DriveState.goToHome)
+                                if (useArduino)
                                 {
-                                    shoulderPos = 464;
-                                    elbowPos = 1000;
-                                    wristPos = 2000;
-                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    DriveInterface(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+                                    DriveController.digitalWrite(13, Arduino.HIGH);
+                                    System.Threading.Thread.Sleep(100);
+                                    DriveController.digitalWrite(13, Arduino.LOW);
                                 }
-                                else if (robotState.DriveState.goToSample)
-                                {
-                                    shoulderPos = 2000;
-                                    elbowPos = 600;
-                                    wristPos = 1350;
-                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
-                                }
-                                else if (robotState.DriveState.goToDeposit)
-                                {
-                                    shoulderPos = 2000;
-                                    elbowPos = 1500;
-                                    wristPos = 1400;
-                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
-                                }
-                                else
-                                {
-                                    shoulderPos = robotState.DriveState.shoulderPos;
-                                    elbowPos = robotState.DriveState.elbowPos;
-                                    wristPos = robotState.DriveState.wristPos;
-                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
-                                }
-
-                                if (robotState.DriveState.gripperPos == closed)
-                                {
-                                    gripperPos = closed;
-                                    _Maestro.closeGripper();
-                                }
-                                else if (robotState.DriveState.gripperPos == open)
-                                {
-                                    gripperPos = open;
-                                    _Maestro.openGripper();
-                                }
-                            }
+                    }
                         }
                     }
                     else
                     {
                         _Maestro.setLOS(true);
-                        _Maestro.setDriveServos(STOP, STOP);
-                        _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                        DriveInterface(STOP, STOP);
+                        //_Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
                     }
                 }
                 catch (OperationCanceledException ex)
@@ -334,27 +374,23 @@ namespace Mars_Rover_RCU
             if (driveMode == normal)
             {
                 Turn(radius);
-                Drive(leftSpeed, rightSpeed);
-                //_Maestro.setDriveServos(leftSpeed, rightSpeed);
+                DriveInterface(leftSpeed, rightSpeed);
             }
             else if (driveMode == rotate)
             {
                 _Maestro.setRotateMode();
-                Drive(leftSpeed, (short)(-rightSpeed));
-                //_Maestro.setDriveServos(leftSpeed, rightSpeed);
+                DriveInterface(leftSpeed, (short)(-rightSpeed));
             }
             else if (driveMode == translate)
             {
                 _Maestro.setTranslateMode();
-                Drive(leftSpeed, (short)(-rightSpeed));
-                //_Maestro.setDriveServos(leftSpeed, rightSpeed);
+                DriveInterface(leftSpeed, (short)(-rightSpeed));
 
             }
             else if (driveMode == tank)
             {
                 _Maestro.setTankMode();
-                Drive(leftSpeed, rightSpeed);
-                //_Maestro.setDriveServos(leftSpeed, rightSpeed);
+                DriveInterface(leftSpeed, rightSpeed);
 
             }
         }
@@ -366,7 +402,7 @@ namespace Mars_Rover_RCU
             _Maestro.setTurningServos((short)(1441 - turn), (short)(1520 - turn), (short)(1510 + turn), (short)(1425 + turn));
         }
 
-        public static void Drive(short leftSpeed, short rightSpeed)
+        private static void DriveInterface(short leftSpeed, short rightSpeed)
         {
             int leftDirPin = 3;
             int rightDirPin = 4;
@@ -383,7 +419,7 @@ namespace Mars_Rover_RCU
                 leftDir = 1;
             } else if (leftSpeed < 1500)
             {
-                leftPWM = (int)Map(leftSpeed, 1000, 1500, 0, 255);
+                leftPWM = (int)Map(leftSpeed, 1500, 1000, 0, 255);
                 leftDir = 0;
             }
 
@@ -394,10 +430,13 @@ namespace Mars_Rover_RCU
             }
             else if (leftSpeed < 1500)
             {
-                rightPWM = (int)Map(rightSpeed, 1000, 1500, 0, 255);
+                rightPWM = (int)Map(rightSpeed, 1500, 1000, 0, 255);
                 rightDir = 0;
             }
-
+            Logger.WriteLine("" + leftPWM);
+            Logger.WriteLine("" + leftDir);
+            Logger.WriteLine("" + rightPWM);
+            Logger.WriteLine("" + rightDir);
             DriveController.digitalWrite(leftDirPin, leftDir);
             DriveController.digitalWrite(rightDirPin, rightDir);
             DriveController.analogWrite(leftPWMPin, leftPWM);
