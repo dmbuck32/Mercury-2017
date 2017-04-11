@@ -60,7 +60,6 @@ SharpIR sharpsensor[3] = {
 };
 
 char headlightOverride;
-boolean headlights;
 bool headlightsOverride;
 long lightAverage;
 
@@ -146,9 +145,9 @@ void loop()
     //*** Read sensors ***//
     for(int i=0;i<3;i++)
     {
-      //If the VL610X has malfunctioned, read the Sharp sensor (this is in centimeters so multiplied by 1000 to convert.)
+      //If the VL610X has malfunctioned, read the Sharp sensor (this is in centimeters so multiplied by 10 to convert.)
       distanceSensors[i][0] = sensor[i].readRangeContinuousMillimeters();
-      if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=(sharpsensor[i].distance()*1000); }
+      if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=(sharpsensor[i].distance()*10); }
       
       distanceSensors[i][1] = sensor[i].readAmbientContinuous();
       if (sensor[i].timeoutOccurred()) { distanceSensors[i][0]=-1; }
@@ -159,36 +158,27 @@ void loop()
     }
 
     //** Headlight Control **//
-  if (Serial.available() > 0)
-  {
-    headlightOverride = Serial.read();
-    if (headlightOverride == '1')
+    if (Serial.available() > 0)
     {
-      headlightsOverride = true;
+      headlightOverride = Serial.read();
+      if (headlightOverride == '1')
+      {
+        headlightsOverride = true;
+      }
+      else if(headlightOverride == '0'){
+        headlightsOverride = false;
+      }
     }
-    else if(headlightOverride == '0'){
-      headlightsOverride = false;
-    }
-  }
   
     
     if(((lightAverage/2) < DARK) || headlightsOverride)
     {
-      headlights = true;
+      digitalWrite(HEADLIGHT,HIGH);
     }
     else
     {
-      headlights = false;
+      digitalWrite(HEADLIGHT,LOW);
     }
-
-    if(headlights)
-  {
-    digitalWrite(HEADLIGHT,HIGH);
-  }
-  else
-  {
-    digitalWrite(HEADLIGHT,LOW);
-  }
 
     //reset the lightAverage value
     lightAverage=0;
