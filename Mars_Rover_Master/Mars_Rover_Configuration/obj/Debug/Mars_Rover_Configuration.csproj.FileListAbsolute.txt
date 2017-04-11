@@ -275,3 +275,14 @@ C:\Users\David\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Config
 C:\Users\David\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
 C:\Users\David\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
 C:\Users\David\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll.config
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.dll
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Configuration.pdb
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.dll
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.pdb
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Mars_Rover_Comms.dll.config
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\bin\Debug\Utility.pdb
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.csprojResolveAssemblyReference.cache
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.dll
+C:\Users\LattePanda\Documents\GitHub\Mercury-2017\Mars_Rover_Master\Mars_Rover_Configuration\obj\Debug\Mars_Rover_Configuration.pdb

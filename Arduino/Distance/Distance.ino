@@ -61,6 +61,7 @@ SharpIR sharpsensor[3] = {
 
 char headlightOverride;
 boolean headlights;
+bool headlightsOverride;
 long lightAverage;
 
 void setup()
@@ -157,7 +158,21 @@ void loop()
       }
     }
 
-    if((lightAverage/2) < DARK)
+    //** Headlight Control **//
+  if (Serial.available() > 0)
+  {
+    headlightOverride = Serial.read();
+    if (headlightOverride == '1')
+    {
+      headlightsOverride = true;
+    }
+    else if(headlightOverride == '0'){
+      headlightsOverride = false;
+    }
+  }
+  
+    
+    if(((lightAverage/2) < DARK) || headlightsOverride)
     {
       headlights = true;
     }
@@ -165,6 +180,15 @@ void loop()
     {
       headlights = false;
     }
+
+    if(headlights)
+  {
+    digitalWrite(HEADLIGHT,HIGH);
+  }
+  else
+  {
+    digitalWrite(HEADLIGHT,LOW);
+  }
 
     //reset the lightAverage value
     lightAverage=0;
@@ -186,24 +210,7 @@ void loop()
     timeOld=timeNew;
   }
 
-  //** Headlight Control **//
-  if (Serial.available() > 0)
-  {
-    headlightOverride = Serial.read();
-    if (headlightOverride = '1')
-    {
-      headlights = true;
-    }
-  }
   
-  if(headlights)
-  {
-    digitalWrite(HEADLIGHT,HIGH);
-  }
-  else
-  {
-    digitalWrite(HEADLIGHT,LOW);
-  }
 
 //*** Debug I2C Scanner ***//
   #else

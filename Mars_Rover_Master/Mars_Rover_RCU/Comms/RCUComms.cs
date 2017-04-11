@@ -101,7 +101,7 @@ namespace Mars_Rover_RCU.Comms
                 catch (Exception ex)
                 {
                     //log it or something!
-                    Console.WriteLine("Test");
+                    //Console.WriteLine("Test");
                     Console.WriteLine(ex.Message);
                 }
                 finally

@@ -52,7 +52,7 @@ namespace Mars_Rover_RCU.Controllers
 
         // Maestro Stuff
        // private const String DriveMaestro = "00109387";
-        private const String ArmMaestro = "00137085";
+        private const String LargeMaestro = "00137085";
         //private const String ArmMaestro = "00159606"; // Large Testing board
         //private const String DriveMaestro = "00135614"; // Small Testing board
 
@@ -66,14 +66,14 @@ namespace Mars_Rover_RCU.Controllers
 
             foreach (DeviceListItem Device in connectedDevices)
             { 
-                if (Device.serialNumber == ArmMaestro)
+                if (Device.serialNumber == LargeMaestro)
                 {
                     maestro = new Usc(Device);
                     initializeArmMaestro();
-                    Logger.WriteLine("Found Arm Maestro");
+                    Logger.WriteLine("Found Maestro");
                 }
             }
-            setArmSpeed(100, 100, 100);
+            //setArmSpeed(100, 100, 100);
         }
 
         // Initialize Drive Channels to stop
