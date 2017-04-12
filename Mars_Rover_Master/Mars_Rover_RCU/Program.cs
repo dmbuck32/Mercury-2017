@@ -29,7 +29,7 @@ namespace Mars_Rover_RCU
 
         private static RCUComms comms;
 
-        static bool debug = false;
+        static bool debug = true;
 
         static bool arduinoReady = false;
 
@@ -37,7 +37,7 @@ namespace Mars_Rover_RCU
         static StreamWriter log;
 
         static public Controllers.Maestro _Maestro;
-        static public Controllers.Arduino DriveController;
+        static public Controllers.DriveController _DriveController;
 
         //Sensors
         static public Controllers.Sensors _Sensors;
@@ -132,10 +132,20 @@ namespace Mars_Rover_RCU
                 if (useArduino)
                 {
                     Logger.WriteLine("Creating Drive Controller.");
-                    //DriveController = new Arduino(DriveCOM);
-                    DriveController = new Arduino("COM14");
-                    DriveController.digitalWrite(1, Arduino.LOW);
-                    Logger.WriteLine("Drive Controller Created.");
+                    _DriveController = new DriveController();
+                    try
+                    {
+                        if (_DriveController.OpenConnection(DriveCOM))
+                        {
+                            Logger.WriteLine("Drive Controller successfully created.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.WriteLine("Error: " + ex.Message);
+                        Logger.WriteLine("Drive Controller not created.");
+                        arduinoReady = false;
+                    }
                 }
                 #endregion
 
@@ -185,11 +195,8 @@ namespace Mars_Rover_RCU
             else
             {
                 //LOS
-                //Logger.WriteLine("LOS");
                 _Maestro.setLOS(true);
                 DriveInterface(STOP, STOP);
-                //_Maestro.setDriveServos(STOP, STOP);
-                //_Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
             }
             try
             {
@@ -244,7 +251,7 @@ namespace Mars_Rover_RCU
                             if (!robotState.DriveState.Control) //Connected but no control
                             {
                                 _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
-                                _Maestro.setDriveServos(STOP, STOP);
+                                DriveInterface(STOP, STOP);
                                 _Maestro.noControl();
                             }
                             else
@@ -337,21 +344,16 @@ namespace Mars_Rover_RCU
                                     Drive(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
                                 }
 
-                                if (useArduino)
-                                {
-                                    DriveInterface(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-                                    DriveController.digitalWrite(13, Arduino.HIGH);
-                                    System.Threading.Thread.Sleep(100);
-                                    DriveController.digitalWrite(13, Arduino.LOW);
-                                }
+                                DriveInterface(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
+
                     }
                         }
                     }
                     else
                     {
+                        // LOS
                         _Maestro.setLOS(true);
                         DriveInterface(STOP, STOP);
-                        //_Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
                     }
                 }
                 catch (OperationCanceledException ex)
@@ -374,25 +376,20 @@ namespace Mars_Rover_RCU
             if (driveMode == normal)
             {
                 Turn(radius);
-                DriveInterface(leftSpeed, rightSpeed);
             }
             else if (driveMode == rotate)
             {
                 _Maestro.setRotateMode();
-                DriveInterface(leftSpeed, (short)(-rightSpeed));
             }
             else if (driveMode == translate)
             {
                 _Maestro.setTranslateMode();
-                DriveInterface(leftSpeed, (short)(-rightSpeed));
-
             }
             else if (driveMode == tank)
             {
                 _Maestro.setTankMode();
-                DriveInterface(leftSpeed, rightSpeed);
-
             }
+            DriveInterface(leftSpeed, rightSpeed);
         }
 
         public static void Turn(double radius)
@@ -404,43 +401,9 @@ namespace Mars_Rover_RCU
 
         private static void DriveInterface(short leftSpeed, short rightSpeed)
         {
-            int leftDirPin = 3;
-            int rightDirPin = 4;
-            int leftPWMPin = 5;
-            int rightPWMPin = 6;
-            byte leftDir = 0;
-            byte rightDir = 0;
-            int leftPWM = 0;
-            int rightPWM = 0;
-
-            if (leftSpeed > 1500)
-            {
-                leftPWM = (int)Map(leftSpeed, 1500, 2000, 0, 255);
-                leftDir = 1;
-            } else if (leftSpeed < 1500)
-            {
-                leftPWM = (int)Map(leftSpeed, 1500, 1000, 0, 255);
-                leftDir = 0;
-            }
-
-            if (rightSpeed > 1500)
-            {
-                rightPWM = (int)Map(rightSpeed, 1500, 2000, 0, 255);
-                rightDir = 1;
-            }
-            else if (leftSpeed < 1500)
-            {
-                rightPWM = (int)Map(rightSpeed, 1500, 1000, 0, 255);
-                rightDir = 0;
-            }
-            Logger.WriteLine("" + leftPWM);
-            Logger.WriteLine("" + leftDir);
-            Logger.WriteLine("" + rightPWM);
-            Logger.WriteLine("" + rightDir);
-            DriveController.digitalWrite(leftDirPin, leftDir);
-            DriveController.digitalWrite(rightDirPin, rightDir);
-            DriveController.analogWrite(leftPWMPin, leftPWM);
-            DriveController.analogWrite(rightPWMPin, rightPWM);
+            //Logger.WriteLine("LeftSpeed=" + leftSpeed);
+            //Logger.WriteLine("RightSpeed=" + rightSpeed);
+            _DriveController.setMotors(leftSpeed, rightSpeed);
         }
 
         public static decimal Map(decimal value, decimal fromSource, decimal toSource, decimal fromTarget, decimal toTarget)
