@@ -204,7 +204,7 @@ namespace Mars_Rover_Comms.TCP
                             tcpClient = new TcpClient();
                             
                             tcpClient.ReceiveBufferSize = 2048;
-                            tcpClient.ReceiveTimeout = 10000;   //client will throw timeout if it hasnt heard from server in 10 seconds: todo, implement this
+                            tcpClient.ReceiveTimeout = 1000;   //client will throw timeout if it hasnt heard from server in 10 seconds: todo, implement this
                             
                             ZClientReadThread = new Thread(new ThreadStart(ReadFromServer_DoWork)); //thread for reading from the server
                             ZClientWriteThread = new Thread(new ThreadStart(WriteToServer_DoWork)); //thread for writing to the server                          

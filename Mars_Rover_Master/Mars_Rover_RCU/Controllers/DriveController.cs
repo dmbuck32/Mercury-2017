@@ -35,6 +35,7 @@ namespace Mars_Rover_RCU.Controllers
                 return false;
             }
             this.Arduino.Open();
+            this.Arduino.DtrEnable = true;
             Logger.WriteLine("Drive Controller is open.");
             this.Arduino.ErrorReceived += ErrorReceived;
             return true;
@@ -42,14 +43,14 @@ namespace Mars_Rover_RCU.Controllers
 
         public void setMotors(short leftSpeed, short rightSpeed)
         {
-            Arduino.Write(leftSpeed.ToString());
-            Arduino.Write(rightSpeed.ToString());
+            this.Arduino.Write(leftSpeed.ToString());
+            this.Arduino.Write(rightSpeed.ToString());
         }
 
         public void stopMotors()
         {
-            Arduino.Write("1500");
-            Arduino.Write("1500");
+            this.Arduino.Write("1500");
+            this.Arduino.Write("1500");
         }
 
         /// <summary>
@@ -59,7 +60,8 @@ namespace Mars_Rover_RCU.Controllers
         /// <param name="e"></param>
         private void ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
         {
-            //print error received
+            this.Arduino.Write("1500");
+            this.Arduino.Write("1500");
             this.Arduino.Close();
         }
     }

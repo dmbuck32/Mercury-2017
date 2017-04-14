@@ -28,7 +28,7 @@ namespace Mars_Rover_RCU
 
         private static RCUComms comms;
 
-        static bool debug = false;
+        static bool debug = true;
 
         static bool arduinoReady = false;
 
@@ -200,7 +200,7 @@ namespace Mars_Rover_RCU
             {
                 //LOS
                 _Maestro.setLOS(true);
-                DriveInterface(STOP, STOP);
+                _DriveController.stopMotors();
             }
             try
             {
@@ -255,7 +255,7 @@ namespace Mars_Rover_RCU
                             if (!robotState.DriveState.Control) //Connected but no control
                             {
                                 _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
-                                DriveInterface(STOP, STOP);
+                                _DriveController.stopMotors();
                                 _Maestro.noControl();
                             }
                             else
@@ -347,15 +347,14 @@ namespace Mars_Rover_RCU
                                     //Decode Robot Mode
                                     Drive(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
                                 }
-
-                    }
+                            }
                         }
                     }
                     else
                     {
                         // LOS
                         _Maestro.setLOS(true);
-                        DriveInterface(STOP, STOP);
+                        _DriveController.stopMotors();
                     }
                 }
                 catch (OperationCanceledException ex)
@@ -391,7 +390,7 @@ namespace Mars_Rover_RCU
             {
                 _Maestro.setTankMode();
             }
-            DriveInterface(leftSpeed, rightSpeed);
+            _DriveController.setMotors(leftSpeed, rightSpeed);
         }
 
         public static void Turn(double radius)
@@ -399,13 +398,6 @@ namespace Mars_Rover_RCU
             int offset = 220;
             short turn = (short)Math.Round(radius * offset);
             _Maestro.setTurningServos((short)(1441 + turn), (short)(1520 + turn), (short)(1510 - turn), (short)(1425 - turn));
-        }
-
-        private static void DriveInterface(short leftSpeed, short rightSpeed)
-        {
-            //Logger.WriteLine("LeftSpeed=" + leftSpeed);
-            //Logger.WriteLine("RightSpeed=" + rightSpeed);
-            _DriveController.setMotors(leftSpeed, rightSpeed);
         }
 
         public static decimal Map(decimal value, decimal fromSource, decimal toSource, decimal fromTarget, decimal toTarget)
