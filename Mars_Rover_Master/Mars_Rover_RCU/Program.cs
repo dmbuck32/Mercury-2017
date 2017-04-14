@@ -65,9 +65,9 @@ namespace Mars_Rover_RCU
         static public string SensorCOM;
         static public string DriveCOM;
 
-        static private bool useMaestro = false;
-        static private bool useSensors = false;
-        static private bool usePID = false;
+        static private bool useMaestro = true;
+        static private bool useSensors = true;
+        static private bool usePID = true;
         static private bool useArduino = true;
 
         public static void Main(string[] args)
@@ -344,8 +344,6 @@ namespace Mars_Rover_RCU
                                     Drive(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
                                 }
 
-                                DriveInterface(robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
-
                     }
                         }
                     }
@@ -396,7 +394,7 @@ namespace Mars_Rover_RCU
         {
             int offset = 220;
             short turn = (short)Math.Round(radius * offset);
-            _Maestro.setTurningServos((short)(1441 - turn), (short)(1520 - turn), (short)(1510 + turn), (short)(1425 + turn));
+            _Maestro.setTurningServos((short)(1441 + turn), (short)(1520 + turn), (short)(1510 - turn), (short)(1425 - turn));
         }
 
         private static void DriveInterface(short leftSpeed, short rightSpeed)
