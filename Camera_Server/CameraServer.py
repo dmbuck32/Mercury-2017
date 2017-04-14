@@ -80,8 +80,10 @@ while True:
 		# Decode which camera frame is from and display it to the proper window
 		if stored_data[0] == 0:
 			cv2.imshow("Front Camera", frame_front)
-		else:
+		elif stored_data[0] == 1:
 			cv2.imshow("Rear Camera", frame_front)
+		else:
+			cv2.imshow("Claw Camera", frame_front)
 	
 		# Sets data_front to null so checks can be made
 		data_front = None

@@ -15,16 +15,17 @@ CAMERA_FPS = 10
 # Opening the front and rear camera
 cap_front = cv2.VideoCapture(0)
 cap_rear = cv2.VideoCapture(1)
+cap_claw = cv2.VideoCapture(2)
 
 # Adjust Camera FPS
 cap_front.set(cv2.CAP_PROP_FPS, CAMERA_FPS)
 cap_rear.set(cv2.CAP_PROP_FPS, CAMERA_FPS)
+cap_claw.set(cv2.CAP_PROP_FPS, CAMERA_FPS)
 
 # Create socket
 clientsocket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
 # Info on how to close the client
-print ('Be sure to close server before closing client')
 print ('Press ctrl-c to close client')
 
 # main loop
@@ -61,6 +62,23 @@ try:
 			
 			# Send Packet
 			clientsocket.sendto(dataToSend_rear, (UDP_IP, UDP_PORT))
+	#=================================================================
+	
+	#=================================================================
+	# Claw Camera
+		if cap_claw.isOpened():
+			# Grab frame from front camera
+			ret_front,frame_claw = cap_claw.read()
+			
+			# resize frame to a smaller size, uses INTER_AREA interpolation
+			data_claw = cv2.resize(frame_claw, (SHRUNK_HEIGHT, SHRUNK_WIDTH), interpolation = cv2.INTER_AREA)
+			
+			# Create list of data with which camera its from and the frame info
+			dataToSend_claw = pickle.dumps([2, data_claw])
+			
+			# Send packet
+			clientsocket.sendto(dataToSend_claw, (UDP_IP, UDP_PORT))
+		
 	#=================================================================
 	
 except KeyboardInterrupt:
