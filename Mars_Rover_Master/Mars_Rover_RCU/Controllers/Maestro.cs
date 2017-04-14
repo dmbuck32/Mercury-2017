@@ -76,6 +76,11 @@ namespace Mars_Rover_RCU.Controllers
             //setArmSpeed(100, 100, 100);
         }
 
+        public bool isConnected()
+        {
+            return maestro != null;
+        }
+
         // Initialize Drive Channels to stop
         public void initializeDriveMaestro()
         {

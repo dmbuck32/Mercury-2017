@@ -10,7 +10,6 @@ using Mars_Rover_RCU.Utilities;
 
 namespace Mars_Rover_RCU
 { 
-    //Main Program Entry PoC:\Users\Jason\Dropbox\My Documents\WVU\Robotics_2014\Software\Mars_Rover_Master\Mars_Rover_RCU\Program.csint
     public class Program
     {
 
@@ -29,7 +28,7 @@ namespace Mars_Rover_RCU
 
         private static RCUComms comms;
 
-        static bool debug = true;
+        static bool debug = false;
 
         static bool arduinoReady = false;
 
@@ -92,6 +91,10 @@ namespace Mars_Rover_RCU
                 {
                     Logger.WriteLine("Creating Maestro");
                     _Maestro = new Maestro();
+                    if (!_Maestro.isConnected())
+                    {
+                        useMaestro = false;
+                    }
                 }
                 #endregion
 
@@ -114,6 +117,7 @@ namespace Mars_Rover_RCU
                         Logger.WriteLine("Error: " + ex.Message);
                         Logger.WriteLine("Sensors not created.");
                         arduinoReady = false;
+                        useSensors = false;
                     }
                 }
                 sensorData = new string[6];
@@ -144,7 +148,7 @@ namespace Mars_Rover_RCU
                     {
                         Logger.WriteLine("Error: " + ex.Message);
                         Logger.WriteLine("Drive Controller not created.");
-                        arduinoReady = false;
+                        useArduino = false;
                     }
                 }
                 #endregion
