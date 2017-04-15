@@ -62,7 +62,7 @@
                                 <DropShadowEffect BlurRadius="3" ShadowDepth="1"/>
                             </Rectangle.Effect>
                         </Rectangle>
-                        <TextBox x:Name="portTxtBox" Text="{Binding ListeningPort, Mode=TwoWay, Source={x:Static p:Settings.Default}}" HorizontalAlignment="Left" Margin="276,11,0,0" TextWrapping="Wrap" Width="52" TextAlignment="Center" FontSize="11" IsEnabled="False" Height="23" VerticalAlignment="Top"/>
+                        <TextBox x:Name="portTxtBox" Text="{Binding ListeningPort, Mode=TwoWay, Source={x:Static p:Settings.Default}}" HorizontalAlignment="Left" Margin="276,11,0,0" TextWrapping="Wrap" Width="52" TextAlignment="Center" FontSize="11" IsEnabled="True" Height="23" VerticalAlignment="Top"/>
                         <Canvas Margin="-16,-14,323,13">
                             <Ellipse HorizontalAlignment="Left" Height="36" Stroke="White" VerticalAlignment="Top" Width="36" Canvas.Top="3" Fill="#FF2A99F5"/>
                             <Label Content="1" HorizontalAlignment="Left" VerticalAlignment="Top" Background="{x:Null}" Foreground="White" FontFamily="SWItalt" FontSize="24" Canvas.Left="4"/>
@@ -404,12 +404,12 @@
         </TabControl>
 
         <Grid Margin="421,8,6,10">
-            <Image x:Name="image" Height="896" VerticalAlignment="Top" Width="440" Source="Resources/Robot2.PNG" Margin="104,117,112,-293" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Right">
+            <Image x:Name="image" Height="332" VerticalAlignment="Top" Width="440" Source="Resources/Robot.JPG" Margin="0,218,0,0" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Center">
                 <Image.RenderTransform>
                     <TransformGroup>
-                        <ScaleTransform/>
+                        <ScaleTransform ScaleX="1.25" ScaleY="1.25"/>
                         <SkewTransform/>
-                        <RotateTransform Angle="180.152"/>
+                        <RotateTransform Angle="90"/>
                         <TranslateTransform/>
                     </TransformGroup>
                 </Image.RenderTransform>
