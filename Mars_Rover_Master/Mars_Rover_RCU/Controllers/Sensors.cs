@@ -67,8 +67,15 @@ namespace Mars_Rover_RCU.Controllers
         /// </summary>
         public void enableHeadlights()
         {
-            HeadlightsEnabled = true;
-            Arduino.Write("1");
+            try
+            {
+                Arduino.Write("1");
+                HeadlightsEnabled = true;
+            }
+            catch(Exception E)
+            {
+                Logger.WriteLine("Error occurred attempting to enable headlight." + E.Message);
+            }
         }
 
         /// <summary>
@@ -76,8 +83,15 @@ namespace Mars_Rover_RCU.Controllers
         /// </summary>
         public void disableHeadlights()
         {
-            HeadlightsEnabled = false;
-            Arduino.Write("0");
+            try
+            {
+                Arduino.Write("0");
+                HeadlightsEnabled = false;
+            }
+            catch (Exception E)
+            {
+                Logger.WriteLine("Error occurred attempting to disable headlight." + E.Message);
+            }
         }
 
         /// <summary>
@@ -87,7 +101,7 @@ namespace Mars_Rover_RCU.Controllers
         /// <param name="e"></param>
         private void ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
         {
-            //print error received
+            
             this.sensorData = null;
             this.Arduino.Close();
         }
@@ -99,15 +113,22 @@ namespace Mars_Rover_RCU.Controllers
         /// <param name="e"></param>
         private void DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
-            String input = Arduino.ReadLine();
-
-            //This will take the data string 
-            sensorData = input.Split(',');
-            
-            //Calling the PID to update
-            if(Program._PID.enabled)
+            try
             {
-                Program._PID.update();
+                String input = Arduino.ReadLine();
+
+                //This will fill the array with the sensor data
+                sensorData = input.Split(',');
+
+                //Calling the PID to update
+                if (Program._PID.enabled)
+                {
+                    Program._PID.update();
+                }
+            }
+            catch(Exception E)
+            {
+                Logger.WriteLine("The following error occurred attempting to read sensor data:" + E.Message);
             }
         }
     }
