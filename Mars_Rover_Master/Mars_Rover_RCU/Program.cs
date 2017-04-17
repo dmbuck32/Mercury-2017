@@ -37,6 +37,7 @@ namespace Mars_Rover_RCU
 
         static public Controllers.Maestro _Maestro;
         static public Controllers.DriveController _DriveController;
+        static public Controllers.ServoController _ServoController;
 
         //Sensors
         static public Controllers.Sensors _Sensors;
@@ -63,11 +64,13 @@ namespace Mars_Rover_RCU
         static public string Port;
         static public string SensorCOM;
         static public string DriveCOM;
+        static public string ServoCOM;
 
-        static private bool useMaestro = true;
+        static private bool useMaestro = false;
         static private bool useSensors = true;
         static private bool usePID = true;
         static private bool useArduino = true;
+        static private bool useServos = true;
 
         public static void Main(string[] args)
         {
@@ -77,6 +80,7 @@ namespace Mars_Rover_RCU
             Port = file.ReadLine();
             SensorCOM = file.ReadLine();
             DriveCOM = file.ReadLine();
+            ServoCOM = file.ReadLine();
             //setup primary comms
             client = new Mars_Rover_Comms.TCP.ZClient(IPAddress, Convert.ToInt32(Port));
             client.PacketReceived += new EventHandler<DataArgs>(client_PacketReceived);
@@ -153,6 +157,27 @@ namespace Mars_Rover_RCU
                 }
                 #endregion
 
+                #region Servos
+                if (useServos)
+                {
+                    Logger.WriteLine("Creating Servo Controller.");
+                    _ServoController = new ServoController();
+                    try
+                    {
+                        if (_ServoController.OpenConnection(ServoCOM))
+                        {
+                            Logger.WriteLine("Servo Controller successfully created.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        Logger.WriteLine("Error: " + ex.Message);
+                        Logger.WriteLine("Servo Controller not created.");
+                        useServos = false;
+                    }
+                }
+                #endregion
+
 
                 //packet handler - runs in its own thread
                 stateProcessor = new Thread(new ThreadStart(StateProcessorDoWork));
@@ -199,7 +224,8 @@ namespace Mars_Rover_RCU
             else
             {
                 //LOS
-                _Maestro.setLOS(true);
+                _ServoController.setLOS(true);
+                //_Maestro.setLOS(true);
                 _DriveController.stopMotors();
             }
             try
@@ -254,13 +280,16 @@ namespace Mars_Rover_RCU
 
                             if (!robotState.DriveState.Control) //Connected but no control
                             {
-                                _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                _ServoController.setArmServos(shoulderPos, elbowPos, wristPos);
+                                //_Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
                                 _DriveController.stopMotors();
-                                _Maestro.noControl();
+                                _ServoController.noControl();
+                                //_Maestro.noControl();
                             }
                             else
                             {
-                                if (useMaestro) {
+                                if (useMaestro)
+                                {
                                     // Set LOS to false
                                     _Maestro.setLOS(false);
 
@@ -304,7 +333,52 @@ namespace Mars_Rover_RCU
                                         _Maestro.openGripper();
                                     }
                                 }
-                                
+                                if (useServos)
+                                {
+                                    // Set LOS to false
+                                    _ServoController.setLOS(false);
+
+                                    if (robotState.DriveState.goToHome)
+                                    {
+                                        shoulderPos = 464;
+                                        elbowPos = 1000;
+                                        wristPos = 2000;
+                                        _ServoController.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    }
+                                    else if (robotState.DriveState.goToSample)
+                                    {
+                                        shoulderPos = 2000;
+                                        elbowPos = 600;
+                                        wristPos = 1350;
+                                        _ServoController.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    }
+                                    else if (robotState.DriveState.goToDeposit)
+                                    {
+                                        shoulderPos = 2000;
+                                        elbowPos = 1500;
+                                        wristPos = 1400;
+                                        _ServoController.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    }
+                                    else
+                                    {
+                                        shoulderPos = robotState.DriveState.shoulderPos;
+                                        elbowPos = robotState.DriveState.elbowPos;
+                                        wristPos = robotState.DriveState.wristPos;
+                                        _ServoController.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    }
+
+                                    if (robotState.DriveState.gripperPos == closed)
+                                    {
+                                        gripperPos = closed;
+                                        _ServoController.closeGripper();
+                                    }
+                                    else if (robotState.DriveState.gripperPos == open)
+                                    {
+                                        gripperPos = open;
+                                        _ServoController.openGripper();
+                                    }
+                                }
+
                                 if (useSensors)
                                 {
                                     // Headlight Function
@@ -342,7 +416,7 @@ namespace Mars_Rover_RCU
                                     }
                                 }
 
-                                if (useArduino && useMaestro)
+                                if (useArduino && useServos)
                                 {
                                     //Decode Robot Mode
                                     Drive(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
@@ -353,7 +427,8 @@ namespace Mars_Rover_RCU
                     else
                     {
                         // LOS
-                        _Maestro.setLOS(true);
+                        //_Maestro.setLOS(true);
+                        _ServoController.setLOS(true);
                         _DriveController.stopMotors();
                     }
                 }
@@ -380,15 +455,18 @@ namespace Mars_Rover_RCU
             }
             else if (driveMode == rotate)
             {
-                _Maestro.setRotateMode();
+                _ServoController.setRotateMode();
+                //_Maestro.setRotateMode();
             }
             else if (driveMode == translate)
             {
-                _Maestro.setTranslateMode();
+                _ServoController.setTranslateMode();
+                //_Maestro.setTranslateMode();
             }
             else if (driveMode == tank)
             {
-                _Maestro.setTankMode();
+                _ServoController.setTankMode();
+                //_Maestro.setTankMode();
             }
             _DriveController.setMotors(leftSpeed, rightSpeed);
         }
@@ -397,13 +475,8 @@ namespace Mars_Rover_RCU
         {
             int offset = 220;
             short turn = (short)Math.Round(radius * offset);
-            _Maestro.setTurningServos((short)(1441 + turn), (short)(1520 + turn), (short)(1510 - turn), (short)(1425 - turn));
+            _ServoController.setTurningServos((short)(1441 + turn), (short)(1520 + turn), (short)(1510 - turn), (short)(1425 - turn));
+            //_Maestro.setTurningServos((short)(1441 + turn), (short)(1520 + turn), (short)(1510 - turn), (short)(1425 - turn));
         }
-
-        public static decimal Map(decimal value, decimal fromSource, decimal toSource, decimal fromTarget, decimal toTarget)
-        {
-            return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
-        }
-
     }
 }

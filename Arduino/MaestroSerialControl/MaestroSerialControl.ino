@@ -28,13 +28,11 @@ void setup() {
   while (!Serial){
   }
   maestroSerial.begin(9600);
-  Serial.println("<Arduino is ready>");
+  //Serial.println("<Arduino is ready>");
 }
 
 void loop() {
-  recvWithStartEndMarkers();
-  parseInput();
-  setServo(channel, value);
+  recvWithStartEndMarkers();  
 }
 
 void recvWithStartEndMarkers() {
@@ -67,6 +65,8 @@ void recvWithStartEndMarkers() {
             recvInProgress = true;
         }
     }
+    parseInput();
+    setServo(channel, value);
 }
 
 void parseInput(){
