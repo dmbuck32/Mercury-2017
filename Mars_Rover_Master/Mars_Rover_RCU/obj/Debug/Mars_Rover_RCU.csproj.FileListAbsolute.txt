@@ -701,7 +701,6 @@ C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.dll
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.dll
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.dll
-C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.dll
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.dll
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Utility.dll
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_Comms.pdb
@@ -713,7 +712,6 @@ C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Interfaces.xml
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.Linq.xml
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\System.Reactive.PlatformServices.xml
-C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\UsbWrapper.xml
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.pdb
 C:\Users\David-Michael\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Usc.xml
 C:\Users\David\Desktop\Mercury-2017\Mars_Rover_Master\Mars_Rover_RCU\bin\Debug\Mars_Rover_RCU.exe.config

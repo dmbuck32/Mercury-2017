@@ -5,6 +5,8 @@
 SoftwareSerial maestroSerial(10, 11); // RX, TX
 
 MiniMaestro maestro(maestroSerial);
+
+//for the RedBoard
   
 byte LeftMotors = 0;
 byte RightMotors = 1;
@@ -66,19 +68,19 @@ void recvWithStartEndMarkers() {
         }
     }
     parseInput();
-    setServo(channel, value);
 }
 
 void parseInput(){
   if (newData == true){
     channel = atoi(strtok(receivedChars,","));
     value = atoi(strtok(NULL,","));
+    setServo(channel, value);
   }
   newData = false;
 }
 
 void setServo(int channel, int value){
-  Serial.println(channel);
-  Serial.println(value);
+  //Serial.println(channel);
+  //Serial.println(value);
   maestro.setTarget(channel, value * 4); 
 }

@@ -43,14 +43,14 @@ namespace Mars_Rover_RCU.Controllers
 
         public void setMotors(short leftSpeed, short rightSpeed)
         {
-            this.Arduino.Write(leftSpeed.ToString());
-            this.Arduino.Write(rightSpeed.ToString());
+            Arduino.Write("<0," + rightSpeed + ">");
+            Arduino.Write("<1," + leftSpeed + ">");
         }
 
         public void stopMotors()
         {
-            this.Arduino.Write("1500");
-            this.Arduino.Write("1500");
+            Arduino.Write("<0,1500>");
+            Arduino.Write("<1,1500>");
         }
 
         /// <summary>

@@ -136,7 +136,7 @@ namespace Mars_Rover_RCU
                 }
                 #endregion
 
-                #region Arduino
+                #region Drive Controller
                 if (useArduino)
                 {
                     Logger.WriteLine("Creating Drive Controller.");
@@ -178,6 +178,10 @@ namespace Mars_Rover_RCU
                 }
                 #endregion
 
+                Logger.WriteLine("Maestro: " + useMaestro);
+                Logger.WriteLine("Sensors: " + useSensors);
+                Logger.WriteLine("Drive Controller: " + useArduino);
+                Logger.WriteLine("Servo COntroller: " + useServos);
 
                 //packet handler - runs in its own thread
                 stateProcessor = new Thread(new ThreadStart(StateProcessorDoWork));
@@ -280,11 +284,20 @@ namespace Mars_Rover_RCU
 
                             if (!robotState.DriveState.Control) //Connected but no control
                             {
-                                _ServoController.setArmServos(shoulderPos, elbowPos, wristPos);
-                                //_Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
-                                _DriveController.stopMotors();
-                                _ServoController.noControl();
-                                //_Maestro.noControl();
+                                if (useServos)
+                                {
+                                    _ServoController.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    _ServoController.noControl();
+                                }
+                                if (useArduino)
+                                {
+                                    _DriveController.stopMotors();
+                                }
+                                if (useMaestro)
+                                {
+                                    //_Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    //_Maestro.noControl();
+                                }
                             }
                             else
                             {
@@ -427,9 +440,18 @@ namespace Mars_Rover_RCU
                     else
                     {
                         // LOS
-                        //_Maestro.setLOS(true);
-                        _ServoController.setLOS(true);
-                        _DriveController.stopMotors();
+                        if (useMaestro)
+                        {
+                            //_Maestro.setLOS(true);
+                        }
+                        if (useServos)
+                        {
+                            _ServoController.setLOS(true);
+                        }
+                        if (useArduino)
+                        {
+                            _DriveController.stopMotors();
+                        }
                     }
                 }
                 catch (OperationCanceledException ex)
