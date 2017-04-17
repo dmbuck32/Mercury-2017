@@ -60,8 +60,7 @@ namespace Mars_Rover_RCU.Controllers
         /// <param name="e"></param>
         private void ErrorReceived(object sender, SerialErrorReceivedEventArgs e)
         {
-            this.Arduino.Write("1500");
-            this.Arduino.Write("1500");
+            stopMotors();
             this.Arduino.Close();
         }
     }
