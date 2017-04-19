@@ -46,6 +46,12 @@ namespace Mars_Rover_RCU.Controllers
             float from = (Kp + (10 * Ki) + Kd) * -175;
             float to = (Kp + (10 * Ki) + Kd) * 192;
 
+            for (i = 0; i < SensorData.Length; i++)
+            {
+                SensorData[i] = Program._Sensors.getData()[i];
+            }
+            
+
             for (i=0;i<3;i++)
             {
                 distance[i] = Int32.Parse(SensorData[i]);
