@@ -103,6 +103,7 @@ namespace Mars_Rover_OCU.Comms
         private bool F3_Pressed = false;
         private bool F4_Pressed = false;
         private bool F5_Pressed = false;
+        private bool F6_Pressed = false;
         private bool Q_Pressed = false;
         private bool E_Pressed = false;
         //End Mercury
@@ -370,6 +371,7 @@ namespace Mars_Rover_OCU.Comms
                             shoulderOCU = outputState.DriveState.shoulderPos;
                             elbowOCU = outputState.DriveState.elbowPos;
                             wristOCU = outputState.DriveState.wristPos;
+                            outputState.DriveState.AutoStop = F6_Pressed;
                         }
                         catch (Exception ex)
                         {
@@ -932,6 +934,15 @@ namespace Mars_Rover_OCU.Comms
         public void setF5(bool value)
         {
             F5_Pressed = value;
+        }
+        public bool getF6()
+        {
+            return F6_Pressed;
+        }
+
+        public void setF6(bool value)
+        {
+            F6_Pressed = value;
         }
     }
 }

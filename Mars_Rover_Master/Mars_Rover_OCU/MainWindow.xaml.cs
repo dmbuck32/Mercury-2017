@@ -252,6 +252,23 @@ namespace Mars_Rover_OCU
                         }
                     }));
                 }
+
+                if (e.Key == Key.F6) //Toggle AutoBrake
+                {
+                    this.Dispatcher.Invoke((Action)(() =>
+                    {
+                        if (comms.getF6() == false)
+                        {
+                            comms.setF6(true);
+                            AutoBrakeBtn.Fill = keyPressed;
+                        }
+                        else
+                        {
+                            comms.setF6(false);
+                            AutoBrakeBtn.Fill = keyReleased;
+                        }
+                    }));
+                }
             }
 
                 //comms.setKeyboardDriveState(e.Key, "down", (short)keyboardSpeedSlider.Value, (short)keyboardSpeedSlider1.Value);

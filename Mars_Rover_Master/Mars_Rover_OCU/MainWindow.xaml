@@ -344,24 +344,26 @@
                     <Grid x:Name="RoverSettings"  HorizontalAlignment="Left" Margin="20,0,0,187" Width="356" Height="85" VerticalAlignment="Bottom" RenderTransformOrigin="0.49,0.637">
                         <Canvas x:Name="___No_Name_" Margin="0,-5,-3,18" Height="72" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="359">
                             <!-- Buttons for toggleable Features -->
-                            <Rectangle x:Name="HomeMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="10" Canvas.Left="142" Visibility="Visible"/>
-                            <Rectangle x:Name="SampleCollectionMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="124" Canvas.Top="10" Canvas.Left="220" Visibility="Visible"/>
-                            <Rectangle x:Name="SampleDepositMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="116" Canvas.Top="45" Canvas.Left="143"/>
-                            <Rectangle x:Name="ToggleHeadlightsBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="74" Canvas.Left="270" Canvas.Top="45"/>
-                            <Rectangle x:Name="TogglePIDBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="45" Canvas.Left="65" Visibility="Visible"/>
+                            <Rectangle x:Name="HomeMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="10" Canvas.Left="48" Visibility="Visible"/>
+                            <Rectangle x:Name="SampleCollectionMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="124" Canvas.Top="10" Canvas.Left="118" Visibility="Visible"/>
+                            <Rectangle x:Name="SampleDepositMacroBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="116" Canvas.Top="10" Canvas.Left="244"/>
+                            <Rectangle x:Name="ToggleHeadlightsBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="74" Canvas.Left="48" Canvas.Top="45"/>
+                            <Rectangle x:Name="TogglePIDBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="45" Canvas.Left="126" Visibility="Visible"/>
+                            <Rectangle x:Name="AutoBrakeBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="67" Canvas.Top="45" Canvas.Left="198" Visibility="Visible"/>
                             <!-- Labels for Buttons-->
-                            <Label Content="Home" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="158" Canvas.Top="7" Width="34" Visibility="Visible" RenderTransformOrigin="-0.15,0.235" HorizontalAlignment="Center"/>
-                            <Label Content="Sample Collection" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="234" Width="97" Canvas.Top="8" Visibility="Visible"/>
-                            <Label Content="Sample Deposit" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="161" Width="85" Canvas.Top="43"/>
-                            <Label Content="Headlights" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="279" Canvas.Top="43" Width="59"/>
-                            <Label Content="PID" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="89" Canvas.Top="43" Width="19" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
-                            <Label Content="PID" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="89" Canvas.Top="43" Width="19" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
-                            <Label Content="F1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="170" Width="14" Canvas.Top="21" RenderTransformOrigin="0.5,0.5"/>
-                            <Label Content="F2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="274" Width="13" Canvas.Top="21"/>
-                            <Label Content="F3" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="196" Width="16" Canvas.Top="56"/>
-                            <Label Content="F4" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="301" Width="14" Canvas.Top="56"/>
-                            <Label Content="F5" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="92" Width="14" Canvas.Top="56" RenderTransformOrigin="0.5,0.5"/>
-                            <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="11" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="65"/>
+                            <Label Content="Home" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="64" Canvas.Top="7" Width="34" Visibility="Visible" RenderTransformOrigin="-0.15,0.235" HorizontalAlignment="Center"/>
+                            <Label Content="Sample Collection" HorizontalAlignment="Center" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="132" Width="97" Canvas.Top="8" Visibility="Visible"/>
+                            <Label Content="Sample Deposit" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="262" Width="85" Canvas.Top="8"/>
+                            <Label Content="Headlights" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="57" Canvas.Top="43" Width="59"/>
+                            <Label Content="PID" HorizontalAlignment="Center" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="150" Canvas.Top="43" Width="19" Visibility="Visible" RenderTransformOrigin="-0.15,0.235"/>
+                            <Label Content="AutoBrake" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Left="202" Canvas.Top="43" Width="59"/>
+                            <Label Content="F1" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="76" Width="14" Canvas.Top="21" RenderTransformOrigin="0.5,0.5"/>
+                            <Label Content="F2" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="172" Width="13" Canvas.Top="21"/>
+                            <Label Content="F3" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="297" Width="16" Canvas.Top="21"/>
+                            <Label Content="F4" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="79" Width="14" Canvas.Top="56"/>
+                            <Label Content="F5" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="153" Width="14" Canvas.Top="56" RenderTransformOrigin="0.5,0.5"/>
+                            <Label Content="F6" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="226" Width="14" Canvas.Top="56"/>
+                            <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="3" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="-9"/>
                             <Slider x:Name="SpeedSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="500" Minimum="0" SmallChange="1" TickFrequency="25" Value="500" Canvas.Left="207" Canvas.Top="246" LargeChange="10" ValueChanged="SpeedSlider_ValueChanged"/>
                             <Label Content="Max&#xD;&#xA;Speed" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="238" Width="45" Canvas.Left="157" RenderTransformOrigin="-0.038,0.5" Foreground="Black"/>
                             <Label Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="337" Height="16" Padding="5,0" Canvas.Top="233" Foreground="White"/>
