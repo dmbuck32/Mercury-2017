@@ -105,7 +105,7 @@
                                 </GroupBox.RenderTransform>
                                 <Grid HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="78" Margin="-3,-15,-2,-2">
                                     <RadioButton x:Name="xboxControlRB" Content="XBox" HorizontalAlignment="Left" VerticalAlignment="Top" IsChecked="True" FontFamily="Courier New" Foreground="White" FontSize="11" IsEnabled="False" Margin="10,8,0,0" Checked="xbox_Checked"/>
-                                    <RadioButton x:Name="keyControlRB" Content="Keyboard" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.494,1.111" IsChecked="False" FontFamily="Courier New" Foreground="White" FontSize="11" IsEnabled="False" Margin="10,25,-8,0" Checked="keyboard_Checked" Width="76" Visibility="Hidden"/>
+                                    <RadioButton x:Name="keyControlRB" Content="Keyboard" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="0.494,1.111" IsChecked="False" FontFamily="Courier New" Foreground="White" FontSize="11" IsEnabled="False" Margin="10,25,-8,0" Checked="keyboard_Checked" Width="76"/>
                                 </Grid>
                             </GroupBox>
 
@@ -127,8 +127,8 @@
                     </Grid>
                     <Label x:Name="connectionStatusLbl" Content="Not Connected" Margin="231,15,8,0" Background="{x:Null}" Foreground="#FFFF0014" FontSize="11" Height="51" VerticalAlignment="Top" HorizontalContentAlignment="Center"/>
                     <Button x:Name="disconnectRoverBtn" Content="Disconnect" HorizontalAlignment="Left" Margin="268,40,0,0" Width="76" IsEnabled="False" Height="26" VerticalAlignment="Top" Click="disconnectBtn_Click"/>
-                    <Grid x:Name="keyboard"  HorizontalAlignment="Left" Margin="22,0,0,120" Width="356" Height="67" VerticalAlignment="Bottom" Visibility="Hidden">
-                        <Canvas Margin="200,0,0,0" Height="67" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="133" Visibility="Hidden">
+                    <Grid x:Name="keyboard"  HorizontalAlignment="Left" Margin="22,0,0,120" Width="356" Height="67" VerticalAlignment="Bottom">
+                        <Canvas Margin="200,0,0,0" Height="67" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="133">
                             <Rectangle x:Name="forwardBtn" Fill="#CCFFFFFF" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="47"/>
                             <Rectangle x:Name="reverseBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="64" Canvas.Top="32"/>
                             <Rectangle x:Name="leftBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="32" Canvas.Top="32"/>
@@ -226,11 +226,12 @@
                             <Label Content="Output Interval:" HorizontalAlignment="Left" Margin="13,155,0,0" VerticalAlignment="Top"/>
                         </Grid>
                     </Expander>
-                    <Grid x:Name="keyboard_Copy"  HorizontalAlignment="Left" Margin="20,0,0,59" Width="347" Height="61" VerticalAlignment="Bottom" Visibility="Hidden">
-                        <Canvas Margin="223,0,-9,-7" Height="67" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="133" Visibility="Hidden">
+                    <Grid x:Name="keyboard_Copy"  HorizontalAlignment="Left" Margin="20,0,0,59" Width="347" Height="61" VerticalAlignment="Bottom">
+                        <Canvas Margin="223,0,-9,-7" Height="67" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="133">
                             <Rectangle x:Name="ArmUpBtn" Fill="#CCFFFFFF" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="27"/>
                             <Rectangle x:Name="ArmDownBtn" Fill="#CCF4F4F5" HorizontalAlignment="Left" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="27" Canvas.Left="45" Canvas.Top="32"/>
-                            <Rectangle x:Name="ScoopInBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="35" Canvas.Left="5" Canvas.Top="32"/>
+                            <Rectangle x:Name="ScoopInBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="30" Canvas.Left="10" Canvas.Top="32"/>
+                            <Rectangle x:Name="ScoopOutBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="29" Canvas.Left="77" Canvas.Top="32"/>
                             <Label Content="↑" HorizontalAlignment="Right" VerticalAlignment="Top" Height="20" Padding="0" FontSize="16" Canvas.Left="44" Width="7" RenderTransformOrigin="0.5,0.5" Canvas.Top="4">
                                 <Label.RenderTransform>
                                     <TransformGroup>
@@ -241,7 +242,6 @@
                                     </TransformGroup>
                                 </Label.RenderTransform>
                             </Label>
-                            <Rectangle x:Name="ScoopOutBtn" Fill="#CCF4F4F5" HorizontalAlignment="Right" Height="27" RadiusY="5" RadiusX="5" VerticalAlignment="Top" Width="35" Canvas.Left="77" Canvas.Top="32"/>
                             <Label HorizontalAlignment="Left" VerticalAlignment="Top" Height="20" Padding="0" FontSize="16" RenderTransformOrigin="0.5,0.5" Canvas.Left="94" Canvas.Top="74">
                                 <Label.RenderTransform>
                                     <TransformGroup>
@@ -272,7 +272,7 @@
                                     </TransformGroup>
                                 </Label.RenderTransform>
                             </Label>
-                            <Label Content="J" HorizontalAlignment="Left" VerticalAlignment="Top" Height="14" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="8" Canvas.Top="31" Width="5">
+                            <Label Content="J" HorizontalAlignment="Left" VerticalAlignment="Top" Height="14" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="15" Canvas.Top="31" Width="5">
                                 <Label.RenderTransform>
                                     <TransformGroup>
                                         <ScaleTransform/>
@@ -302,7 +302,7 @@
                                     </TransformGroup>
                                 </Label.RenderTransform>
                             </Label>
-                            <Label Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Height="14" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="10" Canvas.Top="43" Width="30">
+                            <Label Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Height="14" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="10" Canvas.Top="43" Width="30" Visibility="Hidden">
                                 <Label.RenderTransform>
                                     <TransformGroup>
                                         <ScaleTransform/>
@@ -312,7 +312,7 @@
                                     </TransformGroup>
                                 </Label.RenderTransform>
                             </Label>
-                            <Label Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Height="19" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="82" Canvas.Top="43" Width="30">
+                            <Label Content="Open" HorizontalAlignment="Left" VerticalAlignment="Top" Height="19" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="82" Canvas.Top="43" Width="30" Visibility="Hidden">
                                 <Label.RenderTransform>
                                     <TransformGroup>
                                         <ScaleTransform/>
@@ -322,7 +322,7 @@
                                     </TransformGroup>
                                 </Label.RenderTransform>
                             </Label>
-                            <Label Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Height="14" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="10" Canvas.Top="43" Width="30">
+                            <Label Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Height="14" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="10" Canvas.Top="43" Width="30" Visibility="Hidden">
                                 <Label.RenderTransform>
                                     <TransformGroup>
                                         <ScaleTransform/>
@@ -332,26 +332,7 @@
                                     </TransformGroup>
                                 </Label.RenderTransform>
                             </Label>
-                            <Label Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Height="14" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="10" Canvas.Top="43" Width="30">
-                                <Label.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="-360"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </Label.RenderTransform>
-                            </Label>
-                            <Label Content="Close" HorizontalAlignment="Left" VerticalAlignment="Top" Height="14" Padding="0" RenderTransformOrigin="0.479,0.507" Canvas.Left="10" Canvas.Top="43" Width="30">
-                                <Label.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="-360"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </Label.RenderTransform>
-                            </Label>
+
                         </Canvas>
                         <Canvas Margin="0,0,144,15" Height="41" VerticalAlignment="Bottom">
                             <Slider x:Name="keyboardSpeedSlider1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="50" Minimum="1" SmallChange="1" TickFrequency="9" Value="5" Canvas.Left="48" Canvas.Top="14" Visibility="Hidden"/>
@@ -381,6 +362,10 @@
                             <Label Content="F4" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="301" Width="14" Canvas.Top="56"/>
                             <Label Content="F5" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="92" Width="14" Canvas.Top="56" RenderTransformOrigin="0.5,0.5"/>
                             <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="11" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="65"/>
+                            <Slider x:Name="SpeedSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="500" Minimum="0" SmallChange="1" TickFrequency="25" Value="500" Canvas.Left="207" Canvas.Top="246" LargeChange="10"/>
+                            <Label Content="Max&#xD;&#xA;Speed" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="238" Width="45" Canvas.Left="157" RenderTransformOrigin="-0.038,0.5" Foreground="Black"/>
+                            <Label Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="337" Height="16" Padding="5,0" Canvas.Top="233" Foreground="White"/>
+                            <Label Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="207" Padding="5,0" Canvas.Top="233" Foreground="White"/>
                         </Canvas>
                     </Grid>
                     <Label Content="Headlights:" HorizontalAlignment="Left" Margin="10,512,0,0" VerticalAlignment="Top"/>
@@ -417,9 +402,9 @@
             <Label x:Name="elapsedTime" Content="00:00:00" Margin="0,0,251,10" FontSize="18" Width="91" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
             <Label Content="Elapsed Time:" Margin="0,0,342,12" Width="82" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
             <Button x:Name="stopWatchResetBtn" Content="Reset" Margin="0,0,221,12" Click="stopWatchReset_Clicked" Width="48" HorizontalAlignment="Right" Height="22" VerticalAlignment="Bottom"/>
-            <Label x:Name="FrontSensor" Content="0000" Margin="0,0,303,628" FontSize="18" Width="51" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
-            <Label x:Name="LeftSensor" Content="0000" Margin="0,0,559.8,391" FontSize="18" Width="52" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
-            <Label x:Name="RightSensor" Content="0000" Margin="0,0,46.8,385" FontSize="18" Width="52" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom"/>
+            <TextBlock x:Name="FrontSensor" Text="Error" Margin="0,0,309.2,633.4" FontSize="18" Width="51" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom" TextAlignment="Center"/>
+            <TextBlock x:Name="LeftSensor" Text="Error" Margin="0,0,565.2,385.4" FontSize="18" Width="52" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom" TextAlignment="Center"/>
+            <TextBlock x:Name="RightSensor" Text="Error" Margin="0,0,51.2,386.4" FontSize="18" Width="52" HorizontalAlignment="Right" Height="30" VerticalAlignment="Bottom" TextAlignment="Center"/>
             <Label Content="Front Sensor:" Margin="277,0,289,663" Width="82" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>
             <Label Content="Rear Sensor:" Margin="0,0,326,95" Width="76" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom" Visibility="Hidden"/>
             <Label Content="Left Sensor:" Margin="0,0,551,426" Width="72" HorizontalAlignment="Right" Height="26" VerticalAlignment="Bottom"/>

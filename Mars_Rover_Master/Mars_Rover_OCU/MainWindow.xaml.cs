@@ -468,9 +468,9 @@ namespace Mars_Rover_OCU
             {
                 this.Dispatcher.Invoke((Action)(() =>
                 {
-                    LeftSensor.Content = comms.getLeftSensor();
-                    RightSensor.Content = comms.getRightSensor();
-                    FrontSensor.Content = comms.getFrontLeftSensor();
+                    LeftSensor.Text = comms.getLeftSensor();
+                    RightSensor.Text = comms.getRightSensor();
+                    FrontSensor.Text = comms.getFrontLeftSensor();
                     if (comms.getHeadlights())
                     {
                         HeadlightBool.Text = "ON";
@@ -528,7 +528,7 @@ namespace Mars_Rover_OCU
                     {
                         ArmMode.Text = "Disconnected";
                     }
-
+                    ControllerSettings.Default.MaxSpeed = (int)Math.Round(SpeedSlider.Value);
                     SpeedSensitivity.Text = ControllerSettings.Default.MaxSpeed.ToString();
                 }));
             }
