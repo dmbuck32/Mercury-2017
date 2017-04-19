@@ -9,7 +9,7 @@ import pickle
 import time
 
 HOST = 'localhost' 
-PORT = 8765
+PORT = 1112
 DATA_SIZE = 65535
 SHRUNK_HEIGHT = 127
 SHRUNK_WIDTH = 170
@@ -73,14 +73,15 @@ while True:
 		
 		#========================================================
 		# This if block is used to flip the image on my tablet
-		if platform.machine() == 'AMD64':
-			frame_front = cv2.flip(frame_front,0,1)
+#		if platform.machine() == 'AMD64':
+#			frame_front = cv2.flip(frame_front,0,1)
 		#========================================================
 		
 		# Decode which camera frame is from and display it to the proper window
 		if stored_data[0] == 0:
 			cv2.imshow("Front Camera", frame_front)
 		elif stored_data[0] == 1:
+			frame_front = cv2.flip(frame_front,0,1)
 			cv2.imshow("Rear Camera", frame_front)
 		else:
 			cv2.imshow("Claw Camera", frame_front)

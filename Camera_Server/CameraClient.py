@@ -6,15 +6,15 @@ import socket
 import sys
 import time
 
-UDP_IP = "127.0.0.1"
-UDP_PORT = 8765
+UDP_IP = "127.0.0.1" #"157.182.211.157"
+UDP_PORT = 1112
 SHRUNK_WIDTH = 170
 SHRUNK_HEIGHT = 127
 CAMERA_FPS = 10
 
 # Opening the front and rear camera
-cap_front = cv2.VideoCapture(0)
-cap_rear = cv2.VideoCapture(1)
+cap_front = cv2.VideoCapture(1)
+cap_rear = cv2.VideoCapture(0)
 cap_claw = cv2.VideoCapture(2)
 
 # Adjust Camera FPS
