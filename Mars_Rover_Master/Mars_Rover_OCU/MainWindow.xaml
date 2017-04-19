@@ -362,7 +362,7 @@
                             <Label Content="F4" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="301" Width="14" Canvas.Top="56"/>
                             <Label Content="F5" HorizontalAlignment="Right" VerticalAlignment="Top" Height="16" Padding="0" Canvas.Left="92" Width="14" Canvas.Top="56" RenderTransformOrigin="0.5,0.5"/>
                             <Label Content="Features:" HorizontalAlignment="Right" VerticalAlignment="Top" Height="17" Padding="0" Canvas.Top="11" Width="57" FontWeight="Bold" Foreground="#FFFABF0F" Canvas.Left="65"/>
-                            <Slider x:Name="SpeedSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="500" Minimum="0" SmallChange="1" TickFrequency="25" Value="500" Canvas.Left="207" Canvas.Top="246" LargeChange="10"/>
+                            <Slider x:Name="SpeedSlider" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Height="27" Maximum="500" Minimum="0" SmallChange="1" TickFrequency="25" Value="500" Canvas.Left="207" Canvas.Top="246" LargeChange="10" ValueChanged="SpeedSlider_ValueChanged"/>
                             <Label Content="Max&#xD;&#xA;Speed" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.Top="238" Width="45" Canvas.Left="157" RenderTransformOrigin="-0.038,0.5" Foreground="Black"/>
                             <Label Content="+" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="337" Height="16" Padding="5,0" Canvas.Top="233" Foreground="White"/>
                             <Label Content="-" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="207" Padding="5,0" Canvas.Top="233" Foreground="White"/>

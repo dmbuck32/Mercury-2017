@@ -76,12 +76,12 @@ namespace Mars_Rover_RCU.Comms
                     returnState.ErrorReturnState.ErrorCode = 0xF;
 
                     returnState.PositionReturnState.frontDistance = Program.sensorData[0];
-                    returnState.PositionReturnState.frontAmbient = Program.sensorData[1];
+                    returnState.PositionReturnState.frontAmbient = Program.sensorData[3];
 
-                    returnState.PositionReturnState.leftDistance = Program.sensorData[2];
-                    returnState.PositionReturnState.leftAmbient = Program.sensorData[3];
+                    returnState.PositionReturnState.leftDistance = Program.sensorData[1];
+                    returnState.PositionReturnState.leftAmbient = Program.sensorData[4];
 
-                    returnState.PositionReturnState.rightDistance = Program.sensorData[4];
+                    returnState.PositionReturnState.rightDistance = Program.sensorData[2];
                     returnState.PositionReturnState.rightAmbient = Program.sensorData[5];
 
                     returnState.ArmReturnState.shoulderPos = Program.shoulderPos;

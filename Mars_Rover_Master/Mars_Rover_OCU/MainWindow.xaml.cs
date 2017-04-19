@@ -664,10 +664,14 @@ namespace Mars_Rover_OCU
 
         }
 
-        #endregion
-        
+        private void SpeedSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            ControllerSettings.Default.MaxSpeed = (int)Math.Round(SpeedSlider.Value);
+        }
+
         #endregion
 
+        #endregion
     }
 }
 

@@ -163,19 +163,6 @@ namespace Mars_Rover_OCU.Utilities
             lStickX = state.ThumbSticks.Left.X;
             lStickY = state.ThumbSticks.Left.Y;
 
-            if (lTrigger > ControllerSettings.Default.MaxSpeed)
-            {
-                lTrigger = ControllerSettings.Default.MaxSpeed;
-            }
-            if (rTrigger > ControllerSettings.Default.MaxSpeed)
-            {
-                rTrigger = ControllerSettings.Default.MaxSpeed;
-            }
-            if (Math.Abs(rStickY) > ControllerSettings.Default.MaxSpeed)
-            {
-
-            }
-
             // Robot Motor Speed
 
             if (mode == normal)
@@ -346,7 +333,7 @@ namespace Mars_Rover_OCU.Utilities
 
         internal static short GetSpeed(double input)
         {
-            return (short)Math.Round(500 * input + 1500);
+            return (short)Math.Round(ControllerSettings.Default.MaxSpeed * input + 1500);
         }
 
         public static void setFunctions(bool goToHome, bool goToSample, bool goToDeposit)

@@ -295,8 +295,8 @@ namespace Mars_Rover_RCU
                                 }
                                 if (useMaestro)
                                 {
-                                    //_Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
-                                    //_Maestro.noControl();
+                                    _Maestro.setArmServos(shoulderPos, elbowPos, wristPos);
+                                    _Maestro.noControl();
                                 }
                             }
                             else
@@ -408,6 +408,10 @@ namespace Mars_Rover_RCU
                                         {
                                             _Sensors.disableHeadlights();
                                         }
+                                    }
+                                    for (int i = 0; i < sensorData.Length; i++)
+                                    {
+                                        sensorData[i] = _Sensors.getData()[i];
                                     }
                                 }
 
