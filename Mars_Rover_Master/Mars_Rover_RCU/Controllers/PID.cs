@@ -39,11 +39,14 @@ namespace Mars_Rover_RCU.Controllers
             int[] distance = new int[6];
             int i;
             int average = 0;
-            float P=0;
+            float correction;
+            float P=1;
             float I=0;
             float D=0;
+            float from = (Kp + (10 * Ki) + Kd) * -175;
+            float to = (Kp + (10 * Ki) + Kd) * 192;
 
-            for(i=0;i<3;i++)
+            for (i=0;i<3;i++)
             {
                 distance[i] = Int32.Parse(SensorData[i]);
             }
@@ -74,7 +77,7 @@ namespace Mars_Rover_RCU.Controllers
             P = Kp * error[errorIndex];
 
             //Generating correction
-            correction = (P+I+D)/(159*(Ki+Kp+Kd));
+            correction = (P + I + D - from) / (to - from) * (1 + (-1)) - 1;
             Program.Turn(correction);
 
             //Tank
