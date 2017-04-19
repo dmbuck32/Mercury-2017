@@ -55,7 +55,10 @@ namespace Mars_Rover_Comms
         public bool usePID;
 
         [XmlAttribute("ControllerControl")]
-        public bool controllerControl;  
+        public bool controllerControl;
+
+        [XmlAttribute("AutoStop")]
+        public bool AutoStop;
 
         public DriveState()
         {

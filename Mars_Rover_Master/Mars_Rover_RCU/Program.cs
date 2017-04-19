@@ -265,13 +265,9 @@ namespace Mars_Rover_RCU
                             {
                                 // Debug Statements for each of the drivestates
                                 Logger.WriteLine("Robot Drive Mode: " + robotState.DriveState.Mode);
-                                Logger.WriteLine("Robot Headlight: " + robotState.DriveState.Headlights);
                                 Logger.WriteLine("Robot RightSpeed: " + robotState.DriveState.RightSpeed);
                                 Logger.WriteLine("Robot LeftSpeed: " + robotState.DriveState.LeftSpeed);
-                                Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
                                 Logger.WriteLine("Robot Radius: " + robotState.DriveState.radius);
-                                Logger.WriteLine("Control State: " + robotState.DriveState.Control);
-                                Logger.WriteLine("Controller State: " + robotState.DriveState.controllerControl);
                                 Logger.WriteLine("Robot Arm State: " + robotState.DriveState.ArmState);
                                 Logger.WriteLine("Robot Gripper Pos: " + robotState.DriveState.gripperPos);
                                 Logger.WriteLine("Shoulder POS: " + robotState.DriveState.shoulderPos);
@@ -280,6 +276,11 @@ namespace Mars_Rover_RCU
                                 Logger.WriteLine("Go to Home: " + robotState.DriveState.goToHome);
                                 Logger.WriteLine("Go to Sample: " + robotState.DriveState.goToSample);
                                 Logger.WriteLine("Go to Deposit: " + robotState.DriveState.goToDeposit);
+                                Logger.WriteLine("Robot Headlight: " + robotState.DriveState.Headlights);
+                                Logger.WriteLine("Robot Use Pid: " + robotState.DriveState.usePID);
+                                Logger.WriteLine("AutoBrake: " + robotState.DriveState.AutoStop);
+                                Logger.WriteLine("Controller State: " + robotState.DriveState.controllerControl);
+                                Logger.WriteLine("Control State: " + robotState.DriveState.Control);
                             }
 
                             if (!robotState.DriveState.Control) //Connected but no control
@@ -395,14 +396,14 @@ namespace Mars_Rover_RCU
                                 if (useSensors)
                                 {
                                     // Headlight Function
-                                    if (robotState.DriveState.Headlights == true && arduinoReady)
+                                    if (robotState.DriveState.Headlights)
                                     {
                                         if (!_Sensors.headlightsEnabled())
                                         {
                                             _Sensors.enableHeadlights();
                                         }
                                     }
-                                    else if (robotState.DriveState.Headlights == false & arduinoReady)
+                                    else if (!robotState.DriveState.Headlights)
                                     {
                                         if (_Sensors.headlightsEnabled())
                                         {
@@ -413,6 +414,7 @@ namespace Mars_Rover_RCU
                                     {
                                         sensorData[i] = _Sensors.getData()[i];
                                     }
+                                    _Sensors.setAutoStop(robotState.DriveState.AutoStop);
                                 }
 
                                 if (usePID)

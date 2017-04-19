@@ -228,18 +228,18 @@ namespace Mars_Rover_OCU.Utilities
                 }
                 else if (rTrigger != 0 && lTrigger == 0) // Move Right
                 {
-                    RightSpeed = GetSpeed(-rTrigger);
+                    RightSpeed = GetSpeed(rTrigger);
                     LeftSpeed = GetSpeed(rTrigger);
                 }
                 else if (lTrigger != 0 && rTrigger == 0) // Move Left
                 {
-                    RightSpeed = GetSpeed(lTrigger);
+                    RightSpeed = GetSpeed(-lTrigger);
                     LeftSpeed = GetSpeed(-lTrigger);
                 }
                 else if (rTrigger == 0 && lTrigger == 0 && rStickX != 0) // Move with Right Stick
                 {
                     RightSpeed = GetSpeed(-rStickX);
-                    LeftSpeed = GetSpeed(rStickX);
+                    LeftSpeed = GetSpeed(-rStickX);
                 }
             } else if (mode == tank) // Only use Right stick
             {

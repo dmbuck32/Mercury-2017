@@ -16,7 +16,7 @@ namespace Mars_Rover_RCU.Controllers
         private SerialPort Arduino;
         private String[] sensorData;
         private Boolean HeadlightsEnabled = false;
-
+        private bool AutoStop = false;
         public Sensors()
         {
             sensorData = new String[6];
@@ -94,6 +94,11 @@ namespace Mars_Rover_RCU.Controllers
             }
         }
 
+        public void setAutoStop(bool value)
+        {
+            this.AutoStop = value;
+        }
+
         /// <summary>
         /// Handles the event of a comm error occuring.
         /// </summary>
@@ -119,6 +124,15 @@ namespace Mars_Rover_RCU.Controllers
 
                 //This will fill the array with the sensor data
                 sensorData = input.Split(',');
+
+
+                if (AutoStop)
+                {
+                    Program._DriveController.stopMotors();
+                    Program._DriveController.setMotors(1400, 1400);
+                    System.Threading.Thread.Sleep(10);
+                    Program._DriveController.stopMotors();
+                }
 
                 //Calling the PID to update
                 if (Program._PID.enabled)
