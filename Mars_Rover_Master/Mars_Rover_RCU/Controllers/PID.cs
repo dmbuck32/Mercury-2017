@@ -51,14 +51,12 @@ namespace Mars_Rover_RCU.Controllers
                 SensorData[i] = Program.sensorData[i];
             }
             
-
             for (i=0;i<3;i++)
             {
                 distance[i] = Int32.Parse(SensorData[i]);
             }
-
+            
             error[errorIndex] = (distance[1] - distance[2])/2;
-
 
             //Calculating D
             if (errorIndex > 0)
@@ -90,7 +88,7 @@ namespace Mars_Rover_RCU.Controllers
             //correction*=500;
            // correction += 1500;
 
-            if (errorIndex < 10)
+            if (errorIndex < 9)
             {
                 errorIndex++;
             }
