@@ -178,11 +178,14 @@ namespace Mars_Rover_RCU
                 }
                 #endregion
 
-                Logger.WriteLine("Maestro: " + useMaestro);
-                Logger.WriteLine("Sensors: " + useSensors);
-                Logger.WriteLine("Drive Controller: " + useArduino);
-                Logger.WriteLine("Servo COntroller: " + useServos);
-
+                if (debug)
+                {
+                    Logger.WriteLine("Maestro: " + useMaestro);
+                    Logger.WriteLine("Sensors: " + useSensors);
+                    Logger.WriteLine("Drive Controller: " + useArduino);
+                    Logger.WriteLine("Servo COntroller: " + useServos);
+                }
+                
                 //packet handler - runs in its own thread
                 stateProcessor = new Thread(new ThreadStart(StateProcessorDoWork));
                 stateProcessor.Name = "State Processor";
@@ -414,7 +417,13 @@ namespace Mars_Rover_RCU
                                     {
                                         sensorData[i] = _Sensors.getData()[i];
                                     }
-                                    _Sensors.setAutoStop(robotState.DriveState.AutoStop);
+                                    if (int.Parse(sensorData[0]) < 128 && robotState.DriveState.AutoStop)
+                                    {
+                                        Program._DriveController.stopMotors();
+                                        Program._DriveController.setMotors(1400, 1400);
+                                        System.Threading.Thread.Sleep(100);
+                                        Program._DriveController.stopMotors();
+                                    }
                                 }
 
                                 if (usePID)

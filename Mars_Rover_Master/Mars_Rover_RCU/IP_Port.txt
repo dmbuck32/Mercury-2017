@@ -1,8 +1,8 @@
 127.0.0.1
 1111
 COM10
-COM25
-COM24
+COM17
+COM13
 157.182.211.157 //Confrence Room IP
 192.168.1.33 // Senior Design Lab
 10.253.163.82 // David Desktop

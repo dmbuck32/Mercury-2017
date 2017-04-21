@@ -125,15 +125,6 @@ namespace Mars_Rover_RCU.Controllers
                 //This will fill the array with the sensor data
                 sensorData = input.Split(',');
 
-
-                if (AutoStop)
-                {
-                    Program._DriveController.stopMotors();
-                    Program._DriveController.setMotors(1400, 1400);
-                    System.Threading.Thread.Sleep(10);
-                    Program._DriveController.stopMotors();
-                }
-
                 //Calling the PID to update
                 if (Program._PID.enabled)
                 {
