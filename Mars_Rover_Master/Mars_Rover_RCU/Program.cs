@@ -417,13 +417,15 @@ namespace Mars_Rover_RCU
                                     {
                                         sensorData[i] = _Sensors.getData()[i];
                                     }
-                                    if (int.Parse(sensorData[0]) < 128 && robotState.DriveState.AutoStop)
+                                    /*
+                                    if (int.Parse(sensorData[0]) < 120 && robotState.DriveState.AutoStop)
                                     {
                                         Program._DriveController.stopMotors();
-                                        Program._DriveController.setMotors(1400, 1400);
+                                        Program._DriveController.setMotors(1300, 13300);
                                         System.Threading.Thread.Sleep(100);
                                         Program._DriveController.stopMotors();
                                     }
+                                    */
                                 }
 
                                 if (usePID)
@@ -444,7 +446,11 @@ namespace Mars_Rover_RCU
                                     }
                                 }
 
-                                if (useArduino && useServos)
+                                if (useArduino && useServos && useSensors)
+                                {
+                                    DriveAutoBrake(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed, robotState.DriveState.AutoStop, sensorData[0]);
+                                }
+                                else if (useArduino && useServos)
                                 {
                                     //Decode Robot Mode
                                     Drive(robotState.DriveState.Mode, robotState.DriveState.radius, robotState.DriveState.LeftSpeed, robotState.DriveState.RightSpeed);
@@ -506,6 +512,37 @@ namespace Mars_Rover_RCU
                 //_Maestro.setTankMode();
             }
             _DriveController.setMotors(leftSpeed, rightSpeed);
+        }
+
+        private static void DriveAutoBrake(short driveMode, double radius, short leftSpeed, short rightSpeed, bool autobrake, string frontValue)
+        {
+            if (driveMode == normal)
+            {
+                Turn(radius);
+            }
+            else if (driveMode == rotate)
+            {
+                _ServoController.setRotateMode();
+                //_Maestro.setRotateMode();
+            }
+            else if (driveMode == translate)
+            {
+                _ServoController.setTranslateMode();
+                //_Maestro.setTranslateMode();
+            }
+            else if (driveMode == tank)
+            {
+                _ServoController.setTankMode();
+                //_Maestro.setTankMode();
+            }
+            if (autobrake && int.Parse(frontValue) < 100)
+            {
+                _DriveController.stopMotors();
+            }
+            else
+            {
+                _DriveController.setMotors(leftSpeed, rightSpeed);
+            }
         }
 
         public static void Turn(double radius)

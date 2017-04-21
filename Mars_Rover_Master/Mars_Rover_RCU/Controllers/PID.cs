@@ -46,7 +46,7 @@ namespace Mars_Rover_RCU.Controllers
             float from = (Kp + (10 * Ki) + Kd) * -175;
             float to = (Kp + (10 * Ki) + Kd) * 192;
 
-            for (i = 0; i < SensorData.Length-1; i++)
+            for (i = 0; i < SensorData.Length; i++)
             {
                 SensorData[i] = Program.sensorData[i];
             }
