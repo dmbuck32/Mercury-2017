@@ -19,7 +19,7 @@ namespace Mars_Rover_RCU.Controllers
         //Max error range: -159 to 159
         int[] error;
         int errorIndex = 0;
-        float Kp = 1;
+        float Kp = .5;
         float Ki = 0;
         float Kd = 0;
         float correction = 0;
@@ -39,7 +39,6 @@ namespace Mars_Rover_RCU.Controllers
             int[] distance = new int[6];
             int i;
             int average = 0;
-            float correction;
             float P=1;
             float I=0;
             float D=0;
